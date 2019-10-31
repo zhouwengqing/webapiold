@@ -1,0 +1,2502 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMCControls_EMCMIS</name>
+    </assembly>
+    <members>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController">
+            <summary>
+            功能描述：降水数据插入到临时表
+            创建时间：2017/07/12
+            创建  人：周文卿
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.ItemSave(System.Collections.Generic.List{EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table})">
+            <summary>
+            功能描述：数据插入到临时表
+            创建  人：周文卿
+            创建时间：2017/07/12
+            </summary>
+            <param name="inputdata">插入的实体类</param>
+            <returns>json（是否成功）</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table">
+            <summary>
+            录入的实体类  跟前端所传json一样
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.valueall">
+            <summary>
+            录入的详细信息
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.fldCityID_Submit">
+            <summary>
+            提交城市ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbleqia_p_table.fldType">
+            <summary>
+            降水类型
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value">
+            <summary>
+            具体的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.id">
+            <summary>
+            ID 页面编号
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.fldPName">
+            <summary>
+            测点名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.fldDate">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_p_ItemInputController.tbaeqia_p_value.monitorvalue">
+            <summary>
+            因子的监测值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointController">
+            <summary>
+            降水点位操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointController.Geteqia_p_ddlPName(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得降水测点信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController">
+            <summary>
+            降水点位录入
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.ItemSave(EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata)">
+            <summary>
+            功能描述    ：  保存降水点位录入数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemvalue">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata">
+            <summary>
+            大气点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldPCode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.eqia_pdsavedata.fldType">
+            <summary>
+            降水类型
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_p.Eqia_P_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_ItemCkeckController">
+            <summary>
+            降尘监测因子标准值
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_ItemCkeckController.Geteqia_rd_daySTG(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据因子代码获取执行标准值
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemcontent">监测因子代码</param>
+            <param name="standardnum">执行标准名称</param>
+            <param name="std">执行标准级别</param>
+            <returns>返回因子执行标准值</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_ItemInputController">
+            <summary>
+            功能描述：插入到降尘临时表
+            创建  人：周文卿
+            创建时间：2017/07/12
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_ItemInputController.ItemSave(System.Collections.Generic.List{EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table})">
+            <summary>
+            功能描述：数据插入到临时表
+            创建  人：周文卿
+            创建时间：2017/07/11
+            修改原因：
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="inputdata">插入的实体类</param>
+            <returns>json（是否成功）</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table">
+            <summary>
+            录入的实体类  跟前端所传json一样
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table.valueall">
+            <summary>
+            录入的详细信息
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbleqia_rd_table.fldCityID_Submit">
+            <summary>
+            提交城市ID
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value">
+            <summary>
+            具体的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.id">
+            <summary>
+            ID 页面编号
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.fldPName">
+            <summary>
+            测点名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.fldDate">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.tbaeqia_rd_value.monitorvalue">
+            <summary>
+            因子的监测值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointController">
+            <summary>
+            有关降尘点位操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointController.Geteqia_rd_ddlPName(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得降尘测点信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController">
+            <summary>
+            有关降尘按点位录入操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.ItemSave(EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata)">
+            <summary>
+            功能描述    ：  保存降尘点位录入数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemvalue">需要保存的实体类</param>
+            <returns>返回是否保存成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata">
+            <summary>
+            大气点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.eqia_rdsavedata.fldPCode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_rd.Eqia_RD_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemCkeckController">
+            <summary>
+            大气监测因子标准值
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemCkeckController.Geteqia_r_daySTG(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据因子代码获取执行标准值
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemcontent">监测因子代码</param>
+            <param name="standardnum">执行标准名称</param>
+            <param name="std">执行标准级别</param>
+            <param name="type">备用参数</param>
+            <returns>返回因子执行标准值</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController">
+            <summary>
+            功能描述：数据插入到临时表
+            创建时间：2017/07/12
+            创建  人：周文卿
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.ItemSave(System.Collections.Generic.List{EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table})">
+            <summary>
+            功能描述：数据插入到临时表
+            创建  人：周文卿
+            创建时间：2017/07/11
+            修改原因：
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="inputdata">插入的实体类</param>
+            <returns>json（是否成功）</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table">
+            <summary>
+            录入的实体类  跟前端所传json一样
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table.valueall">
+            <summary>
+            录入的详细信息
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbleqia_r_table.fldCityID_Submit">
+            <summary>
+            提交城市ID
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value">
+            <summary>
+            具体的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.id">
+            <summary>
+            ID 页面编号
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.fldPName">
+            <summary>
+            测点名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.fldDate">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_ItemInputController.tbaeqia_r_value.monitorvalue">
+            <summary>
+            因子的监测值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointController">
+            <summary>
+            有关大气点位操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointController.Geteqia_r_ddlPName(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得大气测点信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-13
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointController.Geteqia_r_hm_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得大气测点信息-重金属
+            创建者      ：  熊瑞竹
+            创建日期    ：  2017-09-13
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController">
+            <summary>
+            有关大气按点位录入操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.ItemSave(EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata)">
+            <summary>
+            功能描述    ：  保存大气点位录入数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemvalue">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata">
+            <summary>
+            大气点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.eqia_rsavedata.fldPCode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqia.Eqia_r.Eqia_R_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqia_sts.Eqia_STS_PointController">
+            <summary>
+            大气专项点位操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqia_sts.Eqia_STS_PointController.GetEqia_STS_PName(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获取大气专项点位
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqia.Eqin_f.Eqin_F_PointController">
+            <summary>
+            有关功能区测点操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqia.Eqin_f.Eqin_F_PointController.Geteqih_f_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得功能区测点信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-13
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回功能区测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqib.Eqib_SectionController">
+            <summary>
+            功能描述    ：  获得生物测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-22
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获得生物测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回生物测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section_V2(System.String)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section_RSCodeAndName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section_GetRive(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section_GetRSCodeByRCode(System.String,System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionController.GetEqib_Section_GetByYearAndLevel(System.String,System.Int32,System.Int16)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="Year">年份</param>
+            <param name="Level">级别</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqib.Eqib_SectionController.Info">
+            <summary>
+            接收实体参数
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqib.Eqib_SectionController.ReturnInfo">
+            <summary>
+            返回实体参数
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.ItemSave(EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存[生物]录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata">
+            <summary>
+            录入实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.Date">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqib.Eqib_SectionInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.ItemSave(EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存电磁辐射录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-9-5
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldDate">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldRSCode">
+             <summary>
+            断面代码
+             </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.eqid.eqid_d.Eqid_D_PointInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.eqid.eqid_d.Geteqid_dpointController">
+            <summary>
+            功能描述：辐射点位获取
+            创建时间：2017/09/04
+            创建  人：周文卿
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.eqid.eqid_d.Geteqid_dpointController.Geteqid_d_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述：辐射点位获取
+            创建时间：2017/09/04
+            创建  人：周文卿
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <param name="Edate"></param>
+            <param name="stcode"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_a.Eqin_A_PointController">
+            <summary>
+            区域噪声获取测点
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_a.Eqin_A_PointController.GetEqin_A_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得区域噪声测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回区域噪声测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_a.Eqin_A_PointInputController">
+            <summary>
+            功能描述：区域噪声按点位录入保存
+            创建  人：周文卿
+            创建时间：2017/07/31
+            </summary>
+            
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_a.Eqin_A_PointInputController.PointSave(System.Collections.Generic.List{EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data})">
+            <summary>
+            功能描述：数据保存
+            创建  人：周文卿
+            创建时间：2017/08/01
+            修改原因：
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="alldata">导入数据实体类</param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data">
+            <summary>
+            数据导入的类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data.inputdata">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data.CityID">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data.datetime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.tbleqin_a_data.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data">
+            <summary>
+            具体数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldGDCODE">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldTimelen">
+            <summary>
+            监测时长
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldDN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldNDISC">
+            <summary>
+            功能区代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldNSC">
+            <summary>
+            声源代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldLEQA">
+            <summary>
+            fldLEQA
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldL10A">
+            <summary>
+            fldL10A
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldL50A">
+            <summary>
+            fldL50A
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldL90A">
+            <summary>
+            fldL90A
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldLmax">
+            <summary>
+            fldLmax
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldLmin">
+            <summary>
+            fldLmin
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldSD">
+            <summary>
+            fldSD
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldMph">
+            <summary>
+            fldMph
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldApparatus_Type">
+            <summary>
+            fldApparatus_Type
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldApparatus_Id">
+            <summary>
+            fldApparatus_Id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_a.inputeqin_a_data.fldApparatus_Grade">
+            <summary>
+            fldApparatus_Grade
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_CommonController">
+            <summary>
+            噪声功能区公共api
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_CommonController.GetNDISCAll">
+            <summary>
+            功能描述    ：  获取功能区名称
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <returns>功能区名称</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController">
+            <summary>
+            功能描述：功能区噪声录入数据API
+            创建者  ：吕荣誉
+            创建日期：2017-7-11
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.ItemSave(EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData)">
+            <summary>
+            功能描述    ：  保存功能区噪声录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData">
+            <summary>
+            功能区噪声录入实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.InputDatas">
+            <summary>
+            输入数值组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldCityID_Operate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldCityID_Submit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldSTCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldCountyCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.fldPCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.Mph">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.Apparatus_Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.Apparatus_Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.Apparatus_Grade">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.Eqin_F_SaveData.ddlNDISC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldHour">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldLEQA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldL10A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldL50A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldL90A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldLmax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldLmin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqin.Eqin_f.Eqin_F_PointInputController.InputData.fldSD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_m.Eqin_M_PointController">
+            <summary>
+            噪声专项获取测点
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_m.Eqin_M_PointController.GetEqin_M_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得噪声专项测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回区域噪声测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqin.Eqin_t.Eqin_T_PointController">
+            <summary>
+            道路交通噪声相关操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqin.Eqin_t.Eqin_T_PointController.GetEqin_T_ddlPName(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得道路交通噪声测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回区域噪声测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiso.Eqiso_PointController">
+            <summary>
+            功能描述    ：  获得土壤测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiso.Eqiso_PointController.GetEqiso_Point(System.String,System.Int32,System.Int16,System.Int32,System.String)">
+            <summary>
+            功能描述    ：  获得土壤测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回土壤测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiso.Eqiso_PointController.GetEqiso_Point_V2(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            功能描述    ：  根据[城市代码][企业代码][年份]获取测点名称和测点代码
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="entcode">企业代码</param>
+            <param name="Year">年份</param>
+            <returns>返回土壤测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiso.Eqiso_PointController.GetEqiso_PNameAndSTName(System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获得土壤城市和测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-07-06
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="pcode">测点代码</param>
+            <param name="Year">年份</param>
+            <returns>返回城市下所有的断面和河流</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiso.Eqiso_PointController.GetEqiso_County_Point(System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获得土壤县区测点信息
+            创建者      ：  熊瑞竹
+            创建日期    ：  2017-9-8
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <returns>返回土壤县区测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController">
+            <summary>
+            功能描述    ：  保存[土壤]录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存[土壤]录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata">
+            <summary>
+            录入实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldPCode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldSampleType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiso.Eqiso_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiv.AuditingCommon.WaitTableEqivController">
+            <summary>
+            审核数据表
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiv.AuditingCommon.WaitTableEqivController.Geteqicom_data(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得生态、生物审核的数据
+            创建者：熊瑞竹
+            创建日期：2017-08-22
+            修改者：
+            修改日期：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="wherequery">查询条件</param>
+            <param name="pageshow">数据类型</param>
+            <param name="cityid">城市Id</param>
+            <returns>返回基本信息数据的Json字符串</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiv.AuditingCommon.WaitTableEqivController.Geteqicom_basic(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得生态、生物审核的数据
+            创建者：熊瑞竹
+            创建日期：2017-08-24
+            修改者：
+            修改日期：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="wherequery">查询条件</param>
+            <param name="pageshow">数据类型</param>
+            <param name="cityid">城市Id</param>
+            <returns>返回基本信息数据的Json字符串</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController">
+            <summary>
+            功能描述    ：  保存区县饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存区县饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata">
+            <summary>
+            区县饮用水点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldRSCode">
+             <summary>
+            断面代码
+             </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_SectionController">
+            <summary>
+            功能描述    ：  获得区县饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_SectionController.GetEqiw_DT_Section(System.String,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            功能描述    ：  获得区县饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回区县饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_SectionController.GetEqiw_DT_Section_V2(System.String,System.String,System.Int16,System.Int32,System.Int32)">
+            <summary>
+            功能描述    ：  获得区县饮用水断面代码和断面名称
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="RCode">河流代码</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <param name="year">年份</param>
+            <returns>返回区县饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DT.Eqiw_DT_SectionController.GetEqiw_DT_RNameandRSName(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得区县饮用水河流和断面信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-07-06
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="year">年份</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">级别</param>
+            <returns>返回城市下所有的断面和河流</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController">
+            <summary>
+            功能描述    ：  保存乡镇饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存乡镇饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata">
+            <summary>
+            区县饮用水点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldRSCode">
+             <summary>
+            断面代码
+             </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_SectionController">
+            <summary>
+            功能描述    ：  获得乡镇饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_SectionController.GetEqiw_DX_Section(System.String,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            功能描述    ：  获得乡镇饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回乡镇饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_SectionController.GetEqiw_DX_Section_V2(System.String,System.String,System.Int16,System.Int32,System.Int32)">
+            <summary>
+            功能描述    ：  获得乡镇饮用水断面代码和断面名称
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="RCode">河流代码</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <param name="year">年份</param>
+            <returns>返回乡镇饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_DX.Eqiw_DX_SectionController.GetEqiw_DX_RNameandRSName(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得乡镇饮用水河流和断面信息
+            创建者      ：  周文卿
+            创建日期    ：  2017-07-06
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">年份</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">级别</param>
+            <returns>返回城市下所有的断面和河流</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController">
+            <summary>
+            功能描述    ：  保存地市饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata)">
+            <summary>
+            功能描述    ：  保存地市饮用水录入数据
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-11
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="data">需要保存的实体类</param>
+            <returns>返回保存是否成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata">
+            <summary>
+            区县饮用水点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldRSCode">
+             <summary>
+            断面代码
+             </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.eqiw_dsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-8-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController.GetEqiw_D_Section(System.String,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController.GetEqiw_D_Section_NofldSTcode(System.String,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息，无STCode
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController.GetEqiw_D_Section_V2(System.String,System.String,System.Int16,System.Int32,System.Int32)">
+            <summary>
+            功能描述    ：  获得地市饮用水断面代码和断面名称
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="RCode">河流代码</param>
+            <param name="Level">级别</param>
+            <param name="include">是否包含上级</param>
+            <param name="year">年份</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController.GetEqiw_D_RNameandRSName(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地表水河流和断面信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-07-06
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">年份</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">级别</param>
+            <returns>返回城市下所有的断面和河流</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_D.Eqiw_D_SectionController.GetEqiw_d_hm_Section(System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获得地市饮用水测点信息
+            创建者      ：  熊瑞竹
+            创建日期    ：  2017-9-13
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="fldYear">年份</param>
+            <returns>返回地市饮用水测点信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_ItemCkeckController">
+            <summary>
+            地下水检查
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_ItemCkeckController.Geteqiw_g_daySTG(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据因子代码获取执行标准值
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemcontent">监测因子代码</param>
+            <param name="standardnum">执行标准名称</param>
+            <param name="std">执行标准级别</param>
+            <param name="type">备用参数</param>
+            <returns>返回因子执行标准值</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointController">
+            <summary>
+            地下水点位操作控制器
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointController.Geteqiw_g_ddlRName(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地下水点位信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回点位信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointController.Geteqiw_g_GetByYearAndLevel(System.String,System.Int32,System.Int16)">
+            <summary>
+            功能描述    ：  获得地下水点位信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回点位信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController">
+            <summary>
+            地下水录入操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata)">
+            <summary>
+            功能描述    ：  保存地表水点位录入数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemvalue">需要保存的实体类</param>
+            <returns>返回是否保存成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata">
+            <summary>
+            大气点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.eqia_rsavedata.fldPCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_g.Eqiw_G_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemCkeckController">
+            <summary>
+            地表水检查
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemCkeckController.Geteqiw_r_daySTG(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据因子代码获取执行标准值
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-16
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemcontent">监测因子代码</param>
+            <param name="standardnum">执行标准名称</param>
+            <param name="std">执行标准级别</param>
+            <param name="type">返回因子执行标准值</param>
+            <returns>返回因子执行标准值</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController">
+            <summary>
+            功能描述：地表水数据插入到临时表
+            创建时间：2017/07/12
+            创建  人：周文卿 
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.ItemSave(System.Collections.Generic.List{EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table})">
+            <summary>
+            功能描述：数据插入到临时表
+            创建  人：周文卿
+            创建时间：2017/07/12
+            </summary>
+            <param name="inputdata">插入的实体类</param>
+            <returns>json（是否成功）</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table">
+            <summary>
+            录入的实体类  跟前端所传json一样
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.valueall">
+            <summary>
+            录入的详细信息
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.fldCityID_Submit">
+            <summary>
+            提交城市ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbleqiw_r_table.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value">
+            <summary>
+            具体的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.id">
+            <summary>
+            ID 页面编号
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldRName">
+            <summary>
+            河流名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldRSCode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldRSName">
+            <summary>
+            断面名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.fldDate">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_ItemInputController.tbaeqiw_r_value.monitorvalue">
+            <summary>
+            因子的监测值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController">
+            <summary>
+            有关地表水断面操作
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.Geteqiw_r_getRTree(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地表水河流信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-16
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回河流信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.Geteqiw_r_ddlRSName(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地表水断面信息
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-16
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <param name="RCode">河流代码</param>
+            <returns>返回断面信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.Geteqiw_r_RNameandRSName(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地表水河流和断面信息
+            创建者      ：  周文卿
+            创建日期    ：  2017-07-06
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">年份</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">级别</param>
+            <returns>返回城市下所有的断面和河流</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.GetSection(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="where">查询条件</param>
+            <param name="PageIndex">页码</param>
+            <param name="PageSize">每页显示的数量</param>
+            <param name="flag">判断是否需要加载所有数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.file">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.file.value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.file.name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.Geteqiw_r_hm_getRTree(System.String,System.String)">
+            <summary>
+            功能描述    ：  获得地表水河流信息
+            创建者      ：  熊瑞竹
+            创建日期    ：  2017-09-13
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="year">结束年份</param>
+            <param name="stcode">城市代码</param>
+            <returns>返回河流信息</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.tbleqiw_r_rcode">
+            <summary>
+            河流类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.tbleqiw_r_rcode.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointController.tbleqiw_r_rcode.rname">
+            <summary>
+            河流名称
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController">
+            <summary>
+            地表水点位录入
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.ItemSave(EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata)">
+            <summary>
+            功能描述    ：  保存地表水点位录入数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-14
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="itemvalue">需要保存的实体类</param>
+            <returns>返回是否保存成功</returns>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata">
+            <summary>
+            大气点位录入保存类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldItemData">
+            <summary>
+            监测值数组
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldUserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldCityID_Operate">
+            <summary>
+            操作城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldCityID_Submit">
+            <summary>
+            提交城市id
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldCountyCode">
+            <summary>
+            区县代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldRSCode">
+             <summary>
+            断面代码
+             </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.eqia_rsavedata.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.itemvalueData">
+            <summary>
+            因子值类
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.itemvalueData.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_EMCMIS.Eqiw.Eqiw_r.Eqiw_R_PointInputController.itemvalueData.itemvalue">
+            <summary>
+            因子值
+            </summary>
+        </member>
+        <member name="T:EMCControls_EMCMIS.Eqiw.Eqiw_sts.Eqiw_STS_PointController">
+            <summary>
+            地表水专项获取点位
+            </summary>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_sts.Eqiw_STS_PointController.GetEqiw_STS_River(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获取地表水专项河流信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="Edate">结束年份</param>
+            <param name="include">是否包含上级</param>
+            <param name="stcode">城市代码</param>
+            <param name="Level">测点级别</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_sts.Eqiw_STS_PointController.GetEqiw_STS_Section(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  获取地表水专项断面信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="RCode">河流代码</param>
+            <param name="Level">测点级别</param>
+            <param name="include">是否包含上级</param>
+            <param name="year">年份</param>
+            <returns>返回测点信息</returns>
+        </member>
+        <member name="M:EMCControls_EMCMIS.Eqiw.Eqiw_sts.Eqiw_STS_PointController.GetEqiw_STS_GetRCodeByYear(System.String,System.Int32)">
+            <summary>
+            功能描述    ：  获取地表水专项断面信息
+            创建者      ：  吕荣誉
+            创建日期    ：  2017-7-10
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="STCode">城市代码</param>
+            <param name="RCode">河流代码</param>
+            <param name="Level">测点级别</param>
+            <param name="include">是否包含上级</param>
+            <param name="year">年份</param>
+            <returns>返回测点信息</returns>
+        </member>
+    </members>
+</doc>

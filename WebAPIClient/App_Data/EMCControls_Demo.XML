@@ -1,0 +1,1925 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMCControls_Demo</name>
+    </assembly>
+    <members>
+        <member name="T:EMCControls_DemoMiddle.Common.City_GIS_LivingController">
+            <summary>
+            获取城市经纬度
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Common.City_GIS_LivingController.GetCityLatitudeAndLongitude(System.String)">
+            <summary>
+            功能描述    ：  根据城市代码获取各业务测点城市经纬度
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-17
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="stcode">城市代码 全部填-1</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Common.GetCityListController">
+            <summary>
+            获得城市列表
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Common.GetCityListController.GetCityLIST(System.String)">
+            <summary>
+            功能描述：获得城市列表
+            创建时间：2017/09/29
+            创建  人：周文卿
+            </summary>
+            <param name="stcode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Common.ProvAndCityBoundGLController">
+            <summary>
+            省和城市地图边界限
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Common.ProvAndCityBoundGLController.GetProvAndCityBoundGL(System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码获取省和城市地图边界限
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-18
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="prcode">省代码</param>
+            <param name="stcode">城市代码 默认-1获取该省所有城市边界线</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController">
+            <summary>
+            获得降水的数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.GetEQIA_P_data(EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter)">
+            <summary>
+            功能描述：获得降水数据
+            创建  人：周文卿
+            创建时间：2017/10/03
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter">
+            <summary>
+            湖库数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter.type">
+            <summary>
+            是否有全省的点位
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter.pcode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <!-- 对于成员“P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter.BeginDate”忽略有格式错误的 XML 注释 -->
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_p.GetEQIA_P_DataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController">
+            <summary>
+            大气数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetAQIDayReport(System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码测点类型获取相关AQI数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-19
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="stcode">城市代码 全部填-1</param>
+            <param name="stype">测点类型 '城市'|'测点'|'县市区'</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetTrendAQIOrDensity(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码测点类型获取AQI相关数据趋势数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-19
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="stcode">城市代码</param>
+            <param name="iday">天数  默认一天数据</param>
+            <param name="stype">测点类型 '城市'|'测点'</param>
+            <param name="pcode">测点代码 默认-1取全部</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetCityOrPointAQIDayReport(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码测点类型获取城市日报数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-19
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ： 
+            </summary>
+            <param name="stcode">城市代码</param>
+            <param name="stype">测点类型</param>
+            <param name="pcode">测点代码</param>
+            <param name="date">时间</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetCityOrPointAQIDayReport(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码测点类型获取城市日报数据(时间段)
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-19
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ： 
+            </summary>
+            <param name="BeginDate">开始时间</param>
+            <param name="EndDate">结束时间</param>
+            <param name="stcode">城市代码</param>
+            <param name="stype">测点类型</param>
+            <param name="pcode">测点代码</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetAQIDayReport(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码测点类型获取相关AQI数据(时间段)
+            创建者      ：  徐雍文
+            创建日期    ：  2017-10-13
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="BeginDate">开始时间</param>
+            <param name="EndDate">结束时间</param>
+            <param name="stcode">城市代码 全部填-1</param>
+            <param name="stype">测点类型 '城市'</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.AirServicesController.GetAirYearSeaMonthDatainfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  根据城市代码时间类型获取评价结果
+            创建者      ：  徐雍文
+            创建日期    ：  2017-10-13
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="BeginDate">开始时间</param>
+            <param name="EndDate">结束时间</param>
+            <param name="stcode">城市代码 全部填-1</param>
+            <param name="timetype">时间类型 默认月统计评价</param>
+            <returns>json数据字符串</returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.Eqia_R_GIS_LivingController">
+            <summary>
+            获取大气相关经纬度信息
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.Eqia_R_GIS_LivingController.GetPointLatitudeAndLongitude(System.String)">
+            <summary>
+            功能描述    ：  根据城市代码获取各业务测点城市经纬度
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-17
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="stcode">城市代码 全部填-1</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController">
+            <summary>
+            获得城市AQI
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GetCityAqi(EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GisParameter)">
+            <summary>
+            功能描述：获得城市AQI
+            创建时间：2017/09/29
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GisParameter">
+             <summary>
+            城市AQI相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GisParameter.BeginDate">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityAQIController.GisParameter.pcode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController">
+            <summary>
+            获得城市优良天数
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GetCityYL(EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter)">
+            <summary>
+            功能描述：获得城市优良天数
+            创建时间：2017/10/04
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter">
+             <summary>
+            相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter.EenDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.GisParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.retudt.Province">
+            <summary>
+            全省
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.retudt.TQ">
+            <summary>
+            同期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetCityYL_DataController.retudt.QQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController">
+            <summary>
+            全省达标情况
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GetCityDB(EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter)">
+            <summary>
+            功能描述：获得城市wpi
+            创建时间：2017/10/04
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter">
+             <summary>
+            相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter.EenDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.GisParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetDBSituationController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController">
+            <summary>
+            空气城市点位污染物浓度值
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GetEQIA_R_Value(EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter)">
+            <summary>
+            功能描述：获得城市污染物
+            创建时间：2017/09/29
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter">
+             <summary>
+            城市AQI相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter.BeginDate">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter.pcode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.GisParameter.type">
+            <summary>
+            点位类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.retudt.ALL">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.retudt.ALLTQ">
+            <summary>
+            全部同期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_ValueController.retudt.ALLQQ">
+            <summary>
+            全部前期
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController">
+            <summary>
+            空气WPI
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GetCityWPI(EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter)">
+            <summary>
+            功能描述：获得城市wpi
+            创建时间：2017/10/04
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter">
+             <summary>
+            相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter.EenDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.GisParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetEQIA_R_WPIController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController">
+            <summary>
+            获得空气基本信息
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GetPointBasic(EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GisParameter)">
+            <summary>
+            功能描述：获得空气基本信息
+            创建时间：2017/09/29
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GisParameter">
+             <summary>
+            饮用水相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GisParameter.year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqia.Eqia_r.GetPointController.GisParameter.pcode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_DataController">
+            <summary>
+            获得饮用水点位数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_DataController.GetDrinkdata(EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter)">
+            <summary>
+            功能描述：获得饮用水数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter">
+            <summary>
+            河流数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.rscode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter.level">
+            <summary>
+            区分地---市
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController">
+            <summary>
+            获得饮用水基本信息
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GetSectionBasic(EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter)">
+            <summary>
+            功能描述：获得饮用水基本信息
+            创建时间：2017/09/28
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter">
+             <summary>
+            饮用水相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter.year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter.rscode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_SectionController.GisParameter.level">
+            <summary>
+            区分---地市
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController">
+            <summary>
+            饮用水数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController.Geteqiw_d_Indexdata(EMCControls_DemoMiddle.Eqiw.eqiw_d.DataParameter)">
+            <summary>
+            功能描述：获得饮用水数据
+            创建  人：周文卿
+            创建时间：2017/10/02
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController.retudt.Scale">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController.retudt.Stage">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController.retudt.city">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_d.GetEQIW_D_IndexDataController.retudt.cityLJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController">
+            <summary>
+            湖库水质类别
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.GetEQIW_L_stage(EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter)">
+            <summary>
+            功能描述：获得湖库数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter">
+            <summary>
+            湖库数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.lcode">
+            <summary>
+            湖库代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.lname">
+            <summary>
+            湖库名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.stattype">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetEQIW_L_StageController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController">
+            <summary>
+            获得富营养的值
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.GetFYYdata(EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter)">
+            <summary>
+            功能描述：获得湖库数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter">
+            <summary>
+            湖库数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.spacecode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.spacename">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.stattype">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetFYYDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController">
+            <summary>
+            获得湖库数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.GetHKdata(EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter)">
+            <summary>
+            功能描述：获得湖库数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter">
+            <summary>
+            湖库数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.lname">
+            <summary>
+            湖库名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.lcode">
+            <summary>
+            湖库代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.retudt.DQFW">
+            <summary>
+            当期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.retudt.TQ">
+            <summary>
+            前期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.retudt.TQFW">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController">
+            <summary>
+            获得湖库基本信息
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GetSectionBasic(EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter)">
+            <summary>
+            功能描述：获得湖库基本信息
+            创建时间：2017/09/24
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter">
+             <summary>
+            湖库相关的参数
+             </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter.year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter.lcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionController.GisParameter.lscode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionDataController">
+            <summary>
+            获得湖库垂线数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_l.GetHKSectionDataController.GetSectiondata(EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter)">
+            <summary>
+            功能描述：获得湖库垂线数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter">
+            <summary>
+            垂线数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.lname">
+            <summary>
+            湖库名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.lcode">
+            <summary>
+            湖库代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.lsname">
+            <summary>
+            垂线名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.lscode">
+            <summary>
+            垂线代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_l.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController">
+            <summary>
+            城市评价
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.Getcityata(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter)">
+            <summary>
+            功能描述：获得城市数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter">
+            <summary>
+            数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.sRname">
+            <summary>
+            水系名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.rscode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.retudt.DQFW">
+            <summary>
+            当期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.retudt.TQFW">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetCityDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController">
+            <summary>
+            获得地表水表格呈现的数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.GetRiverTabledata(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter)">
+            <summary>
+            功能描述：获得河流数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter">
+            <summary>
+            河流数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.StatType">
+            <summary>
+            评价方式
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.TQBeginDate">
+            <summary>
+            同期时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.retudt.city">
+            <summary>
+            城市cwqi
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetIndexDataController.retudt.BHcity">
+            <summary>
+            城市变化
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController">
+            <summary>
+            获得因子超标
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.GetItemOver(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter)">
+            <summary>
+            功能描述：获得湖库数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter">
+            <summary>
+            湖库数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.spacecode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.spacename">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.stattype">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetItemOverController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverDataController">
+            <summary>
+            获得河流数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverDataController.GetRiverdata(EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter)">
+            <summary>
+            功能描述：获得河流数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter">
+            <summary>
+            河流数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.sRname">
+            <summary>
+            水系名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.retudt.DQFW">
+            <summary>
+            当期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.retudt.TQ">
+            <summary>
+            前期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.retudt.TQFW">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController">
+            <summary>
+            功能描述：获得水系数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.GetRiverSystemdata(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter)">
+            <summary>
+            功能描述：获得河流数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter">
+            <summary>
+            河流数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.sRname">
+            <summary>
+            水系名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.retudt.DQFW">
+            <summary>
+            当期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.retudt.TQ">
+            <summary>
+            前期范围
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.retudt.TQFW">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetRiverSystemDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GetSectionBasic(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter)">
+            <summary>
+            功能描述：获得河流断面基本信息
+            创建时间：2017/09/24
+            创建  人：周文卿
+            </summary>
+            <param name="GP">查询的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter">
+            <summary>
+            断面相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter.year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter.fldRSCode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionController.GisParameter.fldPLevel">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController">
+            <summary>
+            功能描述：获得河流断面数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.GetSectiondata(EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter)">
+            <summary>
+            功能描述：获得河流断面数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter">
+            <summary>
+            断面数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.sRname">
+            <summary>
+            水系名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.rcode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.strItemCode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.rscode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.DataParameter.level">
+            <summary>
+            控制级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddle.Eqiw.eqiw_r.GetSectionDataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddle.Other.PUBServicForGisLivingController">
+            <summary>
+            获取经纬度相关
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddle.Other.PUBServicForGisLivingController.GetLatitudeAndLongitude(System.String)">
+            <summary>
+            功能描述    ：  根据城市代码获取各业务测点城市经纬度
+            创建者      ：  徐雍文
+            创建日期    ：  2017-08-11
+            修改者      ：  
+            修改日期    ：  
+            修改原因    ：  
+            </summary>
+            <param name="stcode">城市代码 全部填-1</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController">
+            <summary>
+            获得区域噪声的数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.GetNAData(EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter)">
+            <summary>
+            功能描述：获得城市数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter">
+            <summary>
+            数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter.DN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.DataParameter.gdcode">
+            <summary>
+            网格
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_A.GetEQIN_A_DataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.GetNFData(EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter)">
+            <summary>
+            功能描述：获得道路交通数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter">
+            <summary>
+            数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter.DN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.DataParameter.gdcode">
+            <summary>
+            网格
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_F.GetEQIN_F_DataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController">
+            <summary>
+            道路交通噪声
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.GetNTData(EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter)">
+            <summary>
+            功能描述：获得城市数据
+            创建  人：周文卿
+            创建时间：2017/09/25
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter">
+            <summary>
+            数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter.DN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.DataParameter.gdcode">
+            <summary>
+            网格
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqin.Eqin_T.GetEQIN_T_DataController.retudt.LJ">
+            <summary>
+            累计
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController">
+            <summary>
+            功能描述：临时获得报告河流需要的数据
+            创建  人：周文卿
+            创建时间：2017/10/27
+            
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.GetReportDocdata(System.Object)">
+            <summary>
+            功能描述：获得水质简报数据（双月）
+            创建  人：周文卿
+            创建时间：2017/11/02
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.GetReportDocSingledata(System.Object)">
+            <summary>
+            功能描述：获得水质简报数据（单月）
+            创建  人：周文卿
+            创建时间：2017/11/03
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.GetReportDocRangedata(System.Object)">
+            <summary>
+            功能描述：地表水水质监测信息
+            创建  人：周文卿
+            创建时间：2017/11/11 
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.River">
+            <summary>
+             河流
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.Point">
+            <summary>
+            断面
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.Lake">
+            <summary>
+            湖库
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.LakePoint">
+            <summary>
+            垂线
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.BigLake">
+            <summary>
+            大中型水库
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocDataController.retudata.Sewage">
+            <summary>
+            排污口
+            </summary>
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController">
+            <summary>
+            功能描述：获得JZS数据
+            创建  人：周文卿
+            创建时间：2017/11/15
+            </summary>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.GetReportDocdata_JZS(System.Object)">
+            <summary>
+            功能描述：获得水质简报数据（双月）
+            创建  人：周文卿
+            创建时间：2017/11/02
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.GetReportDocSingledata_JZS(System.Object)">
+            <summary>
+            功能描述：获得水质简报数据（单月）
+            创建  人：周文卿
+            创建时间：2017/11/03
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.GetReportDocRangedata_JZS(System.Object)">
+            <summary>
+            功能描述：地表水水质监测信息
+            创建  人：周文卿
+            创建时间：2017/11/11 
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.River">
+            <summary>
+             河流
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.Point">
+            <summary>
+            断面
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.Lake">
+            <summary>
+            湖库
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.LakePoint">
+            <summary>
+            垂线
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.BigLake">
+            <summary>
+            大中型水库
+            </summary>
+        </member>
+        <member name="P:EMCControls_DemoMiddleDemo.Eqiw.eqiw_r.GetReportDocData_JZSController.retudata.Sewage">
+            <summary>
+            排污口
+            </summary>
+        </member>
+        <member name="T:EMCControls_Demo.MiddleDemo.Eqiso.GetEqiso_DataController">
+            <summary>
+            功能描述：土壤GIS demo
+            创建  人：周文卿
+            创建时间：2017/12/11
+            </summary>
+        </member>
+        <member name="M:EMCControls_Demo.MiddleDemo.Eqiso.GetEqiso_DataController.Getisodata(EMCControls_Demo.MiddleDemo.Eqiso.DataParameter)">
+            <summary>
+            功能描述：获得饮用水数据
+            创建  人：周文卿
+            创建时间：2017/09/26
+            </summary>
+            <param name="DP"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter">
+            <summary>
+            河流数据相关的参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.stcode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.stname">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.TimeType">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.EndDate">
+            <summary>
+            结束时间时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.DataParameter.pcode">
+            <summary>
+            点位代码
+            </summary>
+        </member>
+        <member name="T:EMCControls_Demo.MiddleDemo.Eqiso.retudt">
+            <summary>
+            返回的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.retudt.DQ">
+            <summary>
+            当期
+            </summary>
+        </member>
+        <member name="P:EMCControls_Demo.MiddleDemo.Eqiso.retudt.TQ">
+            <summary>
+            前期
+            </summary>
+        </member>
+    </members>
+</doc>

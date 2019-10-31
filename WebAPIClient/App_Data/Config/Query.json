@@ -1,0 +1,152 @@
+[
+  {
+    "type": "eqia_r",
+    "vwTableName": "vwEQIA_RPI_Basedata_query",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldSYear)+'-'+convert(varchar,fldSMonth)+'-'+convert(varchar,fldSDay),121)"
+  },
+  {
+    "type": "eqia_rd",
+    "vwTableName": "vwEQIA_RDPI_Basedata",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldEYear)+'-'+convert(varchar,fldEMonth)+'-'+convert(varchar,fldEDay),121)"
+  },
+  {
+    "type": "eqia_p",
+    "vwTableName": "vwEQIA_PPI_Basedata",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldSYear)+'-'+convert(varchar,fldSMonth)+'-'+convert(varchar,fldSDay),121)"
+  },
+  {
+    "type": "eqia_s",
+    "vwTableName": "vwEQIA_STS_Basedata_query",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldSYear)+'-'+convert(varchar,fldSMonth)+'-'+convert(varchar,fldSDay),121)"
+  },
+  {
+    "type": "eqiw_r",
+    "vwTableName": "vwEQIW_R_BasedataD",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_r_auto",
+    "vwTableName": "vwEQIW_R_Basedata_Auto",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_g",
+    "vwTableName": "vwEQIW_G_Basedata",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqise",
+    "vwTableName": "vwEQIW_R_BasedataD",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_sts",
+    "vwTableName": "vwEQIW_STS_BasedataD",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqin_a",
+    "vwTableName": "vwEQIN_A_BaseData_Query",
+    "point": "fldSTCode+'.'+fldGDCODE",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqin_f",
+    "vwTableName": "vwEQIN_F_BaseData",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqin_t",
+    "vwTableName": "vwEQIN_T_BaseData_Query",
+    "point": "fldSTCode+'.'+fldRDCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqin_m",
+    "vwTableName": "vwEQIN_M_BaseData_Query",
+    "point": "fldSTCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_d",
+    "vwTableName": "vwEQIW_D_BaseData",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_dt",
+    "vwTableName": "vwEQIW_DT_BaseData",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiw_dx",
+    "vwTableName": "vweqiw_dx_BaseData",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqiso",
+    "vwTableName": "vwEQISO_Basedata",
+    "point": "fldSTCode+'.'+fldEntCode+'.'+fldPCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqie",
+    "vwTableName": "vwEQIE_Basedata_Dao",
+    "point": "fldSTCode",
+    "time": " convert(datetime,convert(varchar,fldYear),121)"
+  },
+  {
+    "type": "eqie_f",
+    "vwTableName": "vwEQIE_FunData_Dao",
+    "point": "fldSTCode",
+    "time": " convert(datetime,convert(varchar,fldYear),121)"
+  },
+  {
+    "type": "eqie_c",
+    "vwTableName": "vwEQIE_CityData_Dao",
+    "point": "fldSTCode",
+    "time": " convert(datetime,convert(varchar,fldYear),121)"
+  },
+  {
+    "type": "eqib_czp",
+    "vwTableName": "vwEQIBCZPBaseData_All",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqib_czc",
+    "vwTableName": "vwEQIBCZCBaseData_All",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqib_cd",
+    "vwTableName": "vwEQIBCDBaseData_All",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqib_cwc",
+    "vwTableName": "vwEQIBCWCBaseData_All",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  },
+  {
+    "type": "eqib_cwp",
+    "vwTableName": "vwEQIBCWPBaseData_All",
+    "point": "fldSTCode+'.'+fldRCode+'.'+fldRSCode",
+    "time": " convert(datetime,convert(varchar,fldYear)+'-'+convert(varchar,fldMonth)+'-'+convert(varchar,fldDay),121)"
+  }
+]

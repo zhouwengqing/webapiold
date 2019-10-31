@@ -1,0 +1,4008 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMCControls_Middle</name>
+    </assembly>
+    <members>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-18
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.type">
+            <summary>
+            “BaseData” = 原始数据表
+            “ResultStat” = 降水点位、城市监测结果统计
+            “STatType2” = 点位、城市各时段酸雨频率、酸度比例
+            “STatType3” = 各时段点位、城市酸雨频率、酸度比例
+            “STatType4” = 阴阳离子平衡
+            “STatType5” = 样品数统计表
+            “STatType6” = 离子当量比例
+            “STatType7” = 离子当量浓度
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.TimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.STatType">
+            <summary>
+            0：原始数据表(不带L)
+            10：原始数据表(带L)
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData">
+            <summary>
+            “BaseData”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData1">
+            <summary>
+            “ResultStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData2">
+            <summary>
+            “STatType2”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData3">
+            <summary>
+            “STatType3”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData4">
+            <summary>
+            “STatType4”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData5">
+            <summary>
+            “STatType5”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData6">
+            <summary>
+            “STatType6”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_Data_MiddleController.ReturnData7">
+            <summary>
+            “STatType7”
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-14
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.pHStand">
+            <summary>
+            标准值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计合计值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细，明细跟平均必须有一个值为1
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.STatType">
+            <summary>
+            统计方法，根据参数返回不同结果
+            0：原始数据表(不带L)
+            10：原始数据表（带L）
+            1：降水点位、城市监测结果统计
+            2：点位、城市各时段酸雨频率、酸度比例
+            3：各时段点位、城市酸雨频率、酸度比例
+            4、阴阳离子平衡
+            5、样品数统计表
+            6、离子当量比例
+            7、离子当量浓度
+            90：降水pH值秩相关
+            91：酸雨频率秩相关
+            92：离子浓度秩相关
+            93：硫硝当量比
+            94：阴阳离子当量比
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.SpaceID">
+            <summary>
+            0：按照郊区城区统计；1：按照两控区非两控区统计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_p.GetEQIA_P_RawDataController.Info.CalculateID">
+            <summary>
+            全省酸雨率计算方法：0城市均值、1酸雨次数除以降水次数
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-18
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.type">
+            <summary>
+            “ZHAppraise”，综合评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.TimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_Data_MiddleController.ReturnData">
+            <summary>
+            “ZHAppraise”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-14
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldStandardName">
+            <summary>
+            标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldStandID">
+            <summary>
+            标准值获取方式（0：所有对照点月均值+3；1:所有对照点月均值+7）
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.IsTotal">
+            <summary>
+            预留参数：是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.IsDetail">
+            <summary>
+            预留参数：是否统计明细，明细跟平均必须有一个值为1
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.fldSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_rd.GetEQIA_RD_RawDataController.Info.STatType">
+            <summary>
+            0:降尘综合评价、90：浓度秩相关
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.ExeCacheData(EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info)">
+            <summary>
+            创建者  ：刘勇军
+            创建时间：2018-4-27
+            功能描述：缓存中间库数据
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.fldStandardName">
+            <summary>
+            标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.fldSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价  
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.STatType">
+            <summary>
+            0:综合评价表；90：达标天数秩相关；91：污染物浓度秩相关;92：综合指数秩相关  
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.CityID">
+            <summary>
+            0:默认城市（fldSTCode）；1：区县（太原市fldLCode）  20：城市（月标准）  21：区县（月标准）
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.CalculateID">
+            <summary>
+            --计算方法，0：按照国家标准计算，1：不进行数据有效性判定，2：点位个数按照国家判定，有效天数不按 
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.ExeEQIA_R_CacheDataController.Info.ItemValueType">
+            <summary>
+            --day:默认例行数据， hour：未审核小时数据	,  audithourdata:已审核小时值	,cityday:城市日均值   , middlehour:中间库小时数据	,middleday:中间库日数据	  			    
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-21
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.type">
+            <summary>
+            “City_DayStat”，城市日数据
+            “City_TotalDateStat”，城市表
+            “Point_DayStat”，点位日数据
+            “Point_TotalDateStat”，点位表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.ReturnData">
+            <summary>
+            “City_DayStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.ReturnData1">
+            <summary>
+            “City_TotalDateStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.ReturnData2">
+            <summary>
+            “Point_DayStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_Data_MiddleController.ReturnData3">
+            <summary>
+            “Point_TotalDateStat”
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-14
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.fldStandardName">
+            <summary>
+            标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.IsTotal">
+            <summary>
+            预留参数：是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.IsDetail">
+            <summary>
+            预留参数：是否统计明细，明细跟平均必须有一个值为1
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.fldSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.STatType">
+            <summary>
+            0:综合评价表；90：达标天数秩相关；91：污染物浓度秩相关;92：综合指数秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.CityID">
+            <summary>
+            0:默认城市（fldSTCode）；1：区县（太原市fldLCode）  20：城市（月标准）  21：区县（月标准）
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.CalculateID">
+            <summary>
+            计算方法，0：按照国家标准计算，1：不进行数据有效性判定，2：点位个数按照国家判定，有效天数不按
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.Info.ItemValueType">
+            <summary>
+            day:默认例行数据， hour：未审核小时数据	,  audithourdata:已审核小时值	,cityday:城市日均值   , middlehour:中间库小时数据	,middleday:中间库日数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData(EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info)">
+            <summary>
+            功能描述：由通用存储过程来获取小时值数据
+            创建者  ：刘勇军
+            创建时间：2018-05-04
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.BeginTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.fldStandardName">
+            <summary>
+            标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.Eqia_r.GetEQIA_R_RawDataController.GetRawHourData_Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-21
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.type">
+            <summary>
+            “City_DayStat”，城市日数据
+            “City_TotalDateStat”，城市表
+            “Point_DayStat”，点位日数据
+            “Point_TotalDateStat”，点位表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.ReturnData">
+            <summary>
+            “City_DayStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.ReturnData1">
+            <summary>
+            “City_TotalDateStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.ReturnData2">
+            <summary>
+            “Point_DayStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqia.V_Eqia_r.GetV_EQIA_R_Data_MiddleController.ReturnData3">
+            <summary>
+            “Point_TotalDateStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.type">
+            <summary>
+            1.“City_AverageData”，城市噪声均值
+            2.“Point_TotalDateStat”，点位表
+            3.“Point_HourStat”，小时值
+            4.“City_TotalDateStat”，城市表
+            5.“City_ProvinceData”，全省统计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.ReportType">
+            <summary>
+            用于行政区划分
+            0：各级行政区fldSTCode
+            1：地市级行政区left(fldSTCode,4)+'00'
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldGDCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.STatType">
+            <summary>
+            报表内容
+            90按功能区
+            91按声源
+            92按声级
+            93分段
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData2">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData3">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.DN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.PointType">
+            <summary>
+            点位传入方式0：fldSTCode、1：fldSTCode+'.'+fldPCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.SpaceID">
+            <summary>
+            报表内容：0、监测结果统计表；1、原始数据表；2、秩相关；3、全省城市状况；4、城市测量数据表；5、城市噪声均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分1：地市级行政区left(fldSTCode,4)+'00'、0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.STatType">
+            <summary>
+            报表类型：90按功能区、91按声源、92按声级、93分段
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.ParmPeople">
+            <summary>
+            人口单位参数：0：人、1：万人
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info.Code_GIS">
+            <summary>
+            专用于GIS的点位转换
+            “1”进行点位生成，对应的字段为 fldGDCode_GIS
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.GetRawData_NoS(EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.DN">
+            <summary>
+            昼夜
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.PointType">
+            <summary>
+            点位传入方式0：fldSTCode、1：fldSTCode+'.'+fldPCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.IsTotal">
+            <summary>
+            预留参数：是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.IsDetail">
+            <summary>
+            预留参数：是否统计明细，明细跟平均必须有一个值为1
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.SpaceID">
+            <summary>
+            0:针对单个点位评价、1：针对城市评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.ReportType">
+            <summary>
+            报表类型，用于行政区划分0：省级、1：市级
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_RawDataController.Info_NoS.STatType">
+            <summary>
+            备用参数，默认值为0，如果有特殊评价要求时使用
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.type">
+            <summary>
+            “City_TotalDateStat”，按城市缓存的数据
+            “Point_HourStat”，点位小时值
+            “Point_TotalDateStat”，点位表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldGDCode">
+            <summary>
+            GDCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldPCode">
+            <summary>
+            PCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否需要前期数据
+            0=否
+            1=是
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldPCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分
+            1：地市级行政区left(fldSTCode,4)+'00'
+            0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.PointType">
+            <summary>
+            点位传入方式0：fldSTCode、1：fldSTCode+'.'+fldPCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.SpaceID">
+            <summary>
+            0:监测结果、1：达标统计情况、2：原始数据表；3、小时均值表；90、秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分1：地市级行政区left(fldSTCode,4)+'00'、0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.STatType">
+            <summary>
+            备用参数，默认值为0，如果有特殊评价要求时使用 
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_RawDataController.Info.StaLodAndStaLad">
+            <summary>
+            是否增加经度纬度
+            1：增加经度纬度列fldStaLod和fldStaLad
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.type">
+            <summary>
+            1.值：City_TotalDateStat，按城市缓存的表
+            2.值：Point_HourStat，点位小时值
+            3.值：Point_TotalDateStat，点位表
+            4.值：City_Data，按城市缓存的声级表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldRDCode">
+            <summary>
+            RDCode
+            1.“最大值”与“平均值”传入即可获取
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否返回同期数据，0不返回，1返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分
+            1：地市级行政区left(fldSTCode,4)+'00'
+            0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.STatType">
+            <summary>
+            报表内容
+            0：按声级范围
+            1：按声级水平
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldRDCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.DN">
+            <summary>
+            昼夜：用于“City_Data”表
+            1.值：“D”或者“N”，返回昼或者夜数据
+            2.值：“All”返回昼夜所有数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData2">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.DN">
+            <summary>
+            昼夜
+            “D”、“N”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.PointType">
+            <summary>
+            点位传入方式0：fldSTCode、1：fldSTCode+'.'+fldPCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.SpaceID">
+            <summary>
+            报表类型：0、监测结果统计表；1、原始数据表；2、至相关；3、全省城市状况；4、城市测量数据统计表；5、城市噪声均值表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分1：地市级行政区left(fldSTCode,4)+'00'、0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.STatType">
+            <summary>
+            备用参数，默认值为0，如果有特殊评价要求时使用 
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_RawDataController.Info.Code_GIS">
+            <summary>
+            专用于GIS的点位转换
+            “1”进行点位生成
+            交通噪声对应字段：fldRDCode_GIS
+            区域噪声对应字段：fldGDCode_GIS
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.ExeCacheData(EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info)">
+            <summary>
+            功能描述：缓存中间库数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-28
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Info.STatType">
+            <summary>
+            0:有采样地信息，例如：武汉
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.DelCacheData(System.Collections.Generic.List{EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Del_Info})">
+            <summary>
+            功能描述：删除中间库数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-29
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Del_Info">
+            <summary>
+            删除参数表实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Del_Info.SpaceID">
+            <summary>
+            用于区分表的字段
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.ExeEQISO_CacheDataController.Del_Info.fldAutoID">
+            <summary>
+            参数表ID
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.EntityConverter.ToList``1(System.Data.DataTable)">
+            <summary>
+            DataTable生成实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.EntityConverter.ToExpression``1(System.Data.DataRow)">
+            <summary>
+            生成表达式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.GetData(EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-29
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.type">
+            <summary>
+            “SpaceID0”：原始数据表
+            “SpaceID1”：基本统计表
+            “SpaceID2”：指数统计表
+            “SpaceID3”：项目各级别统计
+            “SpaceID4”：污染指数统计
+            “SpaceID5”：污染级别统计表
+            “SpaceID6”：土壤质量状况评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.AppriseID">
+            <summary>
+            0:采样地、1：监测类型、2：年份、3：项目、4：点位、5：城市、6：所有行政区
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.Info.STatType">
+            <summary>
+            0:有采样地信息，例如：武汉
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData">
+            <summary>
+            SpaceID0
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData1">
+            <summary>
+            SpaceID1
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData2">
+            <summary>
+            SpaceID2
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData3">
+            <summary>
+            SpaceID3
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData4">
+            <summary>
+            SpaceID4
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData5">
+            <summary>
+            SpaceID5
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_Data_MiddleController.ReturnData6">
+            <summary>
+            SpaceID6
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GetRawData(EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-16
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.STatType">
+            <summary>
+            0:有采样地信息，例如：武汉
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.Info.StaLodAndStaLad">
+            <summary>
+            是否增加经度纬度
+            1：增加经度纬度列fldStaLod和fldStaLad
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GetData_GIS_tblEQISO_Point(EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GIS_tblEQISO_Point_Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-25
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GIS_tblEQISO_Point_Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GIS_tblEQISO_Point_Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.EQISO.GetEQISO_RawDataController.GIS_tblEQISO_Point_Info.fldAttribute">
+            <summary>
+            点位类型
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.ExeCacheData(EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info)">
+            <summary>
+            功能描述：缓存中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-9
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldRStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldRLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldLStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldLLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.IsTLI">
+            <summary>
+            是否统计富营养化指数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.TLIType">
+            <summary>
+            富营养化计算时叶绿素a和透明度单位：1-mg/L,cm；0-mg/m^3,m；2-mg/m^3,cm
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：城市评价、2：城市区县评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.SpaceID">
+            <summary>
+            0:日数据表（修约）、1：年鉴表、2：因子超标情况、20：城市因子超标情况、3：综合评价表   31：综合评价表（日均值不修约） 、4：原始数据表（带左中右）、5：日数据表（不修约）、90：取水量秩相关、91：点次达标率秩相关、92：水量达标率秩相关、93：城市因子秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.STatType">
+            <summary>
+            0：tblEQIW_D_BaseData
+            1：tblEQIW_DT_BaseData
+            2：tblEQIW_DX_BaseData
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.fldSource">
+            <summary>
+            用来标识是例行数据还是全分析数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.CalculateID">
+            <summary>
+            计算方法：0：总氮和粪和细菌总数不参与评价、1：总氮和粪参与评价、2：总氮、粪、化学需氧量不参与评价、3：总氮、粪、化学需氧量不参与水质类别,超标水量评价，参加超标因子评价，总大肠菌群都参与
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Info.CategoryID">
+            <summary>
+            乡镇饮用水专用
+            默认值0
+            重置水源地类别进行评价  0：默认   1：湖库按照河流标准进行评价   2：所有水源地类型按照河流标准评价
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.DelCacheData(System.Collections.Generic.List{EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Del_Info})">
+            <summary>
+            功能描述：删除中间库数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-29
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Del_Info">
+            <summary>
+            删除参数表实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Del_Info.SpaceID">
+            <summary>
+            用于区分表的字段
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_d.ExeEQIW_D_CacheDataController.Del_Info.fldAutoID">
+            <summary>
+            参数表ID
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_d.GetDistinctByNameController">
+            <summary>
+            功能描述：执行中间库去重的操作
+            创建时间：2017/12/27
+            创建  人：周文卿
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_d.GetDistinctByNameController.getdistinctdata(System.String,System.String)">
+            <summary>
+            功能描述：获得数据
+            创建  人：周文卿
+            创建时间：2017/12/27 
+            </summary>
+            <param name="tablename"></param>
+            <param name="stname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_d.GetDistinctByNameController.ConvertDate(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            功能描述：时间转换
+            创建  人：周文卿
+            创建时间：2017/12/27
+            </summary>
+            <param name="fldTimeType">时间类型</param>
+            <param name="BeginDate">开始时间</param>
+            <param name="EndDate">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-30
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOver”：因子超标
+            “CityItemOver”：城市因子超标
+            “BaseData”：原始数据
+            “DayOfData”：日数据
+            “YearBook”：年鉴
+            “City”：城市表
+            “Section”：点位表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            -1返回全部
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.STatType">
+            <summary>
+            0：tblEQIW_D_BaseData
+            1：tblEQIW_DT_BaseData
+            可以传值“0,1”形式，这样地市、区县都会返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.CityFormat">
+            <summary>
+            城市格式
+            为1的情况下，按照城市
+            为2，按照河流
+            为3，按照断面
+            为null的情况下，按照点位格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldRSCode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.IsTotal">
+            <summary>
+            是否返回合计值
+            "1"：返回日期范围内的单月数据和日期范围内的均值数据
+            "2"：只返回精确日期下的均值数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.Info.fldFKID">
+            <summary>
+            当此参数不为null时，会根据fldFKID来搜索相关数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData">
+            <summary>
+            ItemOver数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData2">
+            <summary>
+            CityItemOver数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData3">
+            <summary>
+            BaseData数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData4">
+            <summary>
+            DayOfData数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData5">
+            <summary>
+            YearBook数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData6">
+            <summary>
+            City数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_Data_MiddleController.ReturnData7">
+            <summary>
+            Section数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldRStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldRLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldLStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldLLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsTLI">
+            <summary>
+            是否统计富营养化指数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.TLIType">
+            <summary>
+            富营养化计算时叶绿素a和透明度单位：1-mg/L,cm；0-mg/m^3,m；2-mg/m^3,cm
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：城市评价、2：城市区县评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.SpaceID">
+            <summary>
+            0:日数据表（修约）
+            1：年鉴表
+            2：因子超标情况
+            20：城市因子超标情况
+            3：综合评价表
+            31：综合评价表（日均值不修约）
+            4：原始数据表（带左中右）
+            5：日数据表（不修约）
+            90：取水量秩相关
+            91：点次达标率秩相关
+            92：水量达标率秩相关
+            93：城市因子秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.STatType">
+            <summary>
+            0：tblEQIW_D_BaseData
+            1：tblEQIW_DT_BaseData
+            2：tblEQIW_DX_BaseData
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.fldSource">
+            <summary>
+            fldSource，用来标识是例行数据还是全分析数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.CalculateID">
+            <summary>
+            计算方法：0：总氮和粪和细菌总数不参与评价
+            1：总氮和粪参与评价
+            2：总氮、粪、化学需氧量不参与评价
+            3：总氮、粪、化学需氧量不参与水质类别,超标水量评价，参加超标因子评价，总大肠菌群都参与
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.CategoryID">
+            <summary>
+            乡镇饮用水专用
+            默认值0
+            重置水源地类别进行评价  0：默认   1：湖库按照河流标准进行评价   2：所有水源地类型按照河流标准评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.NewSTDMonth">
+            <summary>
+            0 :关闭混合模式   4：开启混合模式 数值为分界的月份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.IsFilterLess29">
+            <summary>
+            --0:关闭模式    1：开启过滤模式：按月份统计过滤监测项目个数小于29的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.Eqiw_D.GetEQIW_D_RawDataController.Info.StaLodAndStaLad">
+            <summary>
+            是否增加经度纬度
+            1：增加经度纬度列fldStaLod和fldStaLad
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.ExeCacheData_EQIW_RLD(EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD)">
+            <summary>
+            功能描述：缓存中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldStandardNameG">
+            <summary>
+            地下水标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldLevelG">
+            <summary>
+            地下水级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.AppriseID">
+            <summary>
+            0:针对单个断面评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode、3：区县-fldRWTwon、4：设区市-fldSTCode、
+            5:流域+河流、6：城市+河流、7：流域+水系、8：干支流-fldRiverStream、9：河流+fldAttribute、99：全省
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.STatType">
+            <summary>
+            1:年鉴格式、3:断面或者河流综合评价、91：浓度秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.Para1ID">
+            <summary>
+            河流均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.Para2ID">
+            <summary>
+            业务类别，0：河流\1：湖库\2：饮用水
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIW_RLD.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.ExeCacheData_EQIA_R(EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R)">
+            <summary>
+            功能描述：缓存中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQIA_R.fldSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.ExeCacheData_EQISO(EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO)">
+            <summary>
+            功能描述：缓存中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.fldStandardName">
+            <summary>
+            标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.fldLevel">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Info_EQISO.DecCarry">
+            <summary>
+            平均值取值方法
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.DelCacheData_EQIW_RLD(System.Collections.Generic.List{EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIW_RLD})">
+            <summary>
+            功能描述：删除中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIW_RLD">
+            <summary>
+            删除参数表实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIW_RLD.STatType">
+            <summary>
+            用于区分表的字段
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIW_RLD.fldAutoID">
+            <summary>
+            参数表ID
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.DelCacheData_EQISO(System.Collections.Generic.List{EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQISO})">
+            <summary>
+            功能描述：删除中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQISO">
+            <summary>
+            删除参数表实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQISO.fldAutoID">
+            <summary>
+            参数表ID
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.DelCacheData_EQIA_R(System.Collections.Generic.List{EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIA_R})">
+            <summary>
+            功能描述：删除中间库数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIA_R">
+            <summary>
+            删除参数表实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.ExeEQIW_HM_CacheDataController.Del_Info_EQIA_R.fldAutoID">
+            <summary>
+            参数表ID
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.GetData_EQIW_RLD(EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.type">
+            <summary>
+            “STatType1”：年鉴格式
+            “STatType3”：断面或者河流综合评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIW_RLD.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.GetData_EQISO(EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQISO.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.GetData_EQIA_R(EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-4
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.Info_EQIA_R.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.ReturnData">
+            <summary>
+            STatType1
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_Data_MiddleController.ReturnData1">
+            <summary>
+            STatType3
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2018-1-2
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode、3：区县-fldRWTwon、4：设区市-fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.STatType">
+            <summary>
+            0:数据导出格式、1:年鉴格式、2：因子超标评价、3:断面或者河流综合评价、4：数据市站上报省站格式1
+            90:综合指数秩相关、91：浓度秩相关、92：达标率秩相关、93：因子污染指数秩相关、94：各类达标率秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.Para1ID">
+            <summary>
+            河流均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_hm.GetEQIW_HM_RawDataController.Info.Para2ID">
+            <summary>
+            断面属性信息，0：默认属性、1：江西增加信息
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-14
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOverStat”，因子超标
+            “SectionStat”，断面表
+            “TatalSectStat_N”，年鉴数据
+            “TatalSectStat_Z”，综合数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.Info.fldSpaceType">
+            <summary>
+            空间类型：
+            “WaterArea”
+            “LCode”
+            “STCode”
+            “AllProvince”
+            “STCode_LCode”
+            “WaterArea_STCode”
+            “STCode_LCode”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.ReturnData">
+            <summary>
+            “ItemOverStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.ReturnData1">
+            <summary>
+            “SectionStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.ReturnData2">
+            <summary>
+            “TatalSectStat_N”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_Data_MiddleController.ReturnData3">
+            <summary>
+            “TatalSectStat_Z”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-15
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.fldLSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.fldStandardName">
+            <summary>
+            湖库标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.IsTLI">
+            <summary>
+            是否统计富营养化指数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.TLIType">
+            <summary>
+            富营养化计算时叶绿素a和透明度单位：1-mg/L,cm；0-mg/m^3,m；2-mg/m^3,cm
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个垂线评价、1：针对湖库评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.SpaceID">
+            <summary>
+            0:湖库-fldLCode、1：流域-fldWaterArea、2：设区市-fldSTCode、3：城市+湖库-fldSTCode+fldLCode、4：流域+城市-fldWaterArea+fldSTCode
+            99:全省
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.STatType">
+            <summary>
+            1:年鉴表、2：项目超标情况表、3：综合评价表、4：市站导出上报表
+            91:湖库富营养化秩相关、90:项目均值秩相关、92：综合污染指数秩相关、93：达标率至相关、94污染分指数秩相关、95各级达标率至相关、96分区域各级达标率至相关、97：平均综合指数秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.Para1ID">
+            <summary>
+            湖库均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.Para2ID">
+            <summary>
+            基础信息参数，用于不同省份；0：通用、2：湖南、3：内蒙、4：太原、5：无锡、6：湖北总氮和粪不参与水质类别，参与超标情况
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_l.GetEQIW_L_RawDataController.Info.Source">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-7
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOverStat”，因子超标
+            “SectionStat”，断面
+            “TatalSectStat”，合计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldSpaceType">
+            <summary>
+            空间类型：
+            “WaterArea”
+            “RSWaterWork”
+            “RCode”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldSpaceName">
+            <summary>
+            null查询所有
+            传值部分查询：“均值”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldSCategory">
+            <summary>
+            “全部”、“河流”、“湖库”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.CityFormat">
+            <summary>
+            城市格式
+            为1的情况下，按照城市
+            为2，按照河流
+            为3，按照断面
+            为null的情况下，按照点位格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldRSCode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.SpaceNameIsList">
+            <summary>
+            值为1，全等匹配SpaceName
+            为null，包含关系
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.StaLodAndStaLad">
+            <summary>
+            是否增加经度纬度
+            1：增加经度纬度列fldStaLod和fldStaLad
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.IsTotal">
+            <summary>
+            是否返回合计值
+            "1"：返回日期范围内的单月数据和日期范围内的均值数据
+            "2"：只返回精确日期下的均值数据
+            "3"：结束日期减一个月来得出合计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.IsPre">
+            <summary>
+            "1"：返回前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.Special">
+            <summary>
+            特殊参数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.Info.fldKHLevel">
+            <summary>
+            考核级别
+            如果不传为null，就会筛选出非7的数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.ReturnData">
+            <summary>
+            “ItemOverStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.ReturnData1">
+            <summary>
+            “SectionStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.ReturnData2">
+            <summary>
+            “TatalSectStat”
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_AppraiseHistoryWorst(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_AppraiseHistoryWorst_Info)">
+            <summary>
+            功能描述：统计历史最差
+            创建者  ：吕荣誉
+            创建时间：2018-3-31
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_AppraiseHistoryWorst_Info.fldSTCode">
+            <summary>
+            格式：fldSTCode.fldRCode.fldRSCode
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info)">
+            <summary>
+            功能描述：地表水、水华按照国控、市控、全部取得数据
+            创建者  ：吕荣誉
+            创建时间：2018-4-12
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldAttribute">
+            <summary>
+            水华：“水华”、“大中型水库”、“综合整治湖库”
+            国控：“国控考核”、“国控科研趋势断面”
+            市控：“市控考核断面”、“市控评价断面”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldTen">
+            <summary>
+            “水十条”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldRVTown">
+            <summary>
+            当fldAttribute == "水华"时，fldRVTown的值可为“回水区”、“非回水区”，多个返回可写“回水区,非回水区”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldSLevel">
+            <summary>
+            当fldAttribute == "水华"时，1是国控，2是市控
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldYear">
+            <summary>
+            年份，作用于断面
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.IsYear">
+            <summary>
+            "1"返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.IsPre">
+            <summary>
+            "1"：返回前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetData_RLAndSH_Info.fldSCategory">
+            <summary>
+            “河流”、“湖库”
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetCompare_SeparateAndRoutine(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetCompare_SeparateAndRoutine_Info)">
+            <summary>
+            功能描述：采测分离数据和常规数据比较表
+            创建者  ：刘勇军 
+            创建时间：2018-4-20
+            </summary>
+            <param name="info">参数实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_Data_MiddleController.GetCompare_SeparateAndRoutine_Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-16
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.IsTLI">
+            <summary>
+            是否统计富营养化指数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.TLIType">
+            <summary>
+            富营养化计算时叶绿素a和透明度单位：1-mg/L,cm；0-mg/m^3,m；2-mg/m^3,cm
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode、3：区县-fldRWTwon、4：设区市-fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.STatType">
+            <summary>
+            0:数据导出格式、1:年鉴格式、2：因子超标评价、3:断面或者河流综合评价、4：数据市站上报省站格式1
+            90：综合指数秩相关、91：浓度秩相关、92：达标率秩相关、93：因子污染指数秩相关、94：各类达标率秩相关、
+            95：富营养化指数、96：达标率、综合指数、浓度
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.Para1ID">
+            <summary>
+            河流均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.Para2ID">
+            <summary>
+            断面属性信息，0：默认属性、1：江西增加信息、2：太原
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.Source">
+            <summary>
+            数据类型，对应fldSource
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldSTCodeReset">
+            <summary>
+            0:fldSTCode    1:fldPJCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldSourceReset">
+            <summary>
+            0:根据传参fldSource   1：根据Setion表中fldPJSource属性匹配
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.fldIsMerge">
+            <summary>
+            河北特殊点位合并统计标记  0：不合并   1：合并
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.AppriseIndexContent">
+            <summary>
+            sgov,sgov_overi,sgov_overf,sgov_overt,sgov_overft,sgov_overv,sgov_overfv,cpi
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.Info.StaLodAndStaLad">
+            <summary>
+            是否增加经度纬度
+            1：增加经度纬度列fldStaLod和fldStaLad
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_Basedata(EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-16
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.IsTLI">
+            <summary>
+            是否统计富营养化指数
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.TLIType">
+            <summary>
+            富营养化计算时叶绿素a和透明度单位：1-mg/L,cm；0-mg/m^3,m；2-mg/m^3,cm
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode、3：区县-fldRWTwon、4：设区市-fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.STatType">
+            <summary>
+            0:数据导出格式、1:年鉴格式、2：因子超标评价、3:断面或者河流综合评价、4：数据市站上报省站格式1
+            90：综合指数秩相关、91：浓度秩相关、92：达标率秩相关、93：因子污染指数秩相关、94：各类达标率秩相关、
+            95：富营养化指数、96：达标率、综合指数、浓度
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.Para1ID">
+            <summary>
+            河流均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.Para2ID">
+            <summary>
+            断面属性信息，0：默认属性、1：江西增加信息、2：太原
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.Source">
+            <summary>
+            数据类型，对应fldSource
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldSTCodeReset">
+            <summary>
+            0:fldSTCode    1:fldPJCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEQIW_RL_RawDataController.GetRawData_usp_tblEQIW_RL_Report_BasedataInfo.fldSourceReset">
+            <summary>
+            0:根据传参fldSource   1：根据Setion表中fldPJSource属性匹配
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_rl.GetEqiw_RL_DistinctByNameController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-7
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOverStat”，因子超标
+            “SectionStat”，断面表
+            “TatalSectStat”，合计表
+            “STAData”，总站爬下来的数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldSectionType">
+            <summary>
+            断面类型
+            “全部”、“河流”、“湖库”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldValueType">
+            <summary>
+            AppriseID参数
+            0：针对单个断面评价
+            1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.Info.fldSpaceType">
+            <summary>
+            空间类型：
+            “WaterArea”
+            “RSWaterWork”
+            “RCode”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.ReturnData">
+            <summary>
+            “ItemOverStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.ReturnData1">
+            <summary>
+            “SectionStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.ReturnData2">
+            <summary>
+            “TatalSectStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_Data_MiddleController.ReturnData3">
+            <summary>
+            “STAData”
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.GetRawData(EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info)">
+            <summary>
+            功能描述：由通用存储过程来获取数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-16
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info">
+            <summary>
+            存储过程参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.EBeginDate">
+            <summary>
+            第二个时段开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.EEndDate">
+            <summary>
+            第二个时段结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.fldRSC">
+            <summary>
+            水期代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.fldRSCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.fldStandardName">
+            <summary>
+            河流标准级别名称
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.fldLevel">
+            <summary>
+            河流级别
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.fldItemCode">
+            <summary>
+            项目id
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.DecCarry">
+            <summary>
+            平均值取值方法:0:四舍六入五单一、1:四舍五入、2:直接截断、5：对武汉项目特殊处理，氨氮和总磷按照有效位数修约
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.IsPre">
+            <summary>
+            是否统计前期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.IsYear">
+            <summary>
+            是否统计同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.IsTotal">
+            <summary>
+            是否统计平均值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.IsDetail">
+            <summary>
+            是否统计明细
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.AppriseID">
+            <summary>
+            0:针对单个断面评价、1：针对空间评价
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.SpaceID">
+            <summary>
+            0:流域-fldWaterArea、1:水系-fldRSWaterWork、2：河流-fldRCode、3：区县-fldRWTwon、4：设区市-fldSTCode、
+            5:流域+河流、6：城市+河流、7：流域+水系、8：干支流-fldRiverStream、9：河流+fldAttribute、99：全省
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.STatType">
+            <summary>
+            0:数据导出格式、1:年鉴格式、2：因子超标评价、3:断面或者河流综合评价、4：数据市站上报省站格式1
+            90:综合指数秩相关、91：浓度秩相关、92：达标率秩相关、93：因子污染指数秩相关、94：各类达标率秩相关、95：各空间各级达标率数秩相关
+            96：平均综合指数秩相关、--97：因子断面达标率秩相关
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.Para1ID">
+            <summary>
+            河流均值处理，0:默认值按行政区、1：按行政区前4位处理
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.Para2ID">
+            <summary>
+            断面属性信息，0：默认属性、1,91：江西增加信息、2：湖南项目信息、3：太原、4：内蒙、5：湖北超标情况   6：无锡
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.Source">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.eqiw_r.GetEQIW_R_RawDataController.Info.CalculateID">
+            <summary>
+            计算方法：0：默认规则,  1：所有项目不做特殊判断，都参与评价
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController">
+            <summary>
+            功能描述：获得排污口的数据
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.Geteqiwn_data(EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra)">
+            <summary>
+            功能描述：获得排污口的数据
+            创建  人：周文卿
+            创建时间：2017/12/20
+            
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.retudata">
+            <summary>
+            返回实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.retudata.Sewage">
+            <summary>
+            排污口
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra.TimeType">
+            <summary>
+            时间类型
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra.fldLSCode">
+            <summary>
+            点位
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.GetEqiw_n_MiddleController.w_npra.itemcode">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-30
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOver”：因子超标
+            “CityItemOver”：城市因子超标
+            “BaseData”：原始数据
+            “DayOfData”：日数据
+            “YearBook”：年鉴
+            “City”：城市表
+            “Section”：点位表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否返回同期数据
+            “0”：不返回
+            “1”：返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.Info.STatType">
+            <summary>
+            0：tblEQIW_D_BaseData
+            1：tblEQIW_DT_BaseData
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData">
+            <summary>
+            ItemOver数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData2">
+            <summary>
+            CityItemOver数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData3">
+            <summary>
+            BaseData数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData4">
+            <summary>
+            DayOfData数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData5">
+            <summary>
+            YearBook数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData6">
+            <summary>
+            City数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_d.GetV_EQIW_D_Data_MiddleController.ReturnData7">
+            <summary>
+            Section数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-12-7
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.type">
+            <summary>
+            “ItemOverStat”，因子超标
+            “SectionStat”，断面
+            “TatalSectStat”，合计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldTimeType">
+            <summary>
+            时间类型：
+            “month”、“sea”、“halfyear”、“year”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.IsYear">
+            <summary>
+            “1”返回同期数据
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldItemCode">
+            <summary>
+            当不传此参数，默认为null，即不查询因子。
+            需要所有因子，传值“All”
+            需要部分因子，传值“301,302”类似格式
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldSpaceType">
+            <summary>
+            空间类型：
+            “WaterArea”
+            “RSWaterWork”
+            “RCode”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldSpaceName">
+            <summary>
+            null查询所有
+            传值部分查询：“均值”
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.Info.fldSCategory">
+            <summary>
+            “全部”、“河流”、“湖库”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.ReturnData">
+            <summary>
+            “ItemOverStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.ReturnData1">
+            <summary>
+            “SectionStat”
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqiw.V_eqiw_rl.GetV_EQIW_RL_Data_MiddleController.ReturnData2">
+            <summary>
+            “TatalSectStat”
+            </summary>
+        </member>
+    </members>
+</doc>

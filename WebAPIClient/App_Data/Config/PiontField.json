@@ -1,0 +1,198 @@
+[
+  {
+    "type": "eqia_r",
+    "twofield": "fldPLevel,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIA_R_Point",
+    "level": "3",
+    "istranslate": "0",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqia_p",
+    "twofield": "fldPLevel,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIA_P_Point",
+    "level": "3",
+    "istranslate": "0",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqia_rd",
+    "twofield": "fldPLevel,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIA_RD_Point",
+    "level": "3",
+    "istranslate": "0",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqia_s",
+    "twofield": "fldSTCode,fldSTName,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIA_STS_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "1"
+  },
+  {
+    "type": "eqiw_r",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName,fldSTCode,fldSTName",
+    "table": "tblEQIW_R_Section",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqiw_r_auto",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName,fldSTCode,fldSTName",
+    "table": "tblEQIW_R_Section_Auto",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqiw_g",
+    "twofield": "fldSLevel,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIW_G_Section",
+    "level": "3",
+    "istranslate": "0",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqise",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName",
+    "table": "vwEQISE_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqiw_sts",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName",
+    "table": "tblEQIW_STS_Section",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+  },
+  {
+    "type": "eqin_a",
+    "twofield": "fldSTCode,fldSTName,fldSTCode,fldSTName",
+    "threefield": "fldGDCODE,fldGDNAME",
+    "table": "tblEQIN_A_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqin_f",
+    "twofield": "fldSTCode,fldSTName,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIN_F_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "1"
+  },
+  {
+    "type": "eqin_t",
+    "twofield": "fldSTCode,fldSTName,fldSTCode,fldSTName",
+    "threefield": "fldRDCODE,fldRDNAME",
+    "table": "tblEQIN_T_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqin_m",
+    "twofield": "fldSTCode,fldSTName,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQIN_M_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+  },
+  {
+    "type": "eqiw_dt",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName",
+    "table": "tblEQIW_DT_Section",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+
+  },
+  {
+    "type": "eqiw_d",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName",
+    "table": "tblEQIW_D_Section",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+
+  },
+  {
+    "type": "eqiw_dx",
+    "twofield": "fldRCode,fldRName,fldSTCode,fldSTName",
+    "threefield": "fldRSCode,fldRSName",
+    "table": "tblEQIW_DX_Section",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+
+  },
+  {
+    "type": "eqiso",
+    "twofield": "fldEntCode,fldEntName,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQISO_Point",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+
+  },
+  {
+    "type": "eqia_r_v",
+    "twofield": "fldCTCode,fldCTName,fldSTCode,fldSTName",
+    "threefield": "fldQTCode,fldQTName",
+    "table": "tblEMCRIS_BaseData",
+    "level": "3",
+    "istranslate": "1",
+    "rerurnpiont": "3",
+    "pionttype": "1"
+
+  },
+  {
+    "type": "eqid_d",
+    "twofield": "fldPCode,fldPName,fldSTCode,fldSTName",
+    "threefield": "fldPCode,fldPName",
+    "table": "tblEQID_D_Point",
+    "level": "2",
+    "istranslate": "1",
+    "rerurnpiont": "2",
+    "pionttype": "0"
+
+  }
+]

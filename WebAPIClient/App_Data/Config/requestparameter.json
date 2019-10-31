@@ -1,0 +1,634 @@
+[
+  //悦付支付宝H5参数
+  {
+    "fldGatewaynumber": "YF_001",
+    "fldPayType": "支付宝H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "timeout_express": "30m",
+        "bank_type": "ZFB",
+        "notify_url": "www.baidu.com",
+        "return_url": "www.baidu.com"
+      }
+    ],
+    "sign": "sign"
+  },
+  //悦付微信H5参数
+  {
+    "fldGatewaynumber": "YF_001",
+    "fldPayType": "微信H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "timeout_express": "30m",
+        "bank_type": "WX",
+        "notify_url": "www.baidu.com",
+        "return_url": "www.baidu.com"
+      }
+    ],
+    "sign": "sign"
+  },
+  //悦付代付
+  {
+    "fldGatewaynumber": "YF_001",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+       
+        "bank_name": "Bankname",
+        "bank_branch": "Bankbranch",
+        "bank_province": "Bankprovince",
+        "bank_city": "Bankcity",
+        "bank_account": "Bankaccount",
+        "user_name": "Username",
+        "card_type": "CardType",
+        "bank_telephone_no": "BankTelephoneNo",
+        "id_card": "01",
+        "bank_type": "ICBC",
+        "bank_card_union_no": "102565000388"
+      }
+    ],
+    "sign": "sign"
+
+  },
+  //支付家支付宝H5参数
+  {
+    "fldGatewaynumber": "ZFJ_003",
+    "fldPayType": "支付宝H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "timeout_express": "30",
+        "bank_type": "ZFB",
+        "notify_url": "www.baidu.com",
+        "return_url": ""
+      }
+    ],
+    "sign": "sign"
+  },
+  //支付家微信H5参数
+  {
+    "fldGatewaynumber": "ZFJ_003",
+    "fldPayType": "微信H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "num",
+        "order_no": "",
+        "subject": "",
+        "order_amount": "",
+        "timeout_express": "",
+        "bank_type": "",
+        "notify_url": "",
+        "return_url": ""
+      }
+    ],
+    "sign": "sign"
+  },
+  //阿甘支付宝H5参数
+  {
+    "fldGatewaynumber": "AG_002",
+    "fldPayType": "支付宝H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "timeout_express": "30m",
+        "bank_type": "ZFB",
+        "notify_url": "www.baidu.com",
+        "return_url": "www.baidu.com"
+      }
+    ],
+    "sign": "sign"
+  },
+  //阿甘微信H5参数
+  {
+    "fldGatewaynumber": "AG_002",
+    "fldPayType": "微信H5",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "timeout_express": "30m",
+        "bank_type": "WX",
+        "notify_url": "www.baidu.com",
+        "return_url": "www.baidu.com"
+      }
+    ],
+    "sign": "sign"
+  },
+  //阿甘代付
+  {
+    "fldGatewaynumber": "AG_002",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "merchant_id": "10005009",
+        "order_time": "time",
+        "order_no": "num",
+        "subject": "商品",
+        "order_amount": "Amount",
+        "notify_url": "www.baidu.com",
+        "bank_name": "Bankname",
+        "bank_branch": "Bankbranch",
+        "bank_province": "Bankprovince",
+        "bank_city": "Bankcity",
+        "bank_account": "Bankaccount",
+        "user_name": "Username",
+        "card_type": "CardType",
+        "bank_telephone_no": "BankTelephoneNo",
+        "id_card": "IdCard",
+        "bank_type": "ICBC",
+        "bank_card_union_no": "102565000388"
+      }
+    ],
+    "sign": "sign"
+
+  },
+  //万通微信
+  {
+    "fldGatewaynumber": "QJ_004",
+    "fldPayType": "微信H5",
+    "parameter": [
+      {
+        "merchant_code": "1550473045",
+        "appno_no": "lbjs20190218",
+        "order_no": "num",
+        "order_amount": "Amount",
+        "order_time": "time2",
+        "product_name": "商品",
+        "product_code": "789456",
+        "user_no": "123456",
+        "notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_QJ",
+        "pay_type": "weixin-h5",
+        "bank_code": "ABC",
+        "return_url": "www.baidu.com",
+        "merchant_ip": "113.116.247.23",
+        "bank_card": "123456"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/actionapi/weixin/pay"
+
+  },
+  //万通支付宝
+  {
+    "fldGatewaynumber": "QJ_004",
+    "fldPayType": "支付宝H5",
+    "parameter": [
+      {
+        "merchant_code": "1550473045",
+        "appno_no": "lbjs20190218",
+        "order_no": "num",
+        "order_amount": "Amount",
+        "order_time": "time2",
+        "product_name": "商品",
+        "product_code": "789456",
+        "user_no": "123456",
+        "notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_QJ",
+        "pay_type": "zhifubao",
+        "bank_code": "ABC",
+        "return_url": "www.baidu.com",
+        "merchant_ip": "113.116.247.23",
+        "bank_card": "123456"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/actionapi/alipay/pay"
+
+  },
+  //万通京东
+  {
+    "fldGatewaynumber": "QJ_004",
+    "fldPayType": "京东",
+    "parameter": [
+      {
+        "merchant_code": "1550473045",
+        "appno_no": "lbjs20190218",
+        "order_no": "num",
+        "order_amount": "Amount",
+        "order_time": "time2",
+        "product_name": "商品",
+        "product_code": "789456",
+        "user_no": "123456",
+        "notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_QJ",
+        "pay_type": "jd",
+        "bank_code": "ABC",
+        "return_url": "www.baidu.com",
+        "merchant_ip": "113.116.247.23",
+        "bank_card": "123456"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/jdpay.aspx"
+  },
+  //万通代付
+  {
+    "fldGatewaynumber": "QJ_004",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "merchant_code": "1550473045",
+        "appno_no": "lbjs20190218",
+        "order_no": "num",
+        "order_amount": "Amount",
+        "bank_name": "Bankname",
+        "bank_card": "Bankaccount",
+        "user_name": "Username",
+        "pay_type": "jd",
+        "payPassword": "FHL996731",
+        "notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_QJSub",
+        "bank_province": "Bankprovince",
+        "bank_city": "Bankcity",
+        "bank_branch": "Bankbranch"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/actionapi/jdpay/pay"
+  },
+  //锐 支付宝
+  {
+    "fldGatewaynumber": "RUI_005",
+    "fldPayType": "支付宝扫码",
+    "parameter": [
+      {
+        "mno": "A190319160935882",
+        "orderno": "num",
+        "amount": "Amount",
+        "pt_id": "1",
+        "device": "1",
+        "notify_url": "",
+        "async_notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_RUI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/alipay.aspx"
+  },
+  //锐 微信扫码
+  {
+    "fldGatewaynumber": "RUI_005",
+    "fldPayType": "微信扫码",
+    "parameter": [
+      {
+        "mno": "A190319160935882",
+        "orderno": "num",
+        "amount": "Amount",
+        "pt_id": "2",
+        "device": "1",
+        "notify_url": "",
+        "async_notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_RUI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+  },
+  //锐 代付
+  {
+    "fldGatewaynumber": "RUI_005",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "mno": "A190319160935882",
+        "orderno": "num",
+        "amount": "Amount",
+        "pt_id": "1",
+        "device": "1",
+        "notify_url": "http://47.112.131.178:7983/Pay/Payresult.html",
+        "async_notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_RUI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/alipay.aspx"
+  },
+  //汇通 微信扫码
+  {
+    "fldGatewaynumber": "HT_006",
+    "fldPayType": "微信扫码",
+    "parameter": [
+      {
+        "SignMethod": "MD5",
+        "Version": "1.0",
+        "TxCode": "qrpay",
+        "MerNo": "40939485",
+        "UserId": "userid",
+        "ProductId": "0601",
+        "TxSN": "num",
+        "Amount": "Amount",
+        "PdtName": "ProductName",
+        "Remark": "",
+        "StoreId": "",
+        "TerminalId": "",
+        "ReturnUrl": "",
+        "NotifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_HT",
+        "ReqTime": "time2"
+      }
+    ],
+    "sign": "Signature",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+  },
+  //汇通代付
+  {
+    "fldGatewaynumber": "HT_006",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "SignMethod": "MD5",
+        "Version": "1.0",
+        "TxCode": "onepayout",
+        "MerNo": "40939485",
+        "Payee_ba_type": "11",
+        "Payee_ba_bank_name": "Bankname",
+        "Payee_ba_bank_area": "Bankprovince",
+        "Payee_ba_bank_city": "Bankcity",
+        "Payee_ba_bank_branch": "Bankbranch",
+        "Payee_name": "Username",
+        "Payee_ba_number": "Bankaccount",
+        "Payment_amt": "Amount",
+        "Remark": "测试",
+        "TxSN": "num",
+        "Payee_ba_mobile": "18974215213",
+        "Payee_cert_no": "IdCard",
+        "ReqTime": "time2"
+      }
+    ],
+    "sign": "Signature",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+  },
+  //易极速 支付宝
+  {
+    "fldGatewaynumber": "Y_007",
+    "fldPayType": "支付宝H5",
+    "parameter": [
+      {
+        "userId": "10783",
+        "amount": "Amount",
+        "payWay": "7",
+        "orderNo": "num",
+        "ip": "117.136.39.223",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_YI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/H5Alipay.aspx"
+  },
+  {
+    "fldGatewaynumber": "Y_007",
+    "fldPayType": "支付宝扫码",
+    "parameter": [
+      {
+        "userId": "10783",
+        "amount": "Amount",
+        "payWay": "6",
+        "orderNo": "num",
+        "ip": "117.136.39.223",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_RUI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/alipay.aspx"
+  },
+  {
+    "fldGatewaynumber": "Y_007",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "userId": "10783",
+        "amount": "Amount",
+        "bankNo": "Bankname",
+        "cardNo": "Bankaccount",
+        "cardOwner": "Username",
+        "orderNo": "num",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_RUI"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/H5Alipay.aspx"
+  },
+  //再创微信扫码
+  {
+    "fldGatewaynumber": "ZC_008",
+    "fldPayType": "微信扫码",
+    "parameter": [
+      {
+        "mch_id": "605",
+        "order_number": "num",
+        "money": "Amount",
+        "product_code": "WX",
+        "notify_url": "http://47.112.131.178:7983/actionapi/SubAcceptInterface/Accept_ZC"
+
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+
+  },
+  //再创代付
+  {
+    "fldGatewaynumber": "ZC_008",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "mch_id": "605",
+        "order_no": "num",
+        "money": "Amount",
+        "person": "Username",
+        "bank": "Bankname",
+        "card_no": "Bankaccount",
+        "notify_url": ""
+
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+
+  },
+  //无名微信
+  {
+    "fldGatewaynumber": "WM_009",
+    "fldPayType": "微信H5",
+    "parameter": [
+      {
+        "mno": "114",
+        "out_trade_no": "num",
+        "subject": "商品",
+        "total_fee": "Amount",
+        "notify_url": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_WM",
+        "post_time": "time",
+        "client_ip": "47.112.131.178",
+        "pay_type": "WECHAT_H5"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+
+  },
+  //亿点微信
+  {
+    "fldGatewaynumber": "YD_010",
+    "fldPayType": "微信扫码",
+    "parameter": [
+      {
+        "version": "V1.0",
+        "merchantNum": "888017",
+        "nonce_str": "1jK",
+        "merMark": "fQON5",
+        "client_ip": "47.112.131.178",
+        "orderTime": "time",
+        "payType": "wechatCode",
+        "orderNum": "num",
+        "amount": "Amount",
+        "body": "P30",
+        "bank_code": "CCB",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_YD",
+        "returnUrl": "123"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+
+  },
+  //亿点代付
+  {
+    "fldGatewaynumber": "YD_010",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "version": "V1.0",
+        "merchantNum": "888017",
+        "nonce_str": "1jK",
+        "merMark": "fQON5",
+        "user_ip": "47.112.131.178",
+        "method": "transfer",
+        "transferId": "num",
+        "transferMoney": "Amount",
+        "bankCard": "Bankaccount",
+        "bankCode": "bankCode",
+        "bankName": "Bankname",
+        "bankllh": "745382195",
+        "cardName": "Username",
+        "bankBranch": "Bankbranch",
+        "bankprovince": "Bankprovince",
+        "bankCity": "Bankcity",
+        "transferTime": "time",
+        "body": "代付",
+        "signType": "MD5"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx",
+    "bankCode": "merchantNum"
+
+  },
+  //海付微信扫码
+  {
+    "fldGatewaynumber": "HF_011",
+    "fldPayType": "微信扫码",
+    "parameter": [
+      {
+        "userid": "734641",
+        "orderCode": "wc_scanPay",
+        "subject": "P30",
+        "amount": "Amount",
+        "pay_number": "num",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_HF",
+        "pageNotifyUrl": "47.112.131.178"
+
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/ScanWX.aspx"
+
+  },
+  //海付支付宝扫码
+  {
+    "fldGatewaynumber": "HF_011",
+    "fldPayType": "支付宝扫码",
+    "parameter": [
+      {
+        "userid": "734641",
+        "orderCode": "ali_wapPay",
+        "subject": "P30",
+        "amount": "Amount",
+        "pay_number": "num",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_HF",
+        "pageNotifyUrl": "47.112.131.178"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/Xalipay.aspx"
+
+  },
+  //海付代付
+  {
+    "fldGatewaynumber": "HF_011",
+    "fldPayType": "代付",
+    "parameter": [
+      {
+        "userid": "734641",
+        "amount": "Amount",
+        "bankCode": "bankCode",
+        "cardName": "Username",
+        "cardNo": "Bankaccount",
+        "mobile": "18694751532",
+        "customerType": "01",
+        "accountTypeCode": "01",
+        "province": "Bankprovince",
+        "city": "Bankcity",
+        "issueBankName": "Bankname",
+        "notifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_HFSub",
+        "channel_code": "scanPay",
+        "pay_number": "num",
+        "orderCode": "xf_withdraw"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/alipay.aspx",
+    "bankCode": "userid"
+
+  },
+  //赤支付
+  {
+    "fldGatewaynumber": "XF_012",
+    "fldPayType": "支付宝扫码",
+    "parameter": [
+      {
+        "businessNo": "SMZF005",
+        "orderNum": "num",
+        "merchantSubNo": "1",
+        "merchantName": "信",
+        "terminalNo": "1",
+        "commodityName": "P",
+        "transAmount": "Amount",
+        "payNotifyUrl": "http://47.112.131.178:7983/actionapi/AcceptInterface/Accept_HF",
+        "merchantNo": "9900000000000111"
+      }
+    ],
+    "sign": "sign",
+    "payurl": "http://47.112.131.178:7983/Pay/alipay.aspx"
+
+  }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "ItemName_Country": "电导率(ms/m)",
+        "ItemName_System": "电导率"
+    },
+    {
+        "ItemName_Country": "水温(℃)",
+        "ItemName_System": "水温"
+    },
+    {
+        "ItemName_Country": "pH值",
+        "ItemName_System": "pH"
+    },
+    {
+        "ItemName_Country": "溶解氧(mg/L)",
+        "ItemName_System": "溶解氧"
+    },
+    {
+        "ItemName_Country": "透明度(cm)",
+        "ItemName_System": "透明度"
+    },
+    {
+        "ItemName_Country": "盐度(‰)",
+        "ItemName_System": "盐度"
+    },
+    {
+        "ItemName_Country": "COD Mn(mg/L)",
+        "ItemName_System": "高锰酸盐指数"
+    },
+    {
+        "ItemName_Country": "COD Cr(mg/L)",
+        "ItemName_System": "化学需氧量"
+    },
+    {
+        "ItemName_Country": "NH3-N(mg/L)",
+        "ItemName_System": "氨氮"
+    },
+    {
+        "ItemName_Country": "T-P(mg/L)",
+        "ItemName_System": "总磷"
+    },
+    {
+        "ItemName_Country": "T-N(mg/L)",
+        "ItemName_System": "总氮"
+    },
+    {
+        "ItemName_Country": "Cu(mg/L)",
+        "ItemName_System": "铜"
+    },
+    {
+        "ItemName_Country": "Zn(mg/L)",
+        "ItemName_System": "锌"
+    },
+    {
+        "ItemName_Country": "Pb(mg/L)",
+        "ItemName_System": "铅"
+    },
+    {
+        "ItemName_Country": "Cd(mg/L)",
+        "ItemName_System": "镉"
+    },
+    {
+        "ItemName_Country": "BOD5(mg/L)",
+        "ItemName_System": "五日生化需氧量"
+    },
+    {
+        "ItemName_Country": "T-As(mg/L)",
+        "ItemName_System": "砷"
+    },
+    {
+        "ItemName_Country": "T-Se(mg/L)",
+        "ItemName_System": "硒"
+    },
+    {
+        "ItemName_Country": "T-Hg(mg/L)",
+        "ItemName_System": "汞"
+    },
+    {
+        "ItemName_Country": "Cr6+(mg/L)",
+        "ItemName_System": "六价铬"
+    },
+    {
+        "ItemName_Country": "F-(mg/L)",
+        "ItemName_System": "氟化物"
+    },
+    {
+        "ItemName_Country": "CN-(mg/L)",
+        "ItemName_System": "氰化物"
+    },
+    {
+        "ItemName_Country": "挥发酚(mg/L)",
+        "ItemName_System": "挥发酚"
+    },
+    {
+        "ItemName_Country": "石油类(mg/L)",
+        "ItemName_System": "石油类"
+    },
+    {
+        "ItemName_Country": "LAS(mg/L)",
+        "ItemName_System": "阴离子表面活性剂"
+    },
+    {
+        "ItemName_Country": "S2-(mg/L)",
+        "ItemName_System": "硫化物"
+    },
+    {
+        "ItemName_Country": "Chla(mg/L)",
+        "ItemName_System": "叶绿素a"
+    },
+    {
+        "ItemName_Country": "NO3-(mg/L)",
+        "ItemName_System": "硝酸盐"
+    },
+    {
+        "ItemName_Country": "NO2-(mg/L)",
+        "ItemName_System": "亚硝酸盐"
+    },
+    {
+        "ItemName_Country": "流量(m3/s)",
+        "ItemName_System": "流量"
+    }
+]

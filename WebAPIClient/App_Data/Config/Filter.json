@@ -1,0 +1,169 @@
+[
+  {
+    "type": "eqia_r",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "测点级别",
+            "value": "fldPLevel",
+            "dictionaries": "测点级别",
+              "istranslate": "yes"
+          },
+          {
+            "name": "测点属性",
+            "value": "fldAttribute",
+            "dictionaries": "大气测点属性",
+              "istranslate": "yes"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIA_R_Point"
+  },
+  {
+    "type": "eqia_p",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "测点级别",
+            "value": "fldPLevel",
+            "dictionaries": "测点级别",
+              "istranslate": "yes"
+          },
+          {
+            "name": "测点属性",
+            "value": "fldAttribute",
+            "dictionaries": "降水属性",
+              "istranslate": "yes"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIA_P_Point"
+  },
+  {
+    "type": "eqia_rd",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "测点级别",
+            "value": "fldPLevel",
+            "dictionaries": "测点级别",
+              "istranslate": "yes"
+          },
+          {
+            "name": "测点属性",
+            "value": "fldAttribute",
+            "dictionaries": "大气测点属性",
+              "istranslate": "yes"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIA_RD_Point"
+  },
+  {
+    "type": "eqia_sts",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "测点级别",
+            "value": "fldPLevel",
+            "dictionaries": "测点级别",
+              "istranslate": "yes"
+          },
+          {
+            "name": "测点属性",
+            "value": "fldAttribute",
+            "dictionaries": "大气测点属性",
+              "istranslate": "yes"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIA_R_Point"
+  },
+  {
+    "type": "eqiw_r",
+   "condition": [
+      {
+        "one": [
+          {
+            "name": "考核属性",
+            "value": "fldkhscategory",
+            "dictionaries": "考核属性",
+            "istranslate": "no"
+          },
+          {
+            "name": "所属水系",
+            "value": "fldRSWaterWork",
+            "dictionaries": "所属水系",
+            "istranslate": "no"
+          },
+          {
+            "name": "断面属性",
+            "value": "fldAttribute",
+            "dictionaries": "断面属性",
+            "istranslate": "no"
+
+          },
+          {
+            "name": "交界属性",
+            "value": "fldControl",
+            "dictionaries": "交界属性",
+            "istranslate": "no"
+          },
+          {
+            "name": "断面类别",
+            "value": "fldSCategory",
+            "dictionaries": "断面类别",
+            "istranslate": "yes"
+          },
+          {
+            "name": "所在区县",
+            "value": "fldRSTown",
+            "dictionaries": "所在区县",
+            "istranslate": "no"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIW_R_Section"
+  },
+  {
+    "type": "eqin_a",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "按网格属性",
+            "value": "fldAttribute",
+            "dictionaries": "网格属性",
+                  "istranslate": "no"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIN_A_Point"
+  },
+  {
+    "type": "eqin_t",
+    "condition": [
+      {
+        "one": [
+          {
+            "name": "按路段属性",
+            "value": "fldAttribute",
+            "dictionaries": "道路交通路段属性",
+                 "istranslate": "no"
+          }
+        ]
+      }
+    ],
+    "table": "tblEQIN_T_Point"
+  }
+]

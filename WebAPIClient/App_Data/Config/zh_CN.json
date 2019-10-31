@@ -1,0 +1,853 @@
+[
+    {
+        "type": "eqiw_r",
+        "Translators": [
+            {
+                "Field": "fldRName",
+                "zh_CN": "所在河流"
+            },
+            {
+                "Field": "fldRSName",
+                "zh_CN": "断面名称"
+            },
+            {
+                "Field": "fldSTName",
+                "zh_CN": "城市名称"
+            },
+            {
+                "Field": "fldDate",
+                "zh_CN": "时间"
+            },
+            {
+                "Field": "fldFun",
+                "zh_CN": "功能区水质类别"
+            },
+            {
+                "Field": "fldStage",
+                "zh_CN": "本期水质水质类别"
+            },
+            {
+                "Field": "fldMStage",
+                "zh_CN": "上期水质水质类别"
+            },
+            {
+                "Field": "fldYStage",
+                "zh_CN": "同期水质水质类别"
+            },
+            {
+                "Field": "fldItems",
+                "zh_CN": "超III类因子"
+            },
+            {
+                "Field": "fldFitems",
+                "zh_CN": "超功能区因子"
+            },
+            {
+                "Field": "fldSLevel",
+                "zh_CN": "级别"
+            },
+            {
+                "Field": "fldRemark",
+                "zh_CN": "备注"
+            },
+            {
+                "Field": "fld3Dan",
+                "zh_CN": "三氮关系"
+            },
+            {
+                "Field": "fld3Yang",
+                "zh_CN": "三氧关系"
+            },
+            {
+                "Field": "fldOut",
+                "zh_CN": "检出限超标"
+            },
+            {
+                "Field": "fldCheckZ",
+                "zh_CN": "重金属检出"
+            },
+            {
+                "Field": "fldCheckJ",
+                "zh_CN": "有机物检出"
+            },
+            {
+                "Field": "fldSort",
+                "zh_CN": "排序"
+            },
+            {
+                "Field": "fldSectionType",
+                "zh_CN": "断面类型"
+            },
+            {
+                "Field": "311_Value",
+                "zh_CN": "氨氮"
+            },
+            {
+                "Field": "311_Stage",
+                "zh_CN": "氨氮_水质类别"
+            },
+            {
+                "Field": "315_Value",
+                "zh_CN": "溶解氧"
+            },
+            {
+                "Field": "315_Stage",
+                "zh_CN": "溶解氧_水质类别"
+            },
+            {
+                "Field": "fldRSystem",
+                "zh_CN": "所属流域"
+            },
+            {
+                "Field": "302_Value",
+                "zh_CN": "pH"
+            },
+            {
+                "Field": "302_Stage",
+                "zh_CN": "pH_水质类别"
+            },
+            {
+                "Field": "313_Value",
+                "zh_CN": "总磷"
+            },
+            {
+                "Field": "313_Stage",
+                "zh_CN": "总磷_水质类别"
+            },
+            {
+                "Field": "314_Value",
+                "zh_CN": "高锰酸盐指数"
+            },
+            {
+                "Field": "314_Stage",
+                "zh_CN": "高锰酸盐指数_水质类别"
+            },
+            {
+                "Field": "318_Value",
+                "zh_CN": "氟化物"
+            },
+            {
+                "Field": "318_Stage",
+                "zh_CN": "氟化物_水质类别"
+            },
+            {
+                "Field": "319_Value",
+                "zh_CN": "硒"
+            },
+            {
+                "Field": "319_Stage",
+                "zh_CN": "硒_水质类别"
+            },
+            {
+                "Field": "320_Value",
+                "zh_CN": "砷"
+            },
+            {
+                "Field": "320_Stage",
+                "zh_CN": "砷_水质类别"
+            },
+            {
+                "Field": "323_Value",
+                "zh_CN": "铬"
+            },
+            {
+                "Field": "323_Stage",
+                "zh_CN": "铬_水质类别"
+            },
+            {
+                "Field": "325_Value",
+                "zh_CN": "氰化物"
+            },
+            {
+                "Field": "325_Stage",
+                "zh_CN": "氰化物_水质类别"
+            },
+            {
+                "Field": "326_Value",
+                "zh_CN": "挥发酚"
+            },
+            {
+                "Field": "326_Stage",
+                "zh_CN": "挥发酚_水质类别"
+            },
+            {
+                "Field": "327_Value",
+                "zh_CN": "石油类"
+            },
+            {
+                "Field": "327_Stage",
+                "zh_CN": "石油类_水质类别"
+            },
+            {
+                "Field": "328_Value",
+                "zh_CN": "阴离子表面活性剂"
+            },
+            {
+                "Field": "328_Stage",
+                "zh_CN": "阴离子表面活性剂_水质类别"
+            },
+            {
+                "Field": "434_Value",
+                "zh_CN": "铜"
+            },
+            {
+                "Field": "434_Stage",
+                "zh_CN": "铜_水质类别"
+            },
+            {
+                "Field": "435_Value",
+                "zh_CN": "锌"
+            },
+            {
+                "Field": "435_Stage",
+                "zh_CN": "锌_水质类别"
+            },
+            {
+                "Field": "436_Value",
+                "zh_CN": "镉"
+            },
+            {
+                "Field": "436_Stage",
+                "zh_CN": "镉_水质类别"
+            },
+            {
+                "Field": "437_Value",
+                "zh_CN": "铅"
+            },
+            {
+                "Field": "437_Stage",
+                "zh_CN": "铅_水质类别"
+            },
+            {
+                "Field": "438_Value",
+                "zh_CN": "汞"
+            },
+            {
+                "Field": "438_Stage",
+                "zh_CN": "汞_水质类别"
+            },
+            {
+                "Field": "467_Value",
+                "zh_CN": "硫化物"
+            },
+            {
+                "Field": "467_Stage",
+                "zh_CN": "硫化物_水质类别"
+            }
+        ]
+    },
+    {
+        "type": "eqiw_d",
+        "Translators": [
+            {
+                "Field": "fldRName",
+                "zh_CN": "所在河流"
+            },
+            {
+                "Field": "fldRSName",
+                "zh_CN": "断面名称"
+            },
+            {
+                "Field": "fldSTName",
+                "zh_CN": "城市名称"
+            },
+            {
+                "Field": "fldDate",
+                "zh_CN": "时间"
+            },
+            {
+                "Field": "fldFun",
+                "zh_CN": "功能区水质类别"
+            },
+            {
+                "Field": "fldStage",
+                "zh_CN": "本期水质水质类别"
+            },
+            {
+                "Field": "fldMStage",
+                "zh_CN": "上期水质水质类别"
+            },
+            {
+                "Field": "fldYStage",
+                "zh_CN": "同期水质水质类别"
+            },
+            {
+                "Field": "fldItems",
+                "zh_CN": "超III类因子"
+            },
+            {
+                "Field": "fldFitems",
+                "zh_CN": "超功能区因子"
+            },
+            {
+                "Field": "fldSLevel",
+                "zh_CN": "级别"
+            },
+            {
+                "Field": "fldRemark",
+                "zh_CN": "所属流域"
+            },
+            {
+                "Field": "fld3Dan",
+                "zh_CN": "三氮关系"
+            },
+            {
+                "Field": "fld3Yang",
+                "zh_CN": "三氧关系"
+            },
+            {
+                "Field": "fldOut",
+                "zh_CN": "检出限超标"
+            },
+            {
+                "Field": "fldCheckZ",
+                "zh_CN": "重金属检出"
+            },
+            {
+                "Field": "fldCheckJ",
+                "zh_CN": "有机物检出"
+            },
+            {
+                "Field": "fldSort",
+                "zh_CN": "排序"
+            },
+            {
+                "Field": "fldSectionType",
+                "zh_CN": "断面类型"
+            },
+            {
+                "Field": "fldSTCode",
+                "zh_CN": "城市代码"
+            },
+            {
+                "Field": "fldSCategory",
+                "zh_CN": "地表水属性"
+            },
+            {
+                "Field": "302_Value",
+                "zh_CN": "pH"
+            },
+            {
+                "Field": "302_Stage",
+                "zh_CN": "pH_水质类别"
+            },
+            {
+                "Field": "301_Value",
+                "zh_CN": "水温"
+            },
+            {
+                "Field": "301_Stage",
+                "zh_CN": "水温_水质类别"
+            },
+            {
+                "Field": "311_Value",
+                "zh_CN": "氨氮"
+            },
+            {
+                "Field": "311_Stage",
+                "zh_CN": "氨氮_水质类别"
+            },
+            {
+                "Field": "313_Value",
+                "zh_CN": "总磷"
+            },
+            {
+                "Field": "313_Stage",
+                "zh_CN": "总磷_水质类别"
+            },
+            {
+                "Field": "314_Value",
+                "zh_CN": "高锰酸盐指数"
+            },
+            {
+                "Field": "314_Stage",
+                "zh_CN": "高锰酸盐指数_水质类别"
+            },
+            {
+                "Field": "315_Value",
+                "zh_CN": "溶解氧"
+            },
+            {
+                "Field": "315_Stage",
+                "zh_CN": "溶解氧_水质类别"
+            },
+            {
+                "Field": "316_Value",
+                "zh_CN": "化学需氧量"
+            },
+            {
+                "Field": "316_Stage",
+                "zh_CN": "化学需氧量_水质类别"
+            },
+            {
+                "Field": "317_Value",
+                "zh_CN": "生化需氧量"
+            },
+            {
+                "Field": "317_Stage",
+                "zh_CN": "生化需氧量_水质类别"
+            },
+            {
+                "Field": "318_Value",
+                "zh_CN": "氟化物"
+            },
+            {
+                "Field": "318_Stage",
+                "zh_CN": "氟化物_水质类别"
+            },
+            {
+                "Field": "319_Value",
+                "zh_CN": "硒"
+            },
+            {
+                "Field": "319_Stage",
+                "zh_CN": "硒_水质类别"
+            },
+            {
+                "Field": "320_Value",
+                "zh_CN": "砷"
+            },
+            {
+                "Field": "320_Stage",
+                "zh_CN": "砷_水质类别"
+            },
+            {
+                "Field": "323_Value",
+                "zh_CN": "铬"
+            },
+            {
+                "Field": "323_Stage",
+                "zh_CN": "铬_水质类别"
+            },
+            {
+                "Field": "325_Value",
+                "zh_CN": "氰化物"
+            },
+            {
+                "Field": "325_Stage",
+                "zh_CN": "氰化物_水质类别"
+            },
+            {
+                "Field": "434_Value",
+                "zh_CN": "铜"
+            },
+            {
+                "Field": "434_Stage",
+                "zh_CN": "铜_水质类别"
+            },
+            {
+                "Field": "435_Value",
+                "zh_CN": "锌"
+            },
+            {
+                "Field": "435_Stage",
+                "zh_CN": "锌_水质类别"
+            },
+            {
+                "Field": "436_Value",
+                "zh_CN": "镉"
+            },
+            {
+                "Field": "436_Stage",
+                "zh_CN": "镉_水质类别"
+            },
+            {
+                "Field": "437_Value",
+                "zh_CN": "铅"
+            },
+            {
+                "Field": "437_Stage",
+                "zh_CN": "铅_水质类别"
+            },
+            {
+                "Field": "438_Value",
+                "zh_CN": "汞"
+            },
+            {
+                "Field": "438_Stage",
+                "zh_CN": "汞_水质类别"
+            },
+            {
+                "Field": "466_Value",
+                "zh_CN": "总氮"
+            },
+            {
+                "Field": "466_Stage",
+                "zh_CN": "总氮_水质类别"
+            },
+            {
+                "Field": "302_Value",
+                "zh_CN": "pH"
+            },
+            {
+                "Field": "302_Stage",
+                "zh_CN": "pH_水质类别"
+            },
+            {
+                "Field": "313_Value",
+                "zh_CN": "总磷"
+            },
+            {
+                "Field": "313_Stage",
+                "zh_CN": "总磷_水质类别"
+            },
+            {
+                "Field": "314_Value",
+                "zh_CN": "高锰酸盐指数"
+            },
+            {
+                "Field": "314_Stage",
+                "zh_CN": "高锰酸盐指数_水质类别"
+            },
+            {
+                "Field": "318_Value",
+                "zh_CN": "氟化物"
+            },
+            {
+                "Field": "318_Stage",
+                "zh_CN": "氟化物_水质类别"
+            },
+            {
+                "Field": "319_Value",
+                "zh_CN": "硒"
+            },
+            {
+                "Field": "319_Stage",
+                "zh_CN": "硒_水质类别"
+            },
+            {
+                "Field": "320_Value",
+                "zh_CN": "砷"
+            },
+            {
+                "Field": "320_Stage",
+                "zh_CN": "砷_水质类别"
+            },
+            {
+                "Field": "323_Value",
+                "zh_CN": "铬"
+            },
+            {
+                "Field": "323_Stage",
+                "zh_CN": "铬_水质类别"
+            },
+            {
+                "Field": "325_Value",
+                "zh_CN": "氰化物"
+            },
+            {
+                "Field": "325_Stage",
+                "zh_CN": "氰化物_水质类别"
+            },
+            {
+                "Field": "326_Value",
+                "zh_CN": "挥发酚"
+            },
+            {
+                "Field": "326_Stage",
+                "zh_CN": "挥发酚_水质类别"
+            },
+            {
+                "Field": "327_Value",
+                "zh_CN": "石油类"
+            },
+            {
+                "Field": "327_Stage",
+                "zh_CN": "石油类_水质类别"
+            },
+            {
+                "Field": "328_Value",
+                "zh_CN": "阴离子表面活性剂"
+            },
+            {
+                "Field": "328_Stage",
+                "zh_CN": "阴离子表面活性剂_水质类别"
+            },
+            {
+                "Field": "434_Value",
+                "zh_CN": "铜"
+            },
+            {
+                "Field": "434_Stage",
+                "zh_CN": "铜_水质类别"
+            },
+            {
+                "Field": "435_Value",
+                "zh_CN": "锌"
+            },
+            {
+                "Field": "435_Stage",
+                "zh_CN": "锌_水质类别"
+            },
+            {
+                "Field": "436_Value",
+                "zh_CN": "镉"
+            },
+            {
+                "Field": "436_Stage",
+                "zh_CN": "镉_水质类别"
+            },
+            {
+                "Field": "437_Value",
+                "zh_CN": "铅"
+            },
+            {
+                "Field": "437_Stage",
+                "zh_CN": "铅_水质类别"
+            },
+            {
+                "Field": "438_Value",
+                "zh_CN": "汞"
+            },
+            {
+                "Field": "438_Stage",
+                "zh_CN": "汞_水质类别"
+            },
+            {
+                "Field": "467_Value",
+                "zh_CN": "硫化物"
+            },
+            {
+                "Field": "467_Stage",
+                "zh_CN": "硫化物_水质类别"
+            }
+        ]
+    },
+    {
+        "type": "eqiw_r_auto",
+        "Translators": [
+            {
+                "Field": "fldRName",
+                "zh_CN": "所在河流"
+            },
+            {
+                "Field": "fldRSName",
+                "zh_CN": "断面名称"
+            },
+            {
+                "Field": "fldSTName",
+                "zh_CN": "城市名称"
+            },
+            {
+                "Field": "fldDate",
+                "zh_CN": "时间"
+            },
+            {
+                "Field": "fldFun",
+                "zh_CN": "功能区水质类别"
+            },
+            {
+                "Field": "fldStage",
+                "zh_CN": "本期水质水质类别"
+            },
+            {
+                "Field": "fldMStage",
+                "zh_CN": "上期水质水质类别"
+            },
+            {
+                "Field": "fldYStage",
+                "zh_CN": "同期水质水质类别"
+            },
+            {
+                "Field": "fldItems",
+                "zh_CN": "超III类因子"
+            },
+            {
+                "Field": "fldFitems",
+                "zh_CN": "超功能区因子"
+            },
+            {
+                "Field": "fldSLevel",
+                "zh_CN": "级别"
+            },
+            {
+                "Field": "fldRemark",
+                "zh_CN": "备注"
+            },
+            {
+                "Field": "fld3Dan",
+                "zh_CN": "三氮关系"
+            },
+            {
+                "Field": "fld3Yang",
+                "zh_CN": "三氧关系"
+            },
+            {
+                "Field": "fldOut",
+                "zh_CN": "检出限超标"
+            },
+            {
+                "Field": "fldCheckZ",
+                "zh_CN": "重金属检出"
+            },
+            {
+                "Field": "fldCheckJ",
+                "zh_CN": "有机物检出"
+            },
+            {
+                "Field": "fldSort",
+                "zh_CN": "排序"
+            },
+            {
+                "Field": "fldSectionType",
+                "zh_CN": "断面类型"
+            },
+            {
+                "Field": "311_Value",
+                "zh_CN": "氨氮"
+            },
+            {
+                "Field": "311_Stage",
+                "zh_CN": "氨氮_水质类别"
+            },
+            {
+                "Field": "315_Value",
+                "zh_CN": "溶解氧"
+            },
+            {
+                "Field": "315_Stage",
+                "zh_CN": "溶解氧_水质类别"
+            },
+            {
+                "Field": "fldRSystem",
+                "zh_CN": "所属流域"
+            },
+            {
+                "Field": "302_Value",
+                "zh_CN": "pH"
+            },
+            {
+                "Field": "302_Stage",
+                "zh_CN": "pH_水质类别"
+            },
+            {
+                "Field": "313_Value",
+                "zh_CN": "总磷"
+            },
+            {
+                "Field": "313_Stage",
+                "zh_CN": "总磷_水质类别"
+            },
+            {
+                "Field": "314_Value",
+                "zh_CN": "高锰酸盐指数"
+            },
+            {
+                "Field": "314_Stage",
+                "zh_CN": "高锰酸盐指数_水质类别"
+            },
+            {
+                "Field": "318_Value",
+                "zh_CN": "氟化物"
+            },
+            {
+                "Field": "318_Stage",
+                "zh_CN": "氟化物_水质类别"
+            },
+            {
+                "Field": "319_Value",
+                "zh_CN": "硒"
+            },
+            {
+                "Field": "319_Stage",
+                "zh_CN": "硒_水质类别"
+            },
+            {
+                "Field": "320_Value",
+                "zh_CN": "砷"
+            },
+            {
+                "Field": "320_Stage",
+                "zh_CN": "砷_水质类别"
+            },
+            {
+                "Field": "323_Value",
+                "zh_CN": "铬"
+            },
+            {
+                "Field": "323_Stage",
+                "zh_CN": "铬_水质类别"
+            },
+            {
+                "Field": "325_Value",
+                "zh_CN": "氰化物"
+            },
+            {
+                "Field": "325_Stage",
+                "zh_CN": "氰化物_水质类别"
+            },
+            {
+                "Field": "326_Value",
+                "zh_CN": "挥发酚"
+            },
+            {
+                "Field": "326_Stage",
+                "zh_CN": "挥发酚_水质类别"
+            },
+            {
+                "Field": "327_Value",
+                "zh_CN": "石油类"
+            },
+            {
+                "Field": "327_Stage",
+                "zh_CN": "石油类_水质类别"
+            },
+            {
+                "Field": "328_Value",
+                "zh_CN": "阴离子表面活性剂"
+            },
+            {
+                "Field": "328_Stage",
+                "zh_CN": "阴离子表面活性剂_水质类别"
+            },
+            {
+                "Field": "434_Value",
+                "zh_CN": "铜"
+            },
+            {
+                "Field": "434_Stage",
+                "zh_CN": "铜_水质类别"
+            },
+            {
+                "Field": "435_Value",
+                "zh_CN": "锌"
+            },
+            {
+                "Field": "435_Stage",
+                "zh_CN": "锌_水质类别"
+            },
+            {
+                "Field": "436_Value",
+                "zh_CN": "镉"
+            },
+            {
+                "Field": "436_Stage",
+                "zh_CN": "镉_水质类别"
+            },
+            {
+                "Field": "437_Value",
+                "zh_CN": "铅"
+            },
+            {
+                "Field": "437_Stage",
+                "zh_CN": "铅_水质类别"
+            },
+            {
+                "Field": "438_Value",
+                "zh_CN": "汞"
+            },
+            {
+                "Field": "438_Stage",
+                "zh_CN": "汞_水质类别"
+            },
+            {
+                "Field": "467_Value",
+                "zh_CN": "硫化物"
+            },
+            {
+                "Field": "467_Stage",
+                "zh_CN": "硫化物_水质类别"
+            }
+        ]
+    }
+]

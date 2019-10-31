@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7814363-0BE9-4920-B9F0-B0214D6AEE8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDYZ.Ensis.Presistence.DataEntity</RootNamespace>
+    <AssemblyName>DDYZ.Ensis.Presistence.DataEntity</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DDYZ.Ensis.Library.Enum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="DDYZ.Ensis.Library.Exception, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMCControls\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDataEntity.cs" />
+    <Compile Include="jsonHelpCode.cs" />
+    <Compile Include="jsonHelp.cs" />
+    <Compile Include="PointInfo.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblAgentPay.cs" />
+    <Compile Include="tblDictionary.cs" />
+    <Compile Include="tblDocManage.cs" />
+    <Compile Include="tblDT_DN_TempletInfo.cs" />
+    <Compile Include="tblEQIA_PPI_Auditing.cs" />
+    <Compile Include="tblEQIA_PPI_Basedata.cs" />
+    <Compile Include="tblEQIA_PPI_Basedata_Pre.cs" />
+    <Compile Include="tblEQIA_P_Item.cs" />
+    <Compile Include="tblEQIA_P_Point.cs" />
+    <Compile Include="tblEQIA_RDPI_Basedata.cs" />
+    <Compile Include="tblEQIA_RDPI_Basedata_Pre.cs" />
+    <Compile Include="tblEQIA_RD_Item.cs" />
+    <Compile Include="tblEQIA_RD_ItemSTD.cs" />
+    <Compile Include="tblEQIA_RD_Point.cs" />
+    <Compile Include="tblEQIA_RPI_Auditing.cs" />
+    <Compile Include="tblEQIA_RPI_Basedata.cs" />
+    <Compile Include="tblEQIA_RPI_Basedata_Pre.cs" />
+    <Compile Include="tblEQIA_R_Item.cs" />
+    <Compile Include="tblEQIA_R_ItemSTD.cs" />
+    <Compile Include="tblEQIA_R_Point.cs" />
+    <Compile Include="tblEQIA_STS_Auditing.cs" />
+    <Compile Include="tblEQIA_STS_Basedata.cs" />
+    <Compile Include="tblEQIA_STS_Basedata_Pre.cs" />
+    <Compile Include="tblEQIA_STS_Point.cs" />
+    <Compile Include="tblEQIB_BaseData.cs" />
+    <Compile Include="tblEQIB_Basedata_Pre.cs" />
+    <Compile Include="tblEQIB_Section.cs" />
+    <Compile Include="tblEQID_D_BaseData.cs" />
+    <Compile Include="tblEQID_D_BaseData_Pre.cs" />
+    <Compile Include="tblEQID_D_Point.cs" />
+    <Compile Include="tblEQIN_A_BaseData.cs" />
+    <Compile Include="tblEQIN_A_Basedata_Pre.cs" />
+    <Compile Include="tblEQIN_A_Point.cs" />
+    <Compile Include="tblEQIN_F_BaseData.cs" />
+    <Compile Include="tblEQIN_F_Basedata_Pre.cs" />
+    <Compile Include="tblEQIN_F_Point.cs" />
+    <Compile Include="tblEQIN_M_Point.cs" />
+    <Compile Include="tblEQIN_T_BaseData.cs" />
+    <Compile Include="tblEQIN_T_BaseData_pre.cs" />
+    <Compile Include="tblEQIN_T_Point.cs" />
+    <Compile Include="tblEQIP_G_SolidCompanyInfo.cs" />
+    <Compile Include="tblEQISE_Basedata.cs" />
+    <Compile Include="tblEQISE_Item.cs" />
+    <Compile Include="tblEQISE_Section.cs" />
+    <Compile Include="tblEQISO_Basedata.cs" />
+    <Compile Include="tblEQISO_Basedata_Pre.cs" />
+    <Compile Include="tblEQISO_Item.cs" />
+    <Compile Include="tblEQISO_ItemSTD.cs" />
+    <Compile Include="tblEQISO_PISTG.cs" />
+    <Compile Include="tblEQISO_Point.cs" />
+    <Compile Include="tblEQIS_D_BaseData.cs" />
+    <Compile Include="tblEQIS_D_Item.cs" />
+    <Compile Include="tblEQIS_D_Point.cs" />
+    <Compile Include="tblEQIS_W_Basedata.cs" />
+    <Compile Include="tblEQIS_W_Item.cs" />
+    <Compile Include="tblEQIS_W_Point.cs" />
+    <Compile Include="tblEQIW_DT_Section.cs" />
+    <Compile Include="tblEQIW_DX_Section.cs" />
+    <Compile Include="tblEQIW_D_Auditing.cs" />
+    <Compile Include="tblEQIW_D_Basedata.cs" />
+    <Compile Include="tblEQIW_D_Basedata_Pre.cs" />
+    <Compile Include="tblEQIW_D_Section.cs" />
+    <Compile Include="tblEQIW_G_Auditing.cs" />
+    <Compile Include="tblEQIW_G_Basedata.cs" />
+    <Compile Include="tblEQIW_G_Basedata_Pre.cs" />
+    <Compile Include="tblEQIW_G_DAQLTSTD.cs" />
+    <Compile Include="tblEQIW_G_Item.cs" />
+    <Compile Include="tblEQIW_G_Section.cs" />
+    <Compile Include="tblEQIW_L_Auditing.cs" />
+    <Compile Include="tblEQIW_L_Basedata.cs" />
+    <Compile Include="tblEQIW_L_Basedata_Pre.cs" />
+    <Compile Include="tblEQIW_L_DAQLTSTD.cs" />
+    <Compile Include="tblEQIW_L_Section.cs" />
+    <Compile Include="tblEQIW_R_Auditing.cs" />
+    <Compile Include="tblEQIW_R_Basedata.cs" />
+    <Compile Include="tblEQIW_R_Basedata_Pre.cs" />
+    <Compile Include="tblEQIW_R_DAQLTSTD.cs" />
+    <Compile Include="tblEQIW_R_Item.cs" />
+    <Compile Include="tblEQIW_R_Section.cs" />
+    <Compile Include="tblEQIW_STS_Auditing_Auto.cs" />
+    <Compile Include="tblEQIW_STS_Basedata.cs" />
+    <Compile Include="tblEQIW_STS_Basedata_Pre.cs" />
+    <Compile Include="tblEQIW_STS_Section.cs" />
+    <Compile Include="tblEQI_DataImport_Remark.cs" />
+    <Compile Include="tblEQI_InputDate.cs" />
+    <Compile Include="tblEQI_Item_Group.cs" />
+    <Compile Include="tblEQI_Point_Group.cs" />
+    <Compile Include="tblEQI_Query_Group.cs" />
+    <Compile Include="tbleqi_ThreeVerify.cs" />
+    <Compile Include="tblFItem.cs" />
+    <Compile Include="tblFW_AuditingLog.cs" />
+    <Compile Include="tblFW_Dictionary.cs" />
+    <Compile Include="tblFW_ImportTime_Limit.cs" />
+    <Compile Include="tblFW_ItemCorresp.cs" />
+    <Compile Include="tblFW_Log.cs" />
+    <Compile Include="tblFW_Maintenance.cs" />
+    <Compile Include="tblFW_PCTime.cs" />
+    <Compile Include="tblFW_PointCorresp.cs" />
+    <Compile Include="tblFW_RegCity.cs" />
+    <Compile Include="tblFW_Report.cs" />
+    <Compile Include="tblFW_ReportDataList.cs" />
+    <Compile Include="tblFW_TimeLimit.cs" />
+    <Compile Include="tblFW_User.cs" />
+    <Compile Include="tblItem_Recording.cs" />
+    <Compile Include="tblOrdertable.cs" />
+    <Compile Include="tblSubroute.cs" />
+    <Compile Include="typemodel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

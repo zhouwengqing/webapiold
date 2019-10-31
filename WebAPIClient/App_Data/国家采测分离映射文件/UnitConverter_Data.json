@@ -1,0 +1,16 @@
+[
+    {
+        "ItemName": "电导率",
+        "UnitConverter": [
+            "*",
+            "10"
+        ]
+    },
+    {
+        "ItemName": "叶绿素a",
+        "UnitConverter": [
+            "*",
+            "1000"
+        ]
+    }
+]

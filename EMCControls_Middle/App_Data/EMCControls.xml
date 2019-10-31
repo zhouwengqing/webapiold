@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMCControls_Middle</name>
+    </assembly>
+    <members>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.type">
+            <summary>
+            1.“City_AverageData”，城市噪声均值
+            2.“Point_TotalDateStat”，点位表
+            3.“Point_HourStat”，小时值
+            4.“City_TotalDateStat”，城市表
+            5.“City_ProvinceData”，全省统计
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码：
+            1.“-1”返回所有城市
+            2.代码列表形式，代码用任意字符分割即可
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.ReportType">
+            <summary>
+            用于行政区划分
+            0：各级行政区fldSTCode
+            1：地市级行政区left(fldSTCode,4)+'00'
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldGDCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.Info.STatType">
+            <summary>
+            报表内容
+            90按功能区
+            91按声源
+            92按声级
+            93分段
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData2">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_A.GetEQIN_A_Data_MiddleController.ReturnData3">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldPCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分
+            1：地市级行政区left(fldSTCode,4)+'00'
+            0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_F.GetEQIN_F_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="M:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.GetData(EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info)">
+            <summary>
+            功能描述：取得数据
+            创建者  ：吕荣誉
+            创建时间：2017-11-3
+            </summary>
+            <param name="info">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info">
+            <summary>
+            参数实体
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.type">
+            <summary>
+            1.值：City_TotalDateStat，按城市缓存的表
+            2.值：Point_HourStat，点位小时值
+            3.值：Point_TotalDateStat，点位表
+            4.值：City_Data，按城市缓存的声级表
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldYear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldRDCode">
+            <summary>
+            RDCode
+            1.“最大值”与“平均值”传入即可获取
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldBeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.fldEndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.IsYear">
+            <summary>
+            是否返回同期数据，0不返回，1返回
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.ReportType">
+            <summary>
+            报表对象，用于行政区划分
+            1：地市级行政区left(fldSTCode,4)+'00'
+            0：各级行政区fldSTCode
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.STatType">
+            <summary>
+            报表内容
+            0：按声级范围
+            1：按声级水平
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.PointFormat">
+            <summary>
+            点位格式：
+            1.fldSTCdoe.fldRDCode
+            2.用半角逗号分隔
+            3.用于Point_TotalDateStat表，不用于点位小时值
+            </summary>
+        </member>
+        <member name="P:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.Info.DN">
+            <summary>
+            昼夜：用于“City_Data”表
+            1.值：“D”或者“N”，返回昼或者夜数据
+            2.值：“All”返回昼夜所有数据
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData1">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+        <member name="T:EMCControls_Middle.Middle.Eqin.Eqin_T.GetEQIN_T_Data_MiddleController.ReturnData2">
+            <summary>
+            数据实体
+            </summary>
+        </member>
+    </members>
+</doc>

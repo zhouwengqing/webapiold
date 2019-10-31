@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A16371BB-1678-4C11-96D7-62C2A2181024}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDYZ.Ensis.Rule.DataRule</RootNamespace>
+    <AssemblyName>DDYZ.Ensis.Rule.DataRule</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>bin\Debug\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>bin\Debug\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DDYZ.Ensis.Library.Enum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="DDYZ.Ensis.Library.Exception, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="DDYZ.Ensis.Library.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="DDYZ.Ensis.Library.Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DDYZ.Ensis.Library.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lijoy.Rule.System.Info, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BusinessRule\bin\Lijoy.Rule.System.Info.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AESHelper.cs" />
+    <Compile Include="AsposeWordsHelper.cs" />
+    <Compile Include="BaseRule.cs" />
+    <Compile Include="CheckIP.cs" />
+    <Compile Include="Distinct.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="LimitPropsContractResolver.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="PredicateBuilder.cs" />
+    <Compile Include="Query\EQIBQuerySql.cs" />
+    <Compile Include="Query\EQINFQuerySql.cs" />
+    <Compile Include="Query\eqinQuerySql.cs" />
+    <Compile Include="Query\EQINTQuerySql.cs" />
+    <Compile Include="Query\EQIPNQuerySql.cs" />
+    <Compile Include="Query\EQIPQuerySql.cs" />
+    <Compile Include="Query\EQISEQuerySql.cs" />
+    <Compile Include="Query\EQISOQuerySql.cs" />
+    <Compile Include="Query\EQISWQuerySql.cs" />
+    <Compile Include="Query\EQIWRQuerySql.cs" />
+    <Compile Include="Query\QuerySql.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Report_Common.cs" />
+    <Compile Include="RuleJDpay.cs" />
+    <Compile Include="RuleSuccessStatecs.cs" />
+    <Compile Include="RuletblPayfailMessageLog.cs" />
+    <Compile Include="RuleWeixinpay.cs" />
+    <Compile Include="RuleAlipay.cs" />
+    <Compile Include="RuleEqiaImport.cs" />
+    <Compile Include="RuleEQICommon_Auditing.cs" />
+    <Compile Include="RuleEQIV_WaitTable_Auditing.cs" />
+    <Compile Include="RuleExcel.cs" />
+    <Compile Include="RuleFrozenAccount.cs" />
+    <Compile Include="RuleOldOrdertable.cs" />
+    <Compile Include="RuleQuery_Reported_Data.cs" />
+    <Compile Include="RuletblAgentPay.cs" />
+    <Compile Include="RuletblDictionary.cs" />
+    <Compile Include="RuletblDT_Dn_RemoteLog.cs" />
+    <Compile Include="RuletblDT_DN_TempletInfo.cs" />
+    <Compile Include="RuletblEQIA_D_Item.cs" />
+    <Compile Include="RuletblEQIA_PPI_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIA_P_Item.cs" />
+    <Compile Include="RuletblEQIA_RDPI_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIA_RD_Basedata.cs" />
+    <Compile Include="RuletblEQIA_PPI_Basedata.cs" />
+    <Compile Include="RuletblEQIA_P_Point.cs" />
+    <Compile Include="RuletblEQIA_P_Report.cs" />
+    <Compile Include="RuletblEQIA_RD_Item.cs" />
+    <Compile Include="RuletblEQIA_RD_ItemSTD.cs" />
+    <Compile Include="RuletblEQIA_RD_Point.cs" />
+    <Compile Include="RuletblEQIA_RPI_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIA_R_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIA_R_Item.cs" />
+    <Compile Include="RuletblEQIA_R_ItemSTD.cs" />
+    <Compile Include="RuletblEQIA_R_Middle.cs" />
+    <Compile Include="RuletblEQIA_STS_Basedata.cs" />
+    <Compile Include="RuletblEQIA_STS_Point.cs" />
+    <Compile Include="RuletblEQIB_Section.cs" />
+    <Compile Include="RuletblEQICO_R_Report.cs" />
+    <Compile Include="RuletblEQICW_D_Report.cs" />
+    <Compile Include="RuletblEQICW_WS_Report.cs" />
+    <Compile Include="RuletblEQICW_R_Report.cs" />
+    <Compile Include="RuletblEQICA_R_Report.cs" />
+    <Compile Include="RuletblEQIE_R_Report.cs" />
+    <Compile Include="RuletblEQIA_R_Report.cs" />
+    <Compile Include="RuletblEQIBC_T_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIBC_D_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIBC_P_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQID_D_Basedata_Living.cs" />
+    <Compile Include="RuletblEQID_D_Point.cs" />
+    <Compile Include="RuletblEQIN_A_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIN_A_Point.cs" />
+    <Compile Include="RuletblEQIN_F_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIN_F_FuncCode.cs" />
+    <Compile Include="RuletblEQIN_M_Point.cs" />
+    <Compile Include="RuletblEQIN_T_Report.cs" />
+    <Compile Include="RuletblEQIN_F_Report.cs" />
+    <Compile Include="RuletblEQIN_F_BaseData.cs" />
+    <Compile Include="RuletblEQIN_F_Point.cs" />
+    <Compile Include="RuletblEQIN_T_BaseData_Living.cs" />
+    <Compile Include="RuletblEQIN_T_Point.cs" />
+    <Compile Include="RuletblEQIP_S_CompanyInfo.cs" />
+    <Compile Include="RuletblEQIP_S_GasDataCompare_living.cs" />
+    <Compile Include="RuletblEQIP_W_WaterCompanyInfo.cs" />
+    <Compile Include="RuletblEQIBC_Z_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQISE_Item.cs" />
+    <Compile Include="RuletblEQISO_Item.cs" />
+    <Compile Include="RuletblEQISO_Point.cs" />
+    <Compile Include="RuletblEQIS_DZ_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIS_D_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIS_DZ_Point.cs" />
+    <Compile Include="RuletblEQIS_D_Point.cs" />
+    <Compile Include="RuletblEQIS_P_Point.cs" />
+    <Compile Include="RuletblEQIS_P_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIS_W_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIS_W_BaseData_Living.cs" />
+    <Compile Include="RuletblEQIN_A_Report.cs" />
+    <Compile Include="RuletblEQISO_Report.cs" />
+    <Compile Include="RuletblEQIS_W_Item.cs" />
+    <Compile Include="RuletblEQIW_DT_Section.cs" />
+    <Compile Include="RuletblEQIW_DX_Section.cs" />
+    <Compile Include="RuletblEQIW_D_Basedata.cs" />
+    <Compile Include="RuletblEQIW_G_Basedata.cs" />
+    <Compile Include="RuletblEQIW_G_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIW_G_DAQLTSTD.cs" />
+    <Compile Include="RuletblEQIW_G_Report.cs" />
+    <Compile Include="RuletblEQIW_D_Report.cs" />
+    <Compile Include="RuletblEQIW_G_Section.cs" />
+    <Compile Include="RuletblEQIW_HM_Report.cs" />
+    <Compile Include="RuletblEQIW_L_Basedata.cs" />
+    <Compile Include="RuletblEQIW_L_DAQLTSTD.cs" />
+    <Compile Include="RuletblEQIW_L_Section.cs" />
+    <Compile Include="RuletblEQIW_RL_Report.cs" />
+    <Compile Include="RuletblEQIW_R_Auto_Basedata.cs" />
+    <Compile Include="RuletblEQIW_R_Basedata_Pre.cs" />
+    <Compile Include="RuletblEQIW_R_DAQLTSTD.cs" />
+    <Compile Include="RuletblEQIW_R_HourData_Auto.cs" />
+    <Compile Include="RuletblEQIW_R_Item.cs" />
+    <Compile Include="RuletblEQIW_STS_Basedata.cs" />
+    <Compile Include="RuletblEQIW_STS_Section.cs" />
+    <Compile Include="RuletblEQI_Auditing_COM_DeleteAll.cs" />
+    <Compile Include="RuletblEQI_InputDate.cs" />
+    <Compile Include="RuletblEQI_Item.cs" />
+    <Compile Include="RuletblEQIS_W_Point.cs" />
+    <Compile Include="RuletblEQIW_D_Analyse_Gis.cs" />
+    <Compile Include="RuleGisDataSource.cs" />
+    <Compile Include="RuleCommon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuletblEQIA_RPI_Basedata.cs" />
+    <Compile Include="RuletblEQIA_R_Point.cs" />
+    <Compile Include="RuletblEQIW_D_Section.cs" />
+    <Compile Include="RuletblEQIW_L_Report.cs" />
+    <Compile Include="RuletblEQIW_R_Analyse_Gis.cs" />
+    <Compile Include="RuletblEQIW_R_Basedata.cs" />
+    <Compile Include="RuletblEQIW_R_Section.cs" />
+    <Compile Include="RuletblEQI_Item_Group.cs" />
+    <Compile Include="RuletblEQI_Point_Group.cs" />
+    <Compile Include="RuletblEQI_publi.cs" />
+    <Compile Include="RuletblEQI_Query_Group.cs" />
+    <Compile Include="RuletblFW_Dictionary.cs" />
+    <Compile Include="RuletblFW_IP_Power.cs" />
+    <Compile Include="RuletblFW_Log.cs" />
+    <Compile Include="RuletblFW_RegCity.cs" />
+    <Compile Include="RuletblFW_User.cs" />
+    <Compile Include="RuletblItem_Recording.cs" />
+    <Compile Include="RuletblOrdertable.cs" />
+    <Compile Include="RuletblReport_Doc.cs" />
+    <Compile Include="RuleWriteOperateLog.cs" />
+    <Compile Include="RuletblChannelinformation.cs" />
+    <Compile Include="tblRSNameCorItemName.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{bf2b322e-5d19-4235-85cf-01c80a4f0953}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataEntity\DataEntity.csproj">
+      <Project>{e7814363-0be9-4920-b9f0-b0214d6aee8f}</Project>
+      <Name>DataEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\DataRule.csproj.FileListAbsolute.txt.mine" />
+    <None Include="obj\DataRule.csproj.FileListAbsolute.txt.r1587" />
+    <None Include="obj\DataRule.csproj.FileListAbsolute.txt.r1593" />
+    <None Include="obj\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DataRule.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.dll.r1587" />
+    <None Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.dll.r1593" />
+    <None Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.pdb.r1587" />
+    <None Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.pdb.r1593" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache.r1587" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache.r1593" />
+    <None Include="obj\Release\CoreCompileInputs.cache" />
+    <None Include="obj\Release\DataRule.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Aspose.Words.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Enum.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Exception.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Interface.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Lib.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Presistence.DataEntity.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Presistence.DataEntity.pdb" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Presistence.DataStore.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Presistence.DataStore.pdb" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Rule.DataRule.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Rule.DataRule.pdb" />
+    <Content Include="bin\Debug\Lijoy.Rule.System.Info.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Enum.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Enum.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Exception.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Exception.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Interface.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Interface.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Lib.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Lib.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Presistence.DataEntity.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Presistence.DataEntity.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Presistence.DataStore.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Presistence.DataStore.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Rule.DataRule.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Rule.DataRule.pdb" />
+    <Content Include="bin\Release\Lijoy.Rule.System.Info.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="obj\DataRule.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DataRule.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.dll" />
+    <Content Include="obj\Debug\DDYZ.Ensis.Rule.DataRule.pdb" />
+    <Content Include="obj\Debug\Refactor\DDYZ.Ensis.Rule.DataRule.dll" />
+    <Content Include="obj\Release\DataRule.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\DDYZ.Ensis.Rule.DataRule.dll" />
+    <Content Include="obj\Release\DDYZ.Ensis.Rule.DataRule.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\x86\Debug\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

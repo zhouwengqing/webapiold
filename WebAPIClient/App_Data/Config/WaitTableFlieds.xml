@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Common>
+<Flied>
+  <flieds sbtype="eqia_r" chineseName="大气" flds="fldAutoid,fldSTName,fldPName,fldAudType,fldDate,fldSTCode,fldPCode" titname="|['ID','城市名称','测点名称','监测日期','城市代码','测点代码','审核状态',"></flieds>
+  <flieds sbtype="eqia_rd" chineseName="降尘" flds="fldAutoid,fldSTName,fldPName,fldSDate,fldSTCode,fldPCode,fldSYear,fldSMonth,fldSDay,fldSource,fldUserID,fldImport" titname="|['ID','城市名称','测点名称','监测日期','城市代码','测点代码',"></flieds>
+  <flieds sbtype="eqia_p" chineseName="降水" flds="fldAutoid,fldSTName,fldPName,fldType,fldSTCode,fldPCode,fldSDate,fldEDate,fldSYear,fldSMonth,fldSDay,fldSHour,fldSMinute,fldEYear,fldEMonth,fldEDay,fldEHour,fldEMinute,fldSource,fldUserID,fldImport,fldDeleteState" titname="|['ID','城市名称','测点名称','降水类型','城市代码','测点代码','开始时间','结束时间',"></flieds>
+  <flieds sbtype="eqia_s" chineseName="大气专项" flds="fldAutoid,fldSTName,fldPName,fldSDate,fldSTCode,fldPCode,fldSYear,fldSMonth,fldSDay,fldSource,fldUserID,fldImport" titname="|['ID','城市名称','测点名称','监测日期','城市代码','测点代码',"></flieds>
+ 
+  <flieds sbtype="eqiw_r" chineseName="地表水" flds="fldAutoid,fldSTCode,fldSTName,fldRCode,fldRName,fldRSCode,fldRSName,fldDate,RSCName,fldYear,fldMonth,fldDay" titname="|['ID','城市代码','城市名称','河流代码','河流名称','断面代码','断面','监测日期','水期代码',"></flieds>
+ <flieds sbtype="eqiw_g" chineseName="地下水" flds="fldAutoid,fldSTName,fldPName,fldDate,fldSTCode,fldPCode,fldYear,fldMonth,fldDay,fldSource,fldUserID,fldImport" titname="|['ID','城市名称','测点名称','监测日期','城市代码','测点代码',"></flieds>
+ <flieds sbtype="eqise" chineseName="底泥" flds="fldAutoid,fldSTName,fldDate,fldSTCode,fldYear,fldMonth,fldDay,fldSource,fldUserID,fldImport" titname="|['ID','城市名称','测点名称','监测日期','城市代码','测点代码',"></flieds>
+  <flieds sbtype="eqiw_sts" chineseName="地表水专项" flds="fldAutoid,fldSTCode,fldSTName,fldRCode,fldRName,fldRSCode,fldRSName,fldDate,RSCName,fldYear,fldMonth,fldDay,fldSource,fldUserID,fldImport" titname="|['ID','城市代码','城市名称','河流代码','河流名称','断面代码','断面','监测日期','水期代码',"></flieds>
+  
+  <flieds sbtype="eqin_a" chineseName="区域噪声" flds="fldAutoid,fldSTCode,fldSTName,fldGDCODE,fldGDName,fldDate,fldTimelen,fldDN,fldNDISC,fldNSName,fldLEQA,fldL10A,fldL50A,fldL90A,fldLmax,fldLmin,fldSD,fldMph,fldApparatus_Type,fldApparatus_Id,fldApparatus_Grade,fldCalibrationVluesOn,fldCalibrationVluesEnd,fldSPressureValue,fldSPressureType,fldSPressureID" titname="|['ID','城市代码','城市名称','网格代码','网格名称','监测日期','监测时长(分)','昼夜','功能区代码','声源类型','Leq(dB(A))','L10(dB)','L50(dB)','L90(dB)','Lmax(dB)','Lmin(dB)','SD','风速','仪器型号','仪器编号','仪器等级','监测前校准值','监测后校准值','声校准器测量声压值','声校准仪器型号','仪器声校准仪器编号'"></flieds>
+  <flieds sbtype="eqin_f" chineseName="功能区噪声" flds="fldAutoid,fldSTCode,fldSTName,fldPCode,fldPName,fldDate,fldHour,fldNDISC,fldLEQA,fldL10A,fldL50A,fldL90A,fldLmax,fldLmin,fldSD,fldMph,fldApparatus_Type,fldApparatus_Id,fldApparatus_Grade,fldCalibrationVluesOn,fldCalibrationVluesEnd,fldSPressureValue,fldSPressureType,fldSPressureID" titname="|['ID','城市代码','城市名称','测点代码','测点名称','监测日期','监测时间','功能区代码','Leq(dB(A))','L10(dB)','L50(dB)','L90(dB)','Lmax(dB)','Lmin(dB)','SD','风速','仪器型号','仪器编号','仪器等级','监测前校准值','监测后校准值','声校准器测量声压值','声校准仪器型号','声校准仪器编号'"></flieds>
+  <flieds sbtype="eqin_t" chineseName="道路交通噪声" flds="fldAutoid,fldSTCode,fldSTName,fldRDCode,fldRDName,fldDate,fldTimelen,fldDN,fldLEQA,fldL10A,fldL50A,fldL90A,fldLmax,fldLmin,fldQptrafic,fldZptrafic,fldSD,fldMph,fldApparatus_Type,fldApparatus_Id,fldApparatus_Grade,fldCalibrationVluesOn,fldCalibrationVluesEnd,fldSPressureValue,fldSPressureType,fldSPressureID" titname="|['ID','城市代码','城市名称','路段代码','路段名称','监测日期','监测时长(分)','昼夜','Leq(dB(A))','L10(dB)','L50(dB)','L90(dB)','Lmax(dB)','Lmin(dB)','轻型流量(辆/20min)','重型流量(辆/20min)','SD','风速','仪器型号','仪器编号', '仪器等级','监测前校准值','监测后校准值','声校准器测量声压值','声校准仪器型号','声校准仪器编号'"></flieds>
+  <flieds sbtype="eqin_m" chineseName="噪声专项" flds="fldAutoid,fldSTCode,fldSTName,fldPCode,fldPName,fldDate,fldTimelen,fldFeiPtrafic,fldFeiTrumpet,fldFeiTrumpetRate,fldJiPtraficCount,fldJiPtraficGJ,fldJiPtraficCZ,fldJiPtraficHC,fldJiPtraficSH,fldJiTrumpetCount,fldJiTrumpetGJ,fldJiTrumpetCZ,fldJiTrumpetHC,fldJiTrumpetSH,fldJiTRateCount,fldJiTRateGJ,fldJiTRateCZ,fldJiTRateHC,fldJiTRateSH" titname="|['ID','城市代码','城市名称','测点代码','测点名称','监测日期','监测时长(分)','车流量(非机动车)','鸣号次数(非机动车)','鸣号率(非机动车)','车流量总量(机动车)','车流量(公交车)','车流量(出租车)','车流量(货运及长途客车)','车流量(社会车辆)','鸣号次数(总量)','鸣号次数(公交车)','鸣号次数(出租车)','鸣号次数(货运及长途客车)','鸣号次数(社会车辆)','鸣号率(总量-机动车)','鸣号率(公交车)','鸣号率(出租车)','鸣号率(货运及长途客车)','鸣号率(社会车辆)'"></flieds>
+
+</Flied>
+  <!--<Date>
+    <date sbtype="eqia_r"  newdtdate="fldSDate" dtdate="fldEYear,fldEMonth,fldEDay"></date>
+    <date sbtype="eqia_rd"  newdtdate="fldSDate" dtdate="fldEYear,fldEMonth,fldEDay"></date>
+    <date sbtype="eqia_p"  newdtdate="fldSDate,fldEDate" dtdate="fldSYear,fldSMonth,fldSDay,fldSHour,fldSMinute,fldEYear,fldEMonth,fldEDay,fldEHour,fldEMinute"></date>
+    <date sbtype="eqia_s"  newdtdate="fldSDate" dtdate="fldSYear,fldSMonth,fldSDay"></date>
+    <date sbtype="eqiw_r"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay,fldHour,fldMinute"></date>
+    <date sbtype="eqiw_g"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+    <date sbtype="eqise"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+      <date sbtype="eqiw_sts"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+    <date sbtype="eqin_a"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+    <date sbtype="eqin_f"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+    <date sbtype="eqin_t"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+    <date sbtype="eqin_m"  newdtdate="fldDate" dtdate="fldYear,fldMonth,fldDay"></date>
+  </Date>-->
+</Common>

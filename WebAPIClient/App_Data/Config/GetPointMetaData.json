@@ -1,0 +1,824 @@
+[
+  //农村空气
+  {
+    "type": "eqia_r_v",
+    "PointTableName": "[tblEMCRIS_BaseData]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldCTCode,fldCTName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldQTCode,fldQTName",
+        "where": "fldCTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCTCode.fldQTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldRTCode,fldRName",
+        "where": "fldQTCode",
+        "value": null,
+        "pointformat": "fldCTCode.fldQTCode.fldRTCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //农村饮用水
+  {
+    "type": "eqiw_d_v",
+    "PointTableName": "[vwEQIW_D_SectionAPI]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldCCode,fldCName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldVCode,fldVName",
+        "where": "fldCCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode.fldVCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldVCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode.fldVCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //农村土壤
+  {
+    "type": "eqiso_v",
+    "PointTableName": "[vwEQISO_PointAPI]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldCCode,fldCName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldVCode,fldVName",
+        "where": "fldCCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode.fldVCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldPCode,fldPName",
+        "where": "fldVCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode.fldVCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //农村污水处理厂
+  {
+    "type": "eqiw_ws_v",
+    "PointTableName": "[vwEQIW_WS_SectionAPI]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldCCode,fldCName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldVCode,fldVName",
+        "where": "fldCCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldCCode.fldVCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //地表水（三个系统共用）
+  {
+    "type": "eqiw_r",
+    "PointTableName": "[tblEQIW_R_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  {
+    "type": "eqiw_r_auto",
+    "PointTableName": "[tblEQIW_R_Section_Auto]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //水华
+  {
+    "type": "eqise",
+    "PointTableName": "[tblEQIW_R_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量空气
+  {
+    "type": "eqia_r",
+    "PointTableName": "[tblEQIA_R_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldPLevel",
+        "where": "fldSTCode",
+        "value": "1=国控,2=省控,3=市控,4=县控,5=其他,8=外省",
+        "pointformat": "fldSTCode.fldPLevel",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldPLevel",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量降尘
+  {
+    "type": "eqia_rd",
+    "PointTableName": "[tblEQIA_RD_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldPLevel",
+        "where": "fldSTCode",
+        "value": "1=国控,2=省控,3=市控,4=县控,5=其他,8=外省",
+        "pointformat": "fldSTCode.fldPLevel",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldPLevel",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量降水
+  {
+    "type": "eqia_p",
+    "PointTableName": "[tblEQIA_P_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldPLevel",
+        "where": "fldSTCode",
+        "value": "1=国控,2=省控,3=市控,4=县控,5=其他,8=外省",
+        "pointformat": "fldSTCode.fldPLevel",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldPLevel",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量大气专项
+  {
+    "type": "eqia_s",
+    "PointTableName": "[tblEQIA_STS_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldPLevel",
+        "where": "fldSTCode",
+        "value": "1=国控,2=省控,3=市控,4=县控,5=其他,8=外省",
+        "pointformat": "fldSTCode.fldPLevel",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldPLevel",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量地下水
+  {
+    "type": "eqiw_g",
+    "PointTableName": "[tblEQIW_G_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSLevel",
+        "where": "fldSTCode",
+        "value": "1=国控,2=省控,3=市控,4=县控,5=其他,8=外省",
+        "pointformat": "fldSTCode.fldSLevel",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldSLevel",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量地表水专项
+  {
+    "type": "eqiw_sts",
+    "PointTableName": "[tblEQIW_STS_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量地表水专项(重庆)
+  {
+    "type": "eqiw_sts_cq",
+    "PointTableName": "[tblEQIW_STS_Data]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldTaskName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTName",
+        "where": "fldTaskName",
+        "value": null,
+        "pointformat": "fldTaskName.fldSTName",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRName",
+        "where": "fldSTName",
+        "value": null,
+        "pointformat": "fldTaskName.fldSTName.fldRName",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldRSName",
+        "where": "fldRName",
+        "value": null,
+        "pointformat": "fldTaskName.fldSTName.fldRName.fldRSName",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量区域噪声
+  {
+    "type": "eqin_a",
+    "PointTableName": "[tblEQIN_A_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldLCODE,fldLNAME",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldLCODE",
+        "value": null,
+        "pointformat": "fldLCODE.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldGDCODE,fldGDNAME",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldGDCODE",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量功能区噪声
+  {
+    "type": "eqin_f",
+    "PointTableName": "[tblEQIN_F_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldLCODE,fldLNAME",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldLCODE",
+        "value": null,
+        "pointformat": "fldLCODE.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量道路交通噪声
+  {
+    "type": "eqin_t",
+    "PointTableName": "[tblEQIN_T_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldLCode,fldLName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldLCode",
+        "value": null,
+        "pointformat": "fldLCode.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRDCode,fldRDName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRDCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量噪声专项
+  {
+    "type": "eqin_m",
+    "PointTableName": "[tblEQIN_M_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldPCode,fldPName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境饮用水地市
+  {
+    "type": "eqiw_d",
+    "PointTableName": "[tblEQIW_D_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境饮用水区县
+  {
+    "type": "eqiw_dt",
+    "PointTableName": "[tblEQIW_DT_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境饮用水乡镇
+  {
+    "type": "eqiw_dx",
+    "PointTableName": "[tblEQIW_dx_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //环境质量土壤
+  {
+    "type": "eqiso",
+    "PointTableName": "[tblEQISO_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldSTCode,fldSTName",
+        "where": null,
+        "value": null,
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldEntCode,fldEntName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldEntCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldPCode,fldPName",
+        "where": "fldEntCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldEntCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //重金属空气
+  {
+    "type": "eqia_r_hm",
+    "PointTableName": "[tblEQIA_R_Point]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldRemark",
+        "where": null,
+        "value": "1=企业周边,2=重点防控区",
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldRemark",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldLCode,fldLName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode.fldLCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldPCode,fldPName",
+        "where": "fldLCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldLCode.fldPCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //重金属河流
+  {
+    "type": "eqiw_r_hm",
+    "PointTableName": "[tblEQIW_R_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldRemark",
+        "where": null,
+        "value": "0=例行监测,1=企业周边,2=重点防控区",
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldRemark",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  },
+  //重金属河流
+  {
+    "type": "eqiw_d_hm",
+    "PointTableName": "[tblEQIW_D_Section]",
+    "Levels": [
+      {
+        "ID": "1",
+        "Source": "fldRemark",
+        "where": null,
+        "value": "0=例行监测,1=企业周边,2=重点防控区",
+        "pointformat": null,
+        "endPoint": false
+      },
+      {
+        "ID": "2",
+        "Source": "fldSTCode,fldSTName",
+        "where": "fldRemark",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode",
+        "endPoint": false
+      },
+      {
+        "ID": "3",
+        "Source": "fldRCode,fldRName",
+        "where": "fldSTCode",
+        "value": null,
+        "pointformat": "fldRemark.fldSTCode.fldRCode",
+        "endPoint": false
+      },
+      {
+        "ID": "4",
+        "Source": "fldRSCode,fldRSName",
+        "where": "fldRCode",
+        "value": null,
+        "pointformat": "fldSTCode.fldRCode.fldRSCode",
+        "endPoint": true
+      }
+    ]
+  }
+]

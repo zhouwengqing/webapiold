@@ -1,0 +1,138 @@
+[
+    {
+        "ItemName_Country": "水温(℃)",
+        "ItemName_System": "水温"
+    },
+    {
+        "ItemName_Country": "pH(无量纲)",
+        "ItemName_System": "pH"
+    },
+    {
+        "ItemName_Country": "溶解氧",
+        "ItemName_System": "溶解氧"
+    },
+    {
+        "ItemName_Country": "高锰酸盐指数",
+        "ItemName_System": "高锰酸盐指数"
+    },
+    {
+        "ItemName_Country": "氨氮",
+        "ItemName_System": "氨氮"
+    },
+    {
+        "ItemName_Country": "总磷",
+        "ItemName_System": "总磷"
+    },
+    {
+        "ItemName_Country": "氟化物",
+        "ItemName_System": "氟化物"
+    },
+    {
+        "ItemName_Country": "挥发酚",
+        "ItemName_System": "挥发酚"
+    },
+    {
+        "ItemName_Country": "石油类",
+        "ItemName_System": "石油类"
+    },
+    {
+        "ItemName_Country": "粪大肠菌群（个/L）",
+        "ItemName_System": "粪大肠菌群"
+    },
+    {
+        "ItemName_Country": "五日生化需氧量",
+        "ItemName_System": "五日生化需氧量"
+    },
+    {
+        "ItemName_Country": "总氮",
+        "ItemName_System": "总氮"
+    },
+    {
+        "ItemName_Country": "铜",
+        "ItemName_System": "铜"
+    },
+    {
+        "ItemName_Country": "锌",
+        "ItemName_System": "锌"
+    },
+    {
+        "ItemName_Country": "硒（μg/L）",
+        "ItemName_System": "硒"
+    },
+    {
+        "ItemName_Country": "砷（μg/L）",
+        "ItemName_System": "砷"
+    },
+    {
+        "ItemName_Country": "汞（μg/L）",
+        "ItemName_System": "汞"
+    },
+    {
+        "ItemName_Country": "镉",
+        "ItemName_System": "镉"
+    },
+    {
+        "ItemName_Country": "六价铬",
+        "ItemName_System": "六价铬"
+    },
+    {
+        "ItemName_Country": "铅",
+        "ItemName_System": "铅"
+    },
+    {
+        "ItemName_Country": "阴离子表面活性剂（LAS）",
+        "ItemName_System": "阴离子表面活性剂"
+    },
+    {
+        "ItemName_Country": "氰化物",
+        "ItemName_System": "氰化物"
+    },
+    {
+        "ItemName_Country": "硫化物",
+        "ItemName_System": "硫化物"
+    },
+    {
+        "ItemName_Country": "化学需氧量",
+        "ItemName_System": "化学需氧量"
+    },
+    {
+        "ItemName_Country": "硝酸盐氮",
+        "ItemName_System": "硝酸盐"
+    },
+    {
+        "ItemName_Country": "悬浮物",
+        "ItemName_System": "悬浮物"
+    },
+    {
+        "ItemName_Country": "透明度(cm)",
+        "ItemName_System": "透明度"
+    },
+    {
+        "ItemName_Country": "叶 绿 素a（mg/m3）",
+        "ItemName_System": "叶绿素a"
+    },
+    {
+        "ItemName_Country": "亚硝酸盐氮",
+        "ItemName_System": "亚硝酸盐"
+    },
+    {
+        "ItemName_Country": "电导率(μs/cm)",
+        "ItemName_System": "电导率"
+    },
+    {
+        "ItemName_Country": "流量",
+        "ItemName_System": "流量"
+    },
+    {
+        "ItemName_Country": "水面海拔高度",
+        "ItemName_System": "水位"
+    },
+    {
+        "ItemName_Country": "浮游植物（总密度）cell/L(细胞/L)",
+        "ItemName_System": "藻类密度"
+    },
+    {
+        "ItemName_Country": "流速",
+        "ItemName_System": "流速"
+    }
+]

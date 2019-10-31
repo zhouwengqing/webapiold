@@ -1,0 +1,1431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMCCommon</name>
+    </assembly>
+    <members>
+        <member name="T:EMCCommon.Common.AccountController">
+            <summary>
+            账号controller
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.AccountController.Login(System.String,System.String,System.String)">
+            <summary>
+            功能描述    ：  登录认证
+            创建者      ：  都玉新
+            创建日期    ：  2017-05-18
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="citycode">城市代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.AccountController.CheckUser(System.String,System.String,System.String,DDYZ.Ensis.Presistence.DataEntity.tblFW_User@)">
+            <summary>
+            到数据库进行校验登录信息
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="cityid">城市ID</param>
+            <param name="User">当前登录用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.LoginInfo">
+            <summary>
+            登录用户信息
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.LoginInfo.userid">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.LoginInfo.roleid">
+            <summary>
+            用户角色ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.LoginInfo.token">
+            <summary>
+            用户身份验证密钥
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.LoginInfo.cityid">
+            <summary>
+            登录用户城市ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.LoginInfo.username">
+            <summary>
+            登录用户名
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.AuditingButtonController">
+            <summary>
+            审核页面按钮功能
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingButtonController.Delete(System.String,System.String)">
+            <summary>
+            功能描述：审核页面的删除功能
+            创建者：熊瑞竹
+            创建日期：2017-06-07
+            修改者：
+            修改日期：
+            </summary>
+            <param name="fldAutoId">默认ID</param>
+            <param name="typemodel">业务类型</param>
+            <returns>返回删除数据正确或者失败的字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingButtonController.DeleteAll(System.Object)">
+            <summary>
+            功能描述：删除全部数据
+            创建者：熊瑞竹
+            创建日期：2017-06-09
+            修改者：
+            修改日期：
+            </summary>
+            <param name="obj">动态参数</param>
+            <returns>返回删除全部数据正确或者失败的字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingButtonController.Update(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            功能描述：审核的提交审核功能
+            创建者：熊瑞竹
+            创建日期：2017-06-08
+            </summary>
+            <param name="fldAutoId">默认ID</param>
+            <param name="typemodel">业务类型</param>
+            <param name="userId">用户ID</param>
+            <param name="userName">用户名例如：admin</param>
+            <param name="cityId">城市ID</param>
+            <returns>返回提交成功或者失败的字符串</returns>
+        </member>
+        <member name="T:EMCCommon.Common.AuditingController">
+            <summary>
+            功能描述：关于审核确认的统一API
+            创建者  ：吕荣誉
+            创建日期：2017-7-1
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingController.AuditingActionAll(System.String,System.String,System.String)">
+            <summary>
+            功能描述：确认全部数据
+            创建者  ：吕荣誉
+            创建日期：2017-7-3
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="actionType">操作类型：“待提交审核”1，“监测数据审核”0</param>
+            <param name="where">条件</param>
+            <param name="pageshow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingController.AuditingActionEQIA_R(System.Object)">
+            <summary>
+            功能描述：审核确认
+            创建者  ：吕荣誉
+            创建时间：2017-7-6
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="obj">动态参数：type-业务类型；IDList：ID列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.AuditingController.AuditingActionState(System.Object)">
+            <summary>
+            功能描述：数据状态修改
+            创建者  ：吕荣誉
+            创建日期：2017-7-5
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="obj">type：业务类型，audType：数据状态，“no”，“yes”，typeID：ID列表，comment：内容信息，datatime：日期，pname：pname</param>
+            <returns>状态修改成功！，状态提交失败！</returns>
+        </member>
+        <member name="T:EMCCommon.Common.CityListController">
+            <summary>
+            功能描述：加载城市下拉列表
+            创建者：熊瑞竹
+            创建日期：2017-07-06
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.CityListController.GetCityList">
+             <summary>
+             创建者：熊瑞竹
+             创建日期：2017-07-06
+             修改者：
+             修改日期：
+             </summary>
+             <returns>返回城市列表的json格式的字符串</returns>
+            [SupportFilter]
+        </member>
+        <member name="M:EMCCommon.Common.CityListController.GetCityListByStcode(System.String)">
+             <summary>
+             创建者：周文卿
+             创建日期：2017-09-09
+             修改者：
+             修改日期：
+             </summary>
+             <returns>根据城市代码返回城市列表的json格式的字符串</returns>
+            [SupportFilter]
+        </member>
+        <member name="M:EMCCommon.Common.CityListController.GetCityList(System.String)">
+             <summary>
+             创建者：周文卿
+             创建日期：2017-09-09
+             修改者：
+             修改日期：
+             </summary>
+             <returns>根据城市代码返回城市列表的json格式的字符串</returns>
+            [SupportFilter]
+        </member>
+        <member name="T:EMCCommon.Common.FilterController">
+            <summary>
+            过滤条件相关
+            创建时间：2017/06/14
+            创建人：周文卿
+            
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.FilterController.GetCondition(System.String)">
+            <summary>
+            功能描述：根据业务得到选择过滤条件
+            创建时间：2017/06/15
+            创建  人：周文卿
+            修改时间：2017/07/05
+            修改  人：熊瑞竹
+            修改原因：
+            </summary>
+            <param name="type">类别</param>
+            <returns>json(status(状态),msg(提示信息),data格式（数据,[{"name":"按测点级别","value":"fldPLevel","dictionaries":"测点级别"}]）)</returns>
+            
+        </member>
+        <member name="M:EMCCommon.Common.FilterController.GetFilter(System.String,System.String)">
+            <summary>
+            功能描述：根据业务和过滤条件 得到条件名称
+            创建时间：2017/06/14
+            创建  人：周文卿
+            修改时间：2017/07/06
+            修改  人：熊瑞竹
+            修改原因：
+            </summary>
+            <param name="type">类别</param>
+            <param name="field">过滤的条件</param>
+            <returns>josn(status(状态)，data(数据，"data":[{"label":"全部","value":-1}])，msg(提示信息))</returns>
+            
+        </member>
+        <member name="T:EMCCommon.Common.GetQueryDataController">
+            <summary>
+            数据查询结果
+            创建人：周文卿
+            创建时间：2017/06/16
+            
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.GetQueryDataController.GetData(System.Object)">
+            <summary>
+            功能描述：得到查询结果数据
+            创建时间：2017/06/16
+            创建人：周文卿
+            修改时间：
+            修改原因：
+            修改人： 
+            </summary>
+            <param name="obj">动态参数(point:点位,time:时间,type:业务类别,cond:过滤查询的条件)</param>
+            <returns>json(status(状态),msg(提示信息),data([{data(返回的数据):[{xx:xx,xx:xx}],head(汉化的表头):['x','x']])</returns>
+            
+        </member>
+        <member name="M:EMCCommon.Common.GetQueryDataController.GetItemChineseDt(System.Data.DataTable,System.String)">
+            <summary>
+             功能描述：汉化因子
+             创建  人：周文卿
+             创建时间：2017/06/28
+             修改原因：
+             修改时间：
+             修改  人：
+            </summary>
+            <param name="dt">数据</param>
+            <param name="vwname">表名称</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:EMCCommon.Common.GetReportController">
+            <summary>
+            针对报告生成的操作
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.GetReportController.getimg(System.Object)">
+            <summary>
+            功能描述：根据前端回传的是base64，解码成图片并保存
+            创建  人：周文卿
+            创建时间：2017/10/23
+            修改  人：
+            修改时间：
+            修改原因：
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.GetReportController.GetReportYN(System.Object)">
+            <summary>
+            功能描述：根据前端传来的html页面导入到word
+            创建  人：周文卿
+            创建时间：2017/10/23
+            修改   人：
+            修改时间：
+            修改原因：
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.GetReportController.GetFileFromWebApi(System.String,System.String)">
+            <summary>
+            功能描述：返回一个文件另存为
+            创建  人：周文卿
+            创建时间：2017/10/23
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.GetRepotDocController">
+            <summary>
+            功能描述：针对tblReport_Doc表的操作
+            创建  人：周文卿
+            创建时间：2017/10/24
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.GetRepotDocController.GetReportDocList(System.Object)">
+            <summary>
+            功能描述：获得每张表的模板内容
+            创建时间：2017/10/24
+            创建  人：周文卿
+            修改  人：
+            修改时间：
+            修改原因：
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:EMCCommon.Common.GetRepotDocController.InsertorUpdateDoct(System.Object)">
+            <summary>
+            功能描述：更新或者插入文档
+            创建时间：2017/10/24
+            创建  人：周文卿
+            修改  人：
+            修改时间：
+            修改原因：
+            </summary>
+            <param name="concent"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EMCCommon.Common.GroupInputController">
+            <summary>
+            功能描述：录入点位相关操作
+            创建  人：周文卿
+            创建时间：2017/07/05
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.GroupInputController.addGroup(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：新增组合
+            创建  人：周文卿
+            创建时间：2017/07/05
+            修改原因：
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="gname">组合名称</param>
+            <param name="itemcontent">点位</param>
+            <param name="fldobject">业务类别</param>
+            <param name="UserID">用户ID，没有给-1</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.ImportDataInfoController">
+            <summary>
+            功能描述：固定格式导入统一API
+            创建者  ：吕荣誉
+            创建日期：2017-7-24
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.GetSetupList">
+            <summary>
+            获取上报设置列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.AddOrUpdateSetup(System.Collections.Generic.List{EMCCommon.Mode.To_Setup})">
+            <summary>
+            新增或者更新上报设置数据
+            </summary>
+            <param name="tos">To_Setup实体列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.GetImportDataList(System.String,System.String,System.String)">
+            <summary>
+            功能描述：获取固定格式导入列表
+            创建者  ：吕荣誉
+            创建日期：2017-7-24
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            </summary>
+            <param name="type">业务类型</param>
+            <returns>返回表集合的Json数据</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.CheckData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：数据检查
+            创建者  ：吕荣誉
+            创建日期：2017-7-24
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.ImportData(EMCCommon.Common.ImportDataInfoController.Info)">
+            <summary>
+            功能描述：数据导入
+            创建者  ：吕荣誉
+            创建日期：2017-7-26
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            </summary>
+            <param name="info">传入的Info参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.ExecuteEntityContext(System.String,System.String,System.Data.DataTable,System.Int32@)">
+            <summary>
+            执行方法
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="deletehistory">是否删除原有数据“是”“否”</param>
+            <param name="dtTemp">传入的dt</param>
+            <param name="index">作为总记录数使用</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.ImportDataInfoController.Info">
+            <summary>
+            接收参数的实体
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.type">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.fldAutoID">
+            <summary>
+            表的ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.path">
+            <summary>
+            表的完整路径
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.fldCityID_Submit">
+            <summary>
+            提交城市的ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.fldCityID_Operate">
+            <summary>
+            当前操作城市的ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.fldUserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.deletehistory">
+            <summary>
+            是否删除历史数据
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.ImportDataInfoController.Info.jsonpath">
+            <summary>
+            json配置的地址
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.ExcelConvertDataTable(System.String,System.String)">
+            <summary>
+            NPOI将Excel对象转为DataTabel
+            </summary>
+            <param name="TitleRow">需要作为标题的行，默认是第0行</param>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.InvokeMethod``1(System.String,System.Object[])">
+            <summary>
+            反射方法
+            </summary>
+            <typeparam name="T">检查类库</typeparam>
+            <param name="methodName">方法名称</param>
+            <param name="parameters">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.ImportDataInfoController.BuildEntity``1(System.Data.DataTable)">
+            <summary>
+            构建实体集合
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="dtTemp">传入的DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.ItemCheckController">
+            <summary>
+            功能描述：项目因子监测值检查
+            创建时间：2017-05-27
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ItemCheckController.GetSTDName(System.String)">
+            <summary>
+            功能描述    ：  取得执行标准标准名称
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-05
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="modeltype">业务名称</param>
+            <returns>返回执行标准名称执行标准名称键值</returns>
+        </member>
+        <member name="T:EMCCommon.Common.ItemController">
+            <summary>
+            因子操作
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ItemController.GetItemAll(System.Object)">
+            <summary>
+            功能描述    ：  根据业务名称获取所有因子
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-17
+            修改者      ：  周文卿 
+            修改日期    ：  2017-07-19
+            修改原因    ：  添加英文业务类别的判断
+            </summary>
+            <param name="obj">动态类型参数包括：modeltype业务类型，typetwo,英文的业务类别</param>
+            <returns>返回该业务所有因子信息</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemController.GetItemSelect(System.Object)">
+            <summary>
+            功能描述    ：  根据业务名称和因子代码获取对应因子
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-17
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：modeltype业务类型、itemcode因子代码</param>
+            <returns>返回该业务单个因子信息</returns>
+        </member>
+        <member name="T:EMCCommon.Common.ItemGroupController">
+            <summary>
+            项目组合操作方法
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.QueryItemGroup(System.Object)">
+            <summary>
+            功能描述    ：  得到项目组合数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：UserID用户ID、fldobject业务类型</param>
+            <returns>返回该业务里面有的因子项目组合数据</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.gettype(System.String)">
+            <summary>
+            功能描述：根据英文的业务类别转因子组合换所需的的业务
+            创建  人：周文卿
+            创建时间：2017/07/20
+            修改原因：
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="type">英文的业务类别</param>
+            <returns>因子组合所需的类别</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.AddItemGroup(System.Object)">
+            <summary>
+            功能描述    ：  保存新项目组合
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：UserID用户ID、fldname项目组合名称、flditemcontent项目组合代码、fldobject业务类型 </param>
+            <returns>返回当前报存项目组合信息</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.UpdateItemGroup(System.Object)">
+            <summary>
+            功能描述    ：  更新新项目组合
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：id当前选中项目组合在数据库表中行ID、flditemcontent项目组合代码、fldobject业务类型</param>
+            <returns>返回更新成功后的数据</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.DeleteItemGroup(System.Object)">
+            <summary>
+            功能描述    ：  删除新项目组合
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：id当前选中项目组合在数据库表中行ID</param>
+            <returns>返回是否删除成功</returns>
+        </member>
+        <member name="M:EMCCommon.Common.ItemGroupController.GetdllBystcode(System.String,System.String)">
+            功能描述    ：  根据城市代码获得保存的数据组
+            创建者      ：  周文卿
+            创建日期    ：  2017-07-05
+            修改者      ：
+            修改日期    ：
+            修改原因    ：
+            <param name="stcode">城市代码</param>
+            <param name="type">业务类别</param>
+            <returns>json（tblEQI_Item_Group所有数据）</returns>
+            
+        </member>
+        <member name="T:EMCCommon.Common.PiontGroupController">
+            <summary>
+            针对tblEQI_Point_Group表的操作
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.PiontGroupController.addGroup(System.Object)">
+            <summary>
+            功能描述：新增组合
+            创建  人：周文卿
+            创建时间：2017/06/07
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <param name="obj">动态参数(fldName:组合名称,fldObject:业务类别,fldUserID:用户ID（没有ID，传-1直接插入）,fldYear(时间（备用）,fldType（备用参数）)</param>
+            <returns>json（status(状态),msg(提示信息),data（为-1时存在相同名称的组合，成功返回插入的ID））</returns>
+        </member>
+        <member name="M:EMCCommon.Common.PiontGroupController.UpdateGroup(System.Object)">
+            <summary>
+            功能描述：更新组件
+            创建  人：周文卿
+            创建时间：2017/06/07
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <param name="obj">动态参数(id:要更新的组合ID,fldName:组合名称,fldObject:业务类别,fldUserID:用户ID(若无ID，直接更新为-1),fldYear(时间（备用）,fldType（备用参数）)</param>
+            <returns>json（status(状态),msg(提示信息),data()</returns>
+            
+        </member>
+        <member name="M:EMCCommon.Common.PiontGroupController.DeleteGroup(System.String)">
+            <summary>
+            功能描述：删除组合
+            创建时间：2017/06/08
+            创建  人：周文卿
+            修改时间：
+            修改  人：
+            </summary>
+            <param name="id">要删除的ID</param>
+            <returns>json（status(状态),msg(提示信息),data()</returns>
+            
+        </member>
+        <member name="T:EMCCommon.Common.PointAllController">
+            <summary>
+            查询测点或者点位
+            周文卿
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.PointAllController.GetPiont(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得点位或者断面
+            创建  人：周文卿
+            创建时间：2017/06/06
+            修改时间：
+            修改原因：
+            修改  人：
+            </summary>
+            <param name="model">业务类别</param>
+            <param name="userid">用户ID（为空时查找useID=-1）</param>
+            <param name="cityID">城市ID</param>
+            <param name="year">年份</param>
+            <param name="where">筛选条件</param>
+            <param name="screenflied">筛选字段</param>
+            <param name="DName">字典名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.PointAllController.GetTwoLevel(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得二级节点
+            创建  人：周文卿
+            创建时间：2017/06/06
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <param name="stcode">城市代码</param>
+            <param name="table">表名称</param>
+            <param name="field">二级字段名称</param>
+            <param name="level">几级节点</param>
+            <param name="year">年份</param>
+            <param name="threefield">三级节点</param>
+            <param name="istranslate">是否需要翻译</param>
+            <param name="returnpoint">最后得到的点位是几级（2=fldSTCode.fldPCode,3=fldSTCode.fldRCode.fldRSCode）</param>
+            <param name="where">筛选条件</param>
+            <param name="screenflied">筛选字段</param>
+            <param name="DName">字典名称</param> 
+            <param name="pionttype">返回的点位类型（第一级为（0是城市代码，1是区县代码））</param> 
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.PointAllController.GetThreeLevel(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得三级节点
+            创建  人：周文卿
+            创建时间：2017/06/06
+            修改时间：
+            修改  人：
+            修改原因：
+            </summary>
+            <param name="stcode">城市代码</param>
+            <param name="table">表格</param>
+            <param name="threefield">三级字段</param>
+            <param name="year">年份</param>
+            <param name="twofield">二级字段</param>
+            <param name="twovalue">二级字段的值</param>
+            <param name="pionttype">返回测点的类型（0是城市点位--1是区县点位）</param>
+            <param name="returnpoint">最后得到的点位是几级（2=fldSTCode.fldPCode,3=fldSTCode.fldRCode.fldRSCode）</param>
+            <param name="countycode">区县代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.PointAllController.GetPiont_V2(EMCCommon.Common.PointAllController.Info)">
+            <summary>
+            功能描述：获得点位或者断面 V2版本
+            创建  人：吕荣誉
+            创建时间：2017-8-31
+            修改时间：
+            修改原因：
+            修改  人：
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.PointAllController.GetList(System.Data.DataTable,EMCCommon.Common.PointAllController.Level,EMCCommon.Common.PointAllController.Return,System.Data.DataTable@)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="dtSource">数据源，输出的dt也可以作为数据源</param>
+            <param name="item">节点对象</param>
+            <param name="result">接收输出实体</param>
+            <param name="dt">输出dt作为下一节点的数据源</param>
+            <returns>返回输出实体的集合</returns>
+        </member>
+        <member name="T:EMCCommon.Common.PointAllController.Info">
+            <summary>
+            接收参数的实体
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.type">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.userID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.cityID">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.where">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.screenflied">
+            <summary>
+            筛选字段
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.DName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Info.Levels">
+            <summary>
+            根据传入的级别来替换配置
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.PointAllController.JsonEntity">
+            <summary>
+            读取json配置文件，转换为实体
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Level.ID">
+            <summary>
+            节点层次ID，值为1-4
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Level.pointformat">
+            <summary>
+            输出点位格式，例子：fldSTCode.fldPCode
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Level.endPoint">
+            <summary>
+            是否是最后一层节点
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.PointAllController.Return">
+            <summary>
+            输出实体
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Return.id">
+            <summary>
+            在节点层级中作为下一层级的条件ID
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Return.stcode">
+            <summary>
+            作为节点级别的输出格式
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Return.point">
+            <summary>
+            如果节点中最后一级endPoint配置为true
+            那么将point代替label
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Return.label">
+            <summary>
+            非最后一级节点的名称输出参数
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.PointAllController.Return.children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.PointOrSectionController">
+            <summary>
+            功能描述：获取测点或者断面信息
+            创建时间：2017-06-02
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.PointOrSectionController.QueryItemGroup(System.Object)">
+            <summary>
+            功能描述    ：  得到项目组合数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-15
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态类型参数包括：UserID用户ID、fldobject业务类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.QueryDictionaryController">
+            <summary>
+            对字典表操作
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.QueryDictionaryController.ByParentName(System.String)">
+            <summary>
+            功能描述    ：  根据父节点的名字查询子节点数据
+            创建者      ：  徐雍文
+            创建日期    ：  2017-06-05
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="parentname">父节点名称</param>
+            <returns>返回字典表数据</returns>
+        </member>
+        <member name="T:EMCCommon.Common.QueryGroupController">
+            <summary>
+            针对查询模板的操作
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.QueryGroupController.GetTemplate(System.String,System.String)">
+            <summary>
+            功能描述    ：  根据业务获取模板信息
+            创建者      ：  周文卿
+            创建日期    ：  2017-06-01
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="model">业务类型</param>
+            <param name="userid">用户ID(没有查询-1)</param>
+            <returns>json（status(状态),msg(提示信息),data（为tblEQI_Query_Group表所有的数据））</returns>
+        </member>
+        <member name="M:EMCCommon.Common.QueryGroupController.AddTremGroup(System.Object)">
+            <summary>
+            功能描述    ：  添加模板
+            创建者      ：  周文卿
+            创建日期    ：  2017-06-01
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">动态参数(fldName：模板名称，fldObject：业务类别，fldTimeType：时间类型（year,month,day,sea）,fldTimeRange：时间,fldUserID:用户ID（可直接插入-1),fldItemGroup(因子组合)，fldItemCode（因子代码）
+            fldPointGroup（点位组合），fldPointCode（点位代码），fldSource（数据来源）,fldDataType(备用参数)，fldSampleType（备用参数）</param>
+            <returns>json（status(状态),msg(提示信息),data（9999时存在名称相同的模板,成功返回当前插入的ID,失败返回0））</returns>
+        </member>
+        <member name="M:EMCCommon.Common.QueryGroupController.DelTremGroup(System.String)">
+            <summary>
+            功能描述    ：  删除模板
+            创建者      ：  周文卿
+            创建日期    ：  2017-06-01
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ：  
+            </summary>
+            <param name="id">要删除的ID</param>
+            <returns>json（status(状态),msg(提示信息),data（成功为0，失败为1））</returns>
+        </member>
+        <member name="M:EMCCommon.Common.QueryGroupController.updateTremGroup(System.Object)">
+            <summary>
+            功能描述    ：  更新模板
+            创建者      ：  周文卿
+            创建日期    ：  2017-06-02
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="obj">id：要更新的id，动态参数(fldName：模板名称，fldObject：业务类别，fldTimeType：时间类型（year,month,day,sea）,fldTimeRange：时间,fldUserID:用户ID（可直接插入-1),fldItemGroup(因子组合)，fldItemCode（因子代码）
+            fldPointGroup（点位组合），fldPointCode（点位代码），fldSource（数据来源）,fldDataType(备用参数)，fldSampleType（备用参数）</param>
+            <returns>json（status(状态),msg(提示信息),data（）</returns>
+        </member>
+        <member name="T:EMCCommon.Common.ReportListController">
+            <summary>
+            报表名称操作类
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.ReportListController.GetReportList(System.Int32,System.String)">
+            <summary>
+            功能描述    ：  初始化报表列表
+            创建者      ：  徐雍文
+            创建日期    ：  2017-05-06
+            修改者      ：   
+            修改日期    ：   
+            修改原因    ： 
+            </summary>
+            <param name="UserID">当前登录用户ID</param>
+            <param name="typename">报表分类名称 正确的格式为：降水监测_报告表,大气监测_现状表</param>
+            <returns>返回报表列表数据</returns>
+        </member>
+        <member name="T:EMCCommon.Common.TempletExportController">
+            <summary>
+            功能描述：数据模板导出统一API
+            创建者  ：吕荣誉
+            创建日期：2017-7-17
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.TempletExportController.GetTempletExportList(System.String,System.String)">
+            <summary>
+            功能描述：获取数据模板导出列表
+            创建者  ：吕荣誉
+            创建日期：2017-7-17
+            修改者  ：
+            修改日期：
+            修改原因：
+            API说明 ：
+            大气监测-fldPoint_Type = "1"
+            降尘监测-fldPoint_Type = "2"
+            降水监测-fldPoint_Type = "3"
+            地表水监测-fldPoint_Type="4","5"
+            湖库监测-fldPoint_Type = "7"
+            地表饮用水监测-fldPoint_Type = "6"
+            区域噪声监测-fldPoint_Type = "8"
+            功能区噪声监测-fldPoint_Type = "9"
+            道路交通噪声监测-fldPoint_Type = "10"
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="path">json路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMCCommon.Common.TempletExportController.GetTempletExportInfo(System.Collections.Generic.List{EMCCommon.Common.TempletExportController.tbcode})">
+            <summary>
+            功能描述：获取数据模板导出信息
+            创建者  ：吕荣誉
+            创建日期：2017-7-17
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="tbl">实体参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.TempletExportController.tbcode">
+            <summary>
+            点位的实体类
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.type">
+            <summary>
+            业务类别
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldAutoID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.itemcodeList">
+            <summary>
+            因子列表
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldSTCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldPCode">
+            <summary>
+            测点代码
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldRCode">
+            <summary>
+            河流代码
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldRSCode">
+            <summary>
+            断面代码
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldGDCODE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.TempletExportController.tbcode.fldRDCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.UpdateItemController">
+            <summary>
+            临时表更新因子值的控制器
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.UpdateItemController.UpdateItem(System.Object)">
+            <summary>
+            功能描述：更新因子
+            创建者  ：吕荣誉
+            创建日期：2017-7-13
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController">
+            <summary>
+            功能描述：用于检查“超标项目”、“突变值检查”
+            创建者  ：吕荣誉
+            创建日期：2017-6-21
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.VerificationController.QueryStandardAndLevel(System.String)">
+            <summary>
+            功能描述：超标检查中，加载“判断项目超标依据”下拉列表
+                      根据传入的“业务类型”的不同，返回的数据不同
+                      同时返回级别
+            创建者  ：吕荣誉
+            创建日期：2017-6-21
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="type">业务类型</param>
+            <returns>返回StandardList集合与LevelList集合转换成的Json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.VerificationController.ReturnStandardValue(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：根据传入的参数，返回标准表中各项目的值
+            创建者  ：吕荣誉
+            创建日期：2017-6-21
+            修改者  ：
+            修改日期：
+            修改原因：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="checktype">检查方式：“超标检查”，“突变值检查”，“因子逻辑关系检查”</param>
+            <param name="basis">判断超标依据</param>
+            <param name="level">级别</param>
+            <param name="datetime">日期范围，格式：2017-06-01～2017-07-06</param>
+            <param name="percent">百分比</param>
+            <param name="cityid">城市ID</param>
+            <param name="where">查询条件</param>
+            <param name="flag">数据状态标识，0是待提交，1是待审核</param>
+            <returns>返回fldItemCode列与级别列的DataTable转换的Json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.VerificationController.CalculateOut(System.Data.DataTable,System.Data.DataTable,System.String,System.String,System.Collections.Generic.List{EMCCommon.Common.VerificationController.KeyValue}@)">
+            <summary>
+            超标检查具体的处理方法
+            </summary>
+            <param name="dt">需要处理的DataTable表</param>
+            <param name="dt2">页面返回的数据</param>
+            <param name="basis">超标依据</param>
+            <param name="level">级别</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController.LevelEnum">
+            <summary>
+            超标依据级别枚举
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController.LevelEnum_eqiw_r">
+            <summary>
+            超标依据级别枚举
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.VerificationController.GetEnumDescription(System.Enum)">
+            <summary>
+            获取一个枚举值的中文描述
+            </summary>
+            <param name="obj">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController.JsonEntity">
+            <summary>
+            要转换成Json字符串的实体
+            备注：此实体在类中，不在命名空间中，用于VerificationController控制器访问
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.JsonEntity.StandardList">
+            <summary>
+            标准值集合
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.JsonEntity.LevelList">
+            <summary>
+            级别集合
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController.ReturnJson">
+            <summary>
+            要转换特定的Json字符串
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.ReturnJson.Data">
+            <summary>
+            主体数据
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.ReturnJson.Head">
+            <summary>
+            列中文名称列表
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.VerificationController.KeyValue">
+            <summary>
+            健-值实体
+            备注：此实体在类中，不在命名空间中，用于VerificationController控制器访问
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.KeyValue.Key">
+            <summary>
+            健 - 标准表中标准的字段名称
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.KeyValue.Value">
+            <summary>
+            值 - 标准表中标准的字段的值
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Common.VerificationController.KeyValue.SectionName">
+            <summary>
+            断面名称
+            </summary>
+        </member>
+        <member name="T:EMCCommon.Common.WaitTableAllController">
+            <summary>
+            审核数据表
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Common.WaitTableAllController.Geteqicom_data(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得审核的数据
+            创建者：熊瑞竹
+            创建日期：2017-06-06
+            修改者：
+            修改日期：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="wherequery">查询条件</param>
+            <param name="pageshow">数据类型</param>
+            <param name="cityid">城市Id</param>
+            <returns>返回基本信息数据的Json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.WaitTableAllController.Geteqicom_basic(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：加载只有基本信息的表格
+            创建者：周文卿
+            修改日期：
+            修改者：熊瑞竹
+            修改日期：2017-06-07
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="wherequery">查询条件</param>
+            <param name="pageshow">数据类型</param>
+            <param name="cityid">城市Id</param>
+            <returns>返回基本信息数据的Json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Common.WaitTableAllController.Subtable(System.String,System.String)">
+            <summary>
+            功能描述：子表格加载
+            创建者：熊瑞竹
+            创建日期：2017-06-09
+            修改者：
+            修改日期：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="fldAutoId">默认ID</param>
+            <returns>返回Json格式的子表格数据字符串</returns>
+        </member>
+        <member name="T:EMCCommon.Eqin.Eqin_t.NoiseAuditingController">
+            <summary>
+            功能描述：噪声审核功能
+            创建者：熊瑞竹
+            创建日期：2017-06-20
+            修改者：
+            修改日期：
+            </summary>
+        </member>
+        <member name="M:EMCCommon.Eqin.Eqin_t.NoiseAuditingController.Geteqicom_data(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：获得审核的数据
+            创建者：熊瑞竹
+            创建日期：2017-06-06
+            修改者：
+            修改日期：
+            </summary>
+            <returns>json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Eqin.Eqin_t.NoiseAuditingController.Geteqicom_basic(System.String,System.String,System.String,System.String)">
+            <summary>
+            功能描述：加载只有基本信息的表格
+            创建者：周文卿
+            修改日期：
+            修改者：熊瑞竹
+            修改日期：2017-06-07
+            </summary>
+            <param name="obj">动态参数</param>
+            <returns>json字符串</returns>
+        </member>
+        <member name="M:EMCCommon.Eqin.Eqin_t.NoiseAuditingController.Subtable(System.String,System.String)">
+            <summary>
+            功能描述：子表格加载
+            创建者：熊瑞竹
+            创建日期：2017-06-09
+            修改者：
+            修改日期：
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="fldAutoId">默认ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:EMCCommon.Mode.ItemSTD">
+            <summary>
+            因子执行标准基类
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Mode.ItemSTD.key">
+            <summary>
+            因子代码
+            </summary>
+        </member>
+        <member name="P:EMCCommon.Mode.ItemSTD.stg">
+            <summary>
+            因子标准值
+            </summary>
+        </member>
+        <member name="T:EMCCommon.EMCCommon.AccountController.WebApiCore.SupportFilter">
+            <summary>
+            过滤类：SupportFilter并继承AuthorizeAttribute权限筛选器OnAuthorization基类方法
+            </summary>
+        </member>
+        <member name="M:EMCCommon.EMCCommon.AccountController.WebApiCore.SupportFilter.OnAuthorization(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            重写基类的验证方式，加入我们自定义的Ticket验证
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:VerificationRunTime">
+            <summary>
+            检查类库
+            </summary>
+        </member>
+        <member name="M:VerificationRunTime.CheckIsDate(System.String,System.Data.DataRow,System.String)">
+            <summary>
+            检查时间是否是有效的日期
+            </summary>
+            <param name="type"></param>
+            <param name="dr"></param>
+            <param name="ColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VerificationRunTime.CheckIsDouble(System.String,System.Data.DataRow,System.String)">
+            <summary>
+            检查是否是数字。
+            如果值中有带L的数据，那么就跳过
+            </summary>
+            <param name="type"></param>
+            <param name="dr"></param>
+            <param name="ColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VerificationRunTime.CheckCityAndPoint(System.String,System.Data.DataRow,System.String)">
+            <summary>
+            检查是否存在当前城市和点位
+            </summary>
+            <param name="type">业务类型</param>
+            <param name="dr">需要检查的行</param>
+            <param name="ColName">需要检查的列</param>
+            <returns></returns>
+        </member>
+        <member name="M:VerificationRunTime.Check24Hour(System.String,System.Data.DataTable,System.String)">
+            <summary>
+            检查24小时数据
+            </summary>
+            <param name="type"></param>
+            <param name="dt"></param>
+            <param name="ColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VerificationRunTime.CheckData(System.String,System.Data.DataTable,System.String)">
+            <summary>
+            检查Excel中数据是否重复
+            </summary>
+            <param name="type"></param>
+            <param name="dr"></param>
+            <param name="ColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VerificationRunTime.CheckItemName(System.Data.DataRow,System.Collections.Generic.List{Newtonsoft.Json.Linq.JToken})">
+            <summary>
+            检查项目名称是否与Json配置表中匹配
+            </summary>
+            <param name="dr"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lijoy.Service.EMCMIS.ServiceCommon">
+            <summary>
+            通用的服务类，提供如处理数据、转换级别、修约数值等功能
+            author:都玉新
+            date:20150612
+            </summary>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.GetRuleData(System.Data.DataRow,System.Decimal,System.Int32)">
+            <summary>
+            处理数据
+            </summary>
+            <param name="Dec">保留为数</param>
+            <param name="dr">项目处理规则数据</param>
+            <param name="val">需要处理的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.TransWaterStage(System.String)">
+            <summary>
+            把水质类别的数字转换成Ⅰ、Ⅱ等
+            </summary>
+            <param name="strStageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.GetAirOrWaterLevel(System.Int32,System.Int32)">
+            <summary>
+            转换级别
+            </summary>
+            <param name="itype">类型(0:大气  1:水质)</param>
+            <param name="ilevel">级别</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.GetPValue(System.Data.DataTable,System.String,System.Decimal,System.Int32)">
+            <summary>
+            取得修约规则后的数值
+            </summary>
+            <param name="dt">修约数据</param>
+            <param name="Item">项目代码</param>
+            <param name="val">数据</param>
+            <param name="Dec">保留位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.GetDataValue(System.Data.DataRow,System.String)">
+            <summary>
+            获取返回的数据库值
+            </summary>
+            <param name="item">DataRow</param>
+            <param name="strFielName">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.IsNumeric(System.String)">
+             <summary>
+            判断输入字符串是否为数字
+             </summary>
+             <param name="nValue">字符串</param>
+             <returns></returns>
+        </member>
+        <member name="M:Lijoy.Service.EMCMIS.ServiceCommon.IsItemValue(System.String)">
+             <summary>
+            判断是否是字段浓度值
+             </summary>
+             <param name="strColumnName">字符串</param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

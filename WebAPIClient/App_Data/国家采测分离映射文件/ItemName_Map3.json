@@ -1,0 +1,246 @@
+[
+    {
+        "ItemName_Country": "水温(℃)",
+        "ItemName_System": "水温"
+    },
+    {
+        "ItemName_Country": "pH(无量纲)",
+        "ItemName_System": "pH"
+    },
+    {
+        "ItemName_Country": "溶解氧",
+        "ItemName_System": "溶解氧"
+    },
+    {
+        "ItemName_Country": "高锰酸盐指数",
+        "ItemName_System": "高锰酸盐指数"
+    },
+    {
+        "ItemName_Country": "氨氮",
+        "ItemName_System": "氨氮"
+    },
+    {
+        "ItemName_Country": "总磷",
+        "ItemName_System": "总磷"
+    },
+    {
+        "ItemName_Country": "氟化物",
+        "ItemName_System": "氟化物"
+    },
+    {
+        "ItemName_Country": "挥发酚",
+        "ItemName_System": "挥发酚"
+    },
+    {
+        "ItemName_Country": "石油类",
+        "ItemName_System": "石油类"
+    },
+    {
+        "ItemName_Country": "粪大肠菌群（个/L）",
+        "ItemName_System": "粪大肠菌群"
+    },
+    {
+        "ItemName_Country": "五日生化需氧量",
+        "ItemName_System": "五日生化需氧量"
+    },
+    {
+        "ItemName_Country": "总氮",
+        "ItemName_System": "总氮"
+    },
+    {
+        "ItemName_Country": "铜",
+        "ItemName_System": "铜"
+    },
+    {
+        "ItemName_Country": "锌",
+        "ItemName_System": "锌"
+    },
+    {
+        "ItemName_Country": "硒（μg/L）",
+        "ItemName_System": "硒"
+    },
+    {
+        "ItemName_Country": "砷（μg/L）",
+        "ItemName_System": "砷"
+    },
+    {
+        "ItemName_Country": "汞（μg/L）",
+        "ItemName_System": "汞"
+    },
+    {
+        "ItemName_Country": "镉",
+        "ItemName_System": "镉"
+    },
+    {
+        "ItemName_Country": "六价铬",
+        "ItemName_System": "六价铬"
+    },
+    {
+        "ItemName_Country": "铅",
+        "ItemName_System": "铅"
+    },
+    {
+        "ItemName_Country": "阴离子表面活性剂（LAS）",
+        "ItemName_System": "阴离子表面活性剂"
+    },
+    {
+        "ItemName_Country": "氰化物",
+        "ItemName_System": "氰化物"
+    },
+    {
+        "ItemName_Country": "硫化物",
+        "ItemName_System": "硫化物"
+    },
+    {
+        "ItemName_Country": "硫酸盐",
+        "ItemName_System": "硫酸盐"
+    },
+    {
+        "ItemName_Country": "氯化物",
+        "ItemName_System": "氯化物"
+    },
+    {
+        "ItemName_Country": "硝酸盐氮",
+        "ItemName_System": "硝酸盐"
+    },
+    {
+        "ItemName_Country": "铁",
+        "ItemName_System": "铁"
+    },
+    {
+        "ItemName_Country": "锰",
+        "ItemName_System": "锰"
+    },
+    {
+        "ItemName_Country": "甲醛",
+        "ItemName_System": "甲醛"
+    },
+    {
+        "ItemName_Country": "三氯甲烷",
+        "ItemName_System": "三氯甲烷"
+    },
+    {
+        "ItemName_Country": "四氯化碳",
+        "ItemName_System": "四氯化碳"
+    },
+    {
+        "ItemName_Country": "三氯乙烯",
+        "ItemName_System": "三氯乙烯"
+    },
+    {
+        "ItemName_Country": "四氯乙烯",
+        "ItemName_System": "四氯乙烯"
+    },
+    {
+        "ItemName_Country": "苯乙烯",
+        "ItemName_System": "苯乙烯"
+    },
+    {
+        "ItemName_Country": "苯",
+        "ItemName_System": "苯"
+    },
+    {
+        "ItemName_Country": "甲苯",
+        "ItemName_System": "甲苯"
+    },
+    {
+        "ItemName_Country": "乙苯",
+        "ItemName_System": "乙苯"
+    },
+    {
+        "ItemName_Country": "二甲苯",
+        "ItemName_System": "二甲苯"
+    },
+    {
+        "ItemName_Country": "异丙苯",
+        "ItemName_System": "异丙苯"
+    },
+    {
+        "ItemName_Country": "氯苯",
+        "ItemName_System": "氯苯"
+    },
+    {
+        "ItemName_Country": "1,2―二氯苯",
+        "ItemName_System": "1,2-二氯苯"
+    },
+    {
+        "ItemName_Country": "1,4―二氯苯",
+        "ItemName_System": "1,4-二氯苯"
+    },
+    {
+        "ItemName_Country": "三氯苯",
+        "ItemName_System": "三氯苯②"
+    },
+    {
+        "ItemName_Country": "硝基苯",
+        "ItemName_System": "硝基苯"
+    },
+    {
+        "ItemName_Country": "二硝基苯",
+        "ItemName_System": "二硝基苯④"
+    },
+    {
+        "ItemName_Country": "硝基氯苯",
+        "ItemName_System": "硝基氯苯⑤"
+    },
+    {
+        "ItemName_Country": "邻苯二甲酸二丁酯",
+        "ItemName_System": "邻苯二甲酸二丁酯"
+    },
+    {
+        "ItemName_Country": "邻苯二甲酸二（2-乙基己基）酯",
+        "ItemName_System": "邻苯二甲酸二（2-乙基已基）酯"
+    },
+    {
+        "ItemName_Country": "滴滴涕",
+        "ItemName_System": "滴滴涕"
+    },
+    {
+        "ItemName_Country": "林丹",
+        "ItemName_System": "林丹（六六六）"
+    },
+    {
+        "ItemName_Country": "阿特拉津",
+        "ItemName_System": "阿特拉津"
+    },
+    {
+        "ItemName_Country": "苯并（a）芘",
+        "ItemName_System": "苯并（a）芘"
+    },
+    {
+        "ItemName_Country": "钼",
+        "ItemName_System": "钼"
+    },
+    {
+        "ItemName_Country": "钴",
+        "ItemName_System": "钴"
+    },
+    {
+        "ItemName_Country": "铍",
+        "ItemName_System": "铍"
+    },
+    {
+        "ItemName_Country": "硼",
+        "ItemName_System": "硼"
+    },
+    {
+        "ItemName_Country": "锑（μg/L）",
+        "ItemName_System": "锑"
+    },
+    {
+        "ItemName_Country": "镍",
+        "ItemName_System": "镍"
+    },
+    {
+        "ItemName_Country": "钡",
+        "ItemName_System": "钡"
+    },
+    {
+        "ItemName_Country": "钒",
+        "ItemName_System": "钒"
+    },
+    {
+        "ItemName_Country": "铊",
+        "ItemName_System": "铊"
+    }
+]

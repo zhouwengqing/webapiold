@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product App</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Products</h2>
+        <ul id="products" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <input type="button" value="获取" onclick="getitem()" />
+        <p id="product" />
+    </div>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script>
+    var uri = '../api/products';
+
+    $(document).ready(function () {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+            // On success, 'data' contains a list of products.
+            $.each(data, function (key, item) {
+              // Add a list item for the product.
+              $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+            });
+          });
+    });
+
+    function formatItem(item) {
+      return item.Name + ': $' + item.Price;
+    }
+
+    function find() {
+      var id = $('#prodId').val();
+      $.getJSON(uri + '/' + id)
+          .done(function (data) {
+            $('#product').text(formatItem(data));
+          })
+          .fail(function (jqXHR, textStatus, err) {
+            $('#product').text('Error: ' + err);
+          });
+        }
+
+        function getitem() {
+            $.ajax({
+                type: "post",
+                contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+                url:"../api/ItemProject/QueryItemProject",
+                contentType: "application/json",
+                data: JSON.stringify({ UserID: 578, Object:"大气"}),
+                success: function (data, status) {
+                    if (status == "success") {
+                        alert(data);
+                    }
+                },
+                error: function () {
+                   alert("取得信息失败!");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

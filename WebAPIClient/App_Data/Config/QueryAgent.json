@@ -1,0 +1,71 @@
+[
+  //汇通代付查询
+  {
+    "fldGatewaynumber": "HT_006",
+    "parameter": [
+      {
+        "SignMethod": "MD5",
+        "Version": "1.0",
+        "TxCode": "qryonepayout",
+        "MerNo": "40939485",
+        "PlatTxSN": "",
+        "TxSN": "order_no"
+      }
+    ],
+    "requesttype": "1",
+    "payurl": "http://apipay.juheb2b.com/mer/api"
+  },
+  //万通代付查询
+  {
+    "fldGatewaynumber": "QJ_004",
+    "parameter": [
+      {
+        "merchant_code": "1550473045",
+        "appno_no": "lbjs20190218",
+        "order_no": "order_no"
+      }
+    ],
+    "requesttype": "0",
+    "payurl": "http://47.107.53.61/v2/queryWithdrawOrder"
+  },
+  //亿点代付查询
+  {
+    "fldGatewaynumber": "YD_010",
+    "parameter": [
+      {
+        "method": "transfer.query",
+        "transferId": "order_no",
+        "merchantNum": "888017",
+        "nonce_str": "KLJ"
+      }
+    ],
+    "requesttype": "1",
+    "payurl": "http://yd.ydbill.com/YBT/transquery"
+  },
+  //再创代付查询
+  {
+    "fldGatewaynumber": "ZC_008",
+    "parameter": [
+      {
+        "mch_id": "605",
+        "order_no": "order_no"
+      }
+    ],
+    "requesttype": "1",
+    "payurl": "http://xbmch.dxkmi.com/dist/api/withdraw/wdstatus"
+  },
+  //海付代付查询
+  {
+    "fldGatewaynumber": "HF_011",
+    "parameter": [
+      {
+        "userid": "734641",
+        "pay_number": "order_no",
+        "orderCode": "xf_withdrawQuery"
+      }
+    ],
+    "requesttype": "1",
+    "payurl": "http://47.100.105.213:8080/paygate/entrance.action"
+
+  }
+]

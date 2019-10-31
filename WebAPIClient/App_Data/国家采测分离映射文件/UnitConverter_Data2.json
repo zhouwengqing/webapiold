@@ -1,0 +1,23 @@
+[
+    {
+        "ItemName": "硒",
+        "UnitConverter": [
+            "/",
+            "1000"
+        ]
+    },
+    {
+        "ItemName": "砷",
+        "UnitConverter": [
+            "/",
+            "1000"
+        ]
+    },
+    {
+        "ItemName": "汞",
+        "UnitConverter": [
+            "/",
+            "1000"
+        ]
+    }
+]

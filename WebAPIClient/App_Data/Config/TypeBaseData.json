@@ -1,0 +1,1449 @@
+[
+  //大气
+  {
+    "type": "eqia_r",
+    "TypeDisplayName": "大气",
+    "tablenamepre": "[tblEQIA_RPI_Basedata_Pre]",
+    "tablename": "[tblEQIA_RPI_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldBReport],[fldUserID]",
+    "View": "[vwEQIA_RPI_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": "[tblEQIA_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldSYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldSMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldSDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //降尘
+  {
+    "type": "eqia_rd",
+    "TypeDisplayName": "降尘",
+    "tablenamepre": "[tblEQIA_RDPI_Basedata_Pre]",
+    "tablename": "[tblEQIA_RDPI_Basedata]",
+    "basedatacol": "[fldSTCode],[fldPCode],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemValue],[fldFlag],[fldBReport],[fldUserID],[fldSource]",
+    "View": "[vwEQIA_RDPI_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldPCode],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemValue],[fldFlag],0 as [fldBReport],[fldUserID],[fldSource]",
+    "ItemTableName": "[tblEQIA_RD_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldSYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldSMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldSDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //降水
+  {
+    "type": "eqia_p",
+    "TypeDisplayName": "降水",
+    "tablenamepre": "[tblEQIA_PPI_BaseData_Pre]",
+    "tablename": "[tblEQIA_PPI_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldType],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldFlag],[fldBReport],[fldUserID],[fldSource]",
+    "View": "[vwEQIA_PPI_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldType],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldFlag],0 as [fldBReport],[fldUserID],[fldSource]",
+    "ItemTableName": "[tblEQIA_P_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldSYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldSMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldSDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //大气专项
+  {
+    "type": "eqia_s",
+    "TypeDisplayName": "大气专项",
+    "tablenamepre": "[tblEQIA_STS_Basedata_Pre]",
+    "tablename": "[tblEQIA_STS_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldType],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour][fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIA_STS_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldType],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour][fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldSYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldSMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldSDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //地表水
+  {
+    "type": "eqiw_r",
+    "TypeDisplayName": "地表水",
+    "tablenamepre": "[tblEQIW_R_Basedata_Pre]",
+    "tablename": "[tblEQIW_R_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_R_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //水华
+  {
+    "type": "eqise",
+    "TypeDisplayName": "水华",
+    "tablenamepre": "[tblEQIW_R_Basedata_Pre]",
+    "tablename": "[tblEQIW_R_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_R_Basedata_Pre_NewAllForAuditing_ShuiHua]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //地表水
+  {
+    "type": "eqiw_r_auto",
+    "TypeDisplayName": "地表水自动监测",
+    "tablenamepre": "[tblEQIW_R_Basedata_Pre_Auto]",
+    "tablename": "[tblEQIW_R_Basedata_Auto]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_R_Basedata_Pre_NewAllForAuditing_Auto]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //地下水
+  {
+    "type": "eqiw_g",
+    "TypeDisplayName": "地下水",
+    "tablenamepre": "[tblEQIW_G_Basedata_Pre]",
+    "tablename": "[tblEQIW_G_Basedata]",
+    "basedatacol": "[fldSTCode],[fldPCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemValue],[fldSource],[fldUserID]",
+    "View": "[vwEQIW_G_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldPCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemValue],[fldSource],[fldUserID]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //地表水专项
+  {
+    "type": "eqiw_sts",
+    "TypeDisplayName": "地表水专项",
+    "tablenamepre": "[tblEQIW_STS_Basedata_Pre]",
+    "tablename": "[tblEQIW_STS_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_STS_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //区域噪声
+  {
+    "type": "eqin_a",
+    "TypeDisplayName": "区域噪声",
+    "tablenamepre": "[tblEQIN_A_BaseData_Pre]",
+    "tablename": "[tblEQIN_A_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldGDCODE],[fldGDNAME],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldDN],[fldNDISC],[fldNSC],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldSD],[fldFlag],[fldBReport],[fldUserID],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldSource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "View": "[vwEQIN_A_BaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldGDCODE],[fldGDNAME],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldDN],[fldNDISC],[fldNSC],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldSD],[fldFlag],0 as [fldBReport],[fldUserID],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldSource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][网格代码：",
+        "Field": "fldGDCODE"
+      },
+      {
+        "Display": "网格名称：",
+        "Field": "fldGDNAME"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //功能区噪声
+  {
+    "type": "eqin_f",
+    "TypeDisplayName": "功能区噪声",
+    "tablenamepre": "[tblEQIN_F_BaseData_Pre]",
+    "tablename": "[tblEQIN_F_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldNDISC],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldFlag],[fldBReport],[fldUserID],[fldSD],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldsource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "View": "[vwEQIN_F_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldNDISC],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldFlag],0 as [fldBReport],[fldUserID],[fldSD],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldsource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //道路交通噪声
+  {
+    "type": "eqin_t",
+    "TypeDisplayName": "道路交通噪声",
+    "tablenamepre": "[tblEQIN_T_BaseData_Pre]",
+    "tablename": "[tblEQIN_T_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRDCode],[fldRDName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldDN],[fldZptrafic],[fldQptrafic],[fldPTrafic],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldFlag],[fldBReport],[fldUserID],[fldSD],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldSource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "View": "[vwEQIN_T_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRDCode],[fldRDName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldDN],[fldZptrafic],[fldQptrafic],[fldPTrafic],[fldLEQA],[fldL10A],[fldL50A],[fldL90A],[fldLmax],[fldLmin],[fldFlag],0 as [fldBReport],[fldUserID],[fldSD],[fldMph],[fldApparatus_Type],[fldApparatus_Id],[fldApparatus_Grade],[fldMatching_Data],[fldSource],[fldCalibrationVluesOn],[fldCalibrationVluesEnd],[fldSPressureValue],[fldSPressureType],[fldSPressureID]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][道路代码：",
+        "Field": "fldRDCode"
+      },
+      {
+        "Display": "道路名称：",
+        "Field": "fldRDName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //噪声专项
+  {
+    "type": "eqin_m",
+    "TypeDisplayName": "噪声专项",
+    "tablenamepre": "[tblEQIN_M_BaseData_Pre]",
+    "tablename": "[tblEQIN_M_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldFeiPtrafic],[fldFeiTrumpet],[fldFeiTrumpetRate],[fldJiPtraficGJ],[fldJiPtraficCZ],[fldJiPtraficHC],[fldJiPtraficSH],[fldJiPtraficCount],[fldJiTrumpetGJ],[fldJiTrumpetCZ],[fldJiTrumpetHC],[fldJiTrumpetSH],[fldJiTrumpetCount],[fldJiTRateGJ],[fldJiTRateCZ],[fldJiTRateHC],[fldJiTRateSH],[fldJiTRateCount],[fldFlag],[fldBReport],[fldUserID],[fldSource]",
+    "View": "[vwEQIN_M_BaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldTimelen],[fldFeiPtrafic],[fldFeiTrumpet],[fldFeiTrumpetRate],[fldJiPtraficGJ],[fldJiPtraficCZ],[fldJiPtraficHC],[fldJiPtraficSH],[fldJiPtraficCount],[fldJiTrumpetGJ],[fldJiTrumpetCZ],[fldJiTrumpetHC],[fldJiTrumpetSH],[fldJiTrumpetCount],[fldJiTRateGJ],[fldJiTRateCZ],[fldJiTRateHC],[fldJiTRateSH],[fldJiTRateCount],[fldFlag],0 as [fldBReport],[fldUserID],[fldSource]",
+    "ItemTableName": "",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //地市饮用水
+  {
+    "type": "eqiw_d",
+    "TypeDisplayName": "地市饮用水",
+    "tablenamepre": "[tblEQIW_D_Basedata_Pre]",
+    "tablename": "[tblEQIW_D_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_D_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_D_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldRSName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //区县饮用水
+  {
+    "type": "eqiw_dt",
+    "TypeDisplayName": "区县饮用水",
+    "tablenamepre": "[tblEQIW_DT_Basedata_Pre]",
+    "tablename": "[tblEQIW_DT_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_DT_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_D_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldRSName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //乡镇饮用水
+  {
+    "type": "eqiw_dx",
+    "TypeDisplayName": "乡镇饮用水",
+    "tablenamepre": "[tbleqiw_dx_Basedata_Pre]",
+    "tablename": "[tblEQIW_DX_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_DX_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_D_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldRSName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //土壤
+  {
+    "type": "eqiso",
+    "TypeDisplayName": "土壤",
+    "tablenamepre": "[tblEQISO_Basedata_Pre]",
+    "tablename": "[tblEQISO_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSampleType],[fldSampleName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSamplingPerson],[fldSamplingWeather],[fldFlag],[fldBReport],[fldUserID],[fldEntCode],[fldEntName]",
+    "View": "[vwEQISO_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSampleType],[fldSampleName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSamplingPerson],[fldSamplingWeather],[fldFlag],0 as [fldBReport],[fldUserID],[fldEntCode],[fldEntName]",
+    "ItemTableName": "[tblEQISO_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //生态状况
+  {
+    "type": "eqie",
+    "TypeDisplayName": "生态状况",
+    "tablenamepre": "[tblEQIE_BaseData_Pre]",
+    "tablename": "[tblEQIE_BaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldYear],[fldArea],[fld21],[fld22],[fld23],[fld24],[fld31],[fld32],[fld33],[fld41],[fld42],[fld43],[fld44],[fld45],[fld46],[fld47],[fld11],[fld12],[fld51],[fld52],[fld53],[fld61],[fld62],[fld63],[fld64],[fld65],[fld66],[fld67],[fld71],[fld72],[fld73],[fld81],[fld82],[fld83],[fld91],[fld92],[fld93],[fld94],[fld95],[fld96],[fld97],[fld98],[fldNDVI],[fldIndex],[fldPopulation],[fldSource],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIE_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldYear],[fldArea],[fld21],[fld22],[fld23],[fld24],[fld31],[fld32],[fld33],[fld41],[fld42],[fld43],[fld44],[fld45],[fld46],[fld47],[fld11],[fld12],[fld51],[fld52],[fld53],[fld61],[fld62],[fld63],[fld64],[fld65],[fld66],[fld67],[fld71],[fld72],[fld73],[fld81],[fld82],[fld83],[fld91],[fld92],[fld93],[fld94],[fld95],[fld96],[fld97],[fld98],[fldNDVI],[fldIndex],[fldPopulation],[fldSource],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "监测年份：",
+        "Field": "fldYear"
+      }
+    ]
+  },
+  //生态功能区评价
+  {
+    "type": "eqie_f",
+    "TypeDisplayName": "生态功能区评价",
+    "tablenamepre": "[tblEQIE_FunData_Pre]",
+    "tablename": "[tblEQIE_FunData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldYear],[fldEPIIWater],[fldEQIAR],[fldEQIWR],[fldEQIWD],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIE_FunData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldYear],[fldEPIIWater],[fldEQIAR],[fldEQIWR],[fldEQIWD],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "监测年份：",
+        "Field": "fldYear"
+      }
+    ]
+  },
+  //城市生态环境
+  {
+    "type": "eqie_c",
+    "TypeDisplayName": "城市生态环境",
+    "tablenamepre": "[tblEQIE_CityData_Pre]",
+    "tablename": "[tblEQIE_CityData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldYear],[fldEQIWR],[fldEQIAR],[fldEQIWD],[fldEQINA],[fldHeatisLand],[fldEcology],[fldGreenbelt],[fldGDP],[fldEPIIWater],[fldWaste],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIE_CityData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldYear],[fldEQIWR],[fldEQIAR],[fldEQIWD],[fldEQINA],[fldHeatisLand],[fldEcology],[fldGreenbelt],[fldGDP],[fldEPIIWater],[fldWaste],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "监测日期：",
+        "Field": "fldYear"
+      }
+    ]
+  },
+  //浮游植物
+  {
+    "type": "eqib_czp",
+    "TypeDisplayName": "浮游植物",
+    "tablenamepre": "[tblEQIBCZPBaseData_Pre]",
+    "tablename": "[tblEQIBCZPBaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldWaterTyoe],[fldPickVolume],[fldConcentrate],[fldDensity]",
+    "View": "[vwEQIBCZPBaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldWaterTyoe],[fldPickVolume],[fldConcentrate],[fldDensity]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "断面代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "断面名称：",
+        "Field": "fldRSName"
+      }
+    ]
+  },
+  //浮游动物
+  {
+    "type": "eqib_czc",
+    "TypeDisplayName": "浮游动物",
+    "tablenamepre": "[tblEQIBCZCBaseData_Pre]",
+    "tablename": "[tblEQIBCZCBaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldNetTyoe],[fldPickVolume],[fldConcentrate],[fldDensity]",
+    "View": "[vwEQIBCZCBaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldNetTyoe],[fldPickVolume],[fldConcentrate],[fldDensity]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "断面代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "断面名称：",
+        "Field": "fldRSName"
+      }
+    ]
+  },
+  //底栖生物
+  {
+    "type": "eqib_cd",
+    "TypeDisplayName": "底栖生物",
+    "tablenamepre": "[tblEQIBCDBaseData_Pre]",
+    "tablename": "[tblEQIBCDBaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldAcreage],[fldAmount],[fldDensity]",
+    "View": "[vwEQIBCDBaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldAcreage],[fldAmount],[fldDensity]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "断面代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "断面名称：",
+        "Field": "fldRSName"
+      }
+    ]
+  },
+  //着生动物
+  {
+    "type": "eqib_cwc",
+    "TypeDisplayName": "着生动物",
+    "tablenamepre": "[tblEQIBCWCBaseData_Pre]",
+    "tablename": "[tblEQIBCWCBaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldAcreage],[fldDensity]",
+    "View": "[vwEQIBCWCBaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldAcreage],[fldDensity]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "断面代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "断面名称：",
+        "Field": "fldRSName"
+      }
+    ]
+  },
+  //着生植物
+  {
+    "type": "eqib_cwp",
+    "TypeDisplayName": "着生植物",
+    "tablenamepre": "[tblEQIBCWPBaseData_Pre]",
+    "tablename": "[tblEQIBCWPBaseData]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldDilution],[fldDensity]",
+    "View": "[vwEQIBCWPBaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldPCode],[fldTypeCode],[fldCTypeCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldDilution],[fldDensity]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "断面代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "断面名称：",
+        "Field": "fldRSName"
+      }
+    ]
+  },
+  //农村空气
+  {
+    "type": "eqia_r_v",
+    "TypeDisplayName": "农村空气",
+    "tablenamepre": "[tblEQIA_RPI_Basedata_V_Pre]",
+    "tablename": "[tblEQIA_RPI_Basedata_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld101],[fld141],[fld107],[fld105],[fld108],[fld106],[fldPollutantsName],[fldPollutantsValue],[fldRemark],[fldSource],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIA_RPI_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld101],[fld141],[fld107],[fld105],[fld108],[fld106],[fldPollutantsName],[fldPollutantsValue],[fldRemark],[fldSource],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": "[tblEQIA_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldCCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldCName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //农村地表水
+  {
+    "type": "eqiw_r_v",
+    "TypeDisplayName": "农村地表水",
+    "tablenamepre": "[tblEQIW_R_Basedata_V_Pre]",
+    "tablename": "[tblEQIW_R_Basedata_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldRSCode],[fldRSName],[fldYear],[fldMonth],[fldDay],[fld301],[fld303],[fld304],[fld309],[fld432],[fld433],[fld302],[fld315],[fld316],[fld314],[fld317],[fld311],[fld313],[fld466],[fld434],[fld435],[fld318],[fld319],[fld320],[fld438],[fld436],[fld325],[fld323],[fld437],[fld326],[fld327],[fld328],[fld467],[fld330],[fldWaterType],[fldSource],[fldUserID],[fldFlag],[fldBReport],[fldRemark]",
+    "View": "[vwEQIW_R_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldRSCode],[fldRSName],[fldYear],[fldMonth],[fldDay],[fld301],null as [fld303],null as [fld304],null as [fld309],null as [fld432],null as [fld433],[fld302],[fld315],[fld316],[fld314],[fld317],[fld311],[fld313],[fld466],[fld434],[fld435],[fld318],[fld319],[fld320],[fld438],[fld436],[fld325],[fld323],[fld437],[fld326],[fld327],[fld328],[fld467],[fld330],[fldWaterType],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport],[fldRemark]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldCCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldCName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //农村饮用水
+  {
+    "type": "eqiw_d_v",
+    "TypeDisplayName": "农村饮用水",
+    "tablenamepre": "[tblEQIW_D_Basedata_V_Pre]",
+    "tablename": "[tblEQIW_D_Basedata_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldRSCode],[fldRSName],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld998],[fld301],[fld302],[fld303],[fld315],[fld316],[fld314],[fld317],[fld311],[fld313],[fld466],[fld434],[fld435],[fld318],[fld319],[fld320],[fld438],[fld436],[fld323],[fld437],[fld325],[fld326],[fld327],[fld328],[fld467],[fld330],[fld304],[fld309],[fld310],[fld432],[fld433],[fld462],[fld329],[fldWaterType],[fldPollutantsName],[fldPollutantsValue],[fldRemark],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_D_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldRSCode],[fldRSName],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld998],[fld301],[fld302],[fld303],[fld315],[fld316],[fld314],[fld317],[fld311],[fld313],[fld466],[fld434],[fld435],[fld318],[fld319],[fld320],[fld438],[fld436],[fld323],[fld437],[fld325],[fld326],[fld327],[fld328],[fld467],[fld330],[fld304],[fld309],[fld310],[fld432],[fld433],[fld462],[fld329],[fldWaterType],[fldPollutantsName],[fldPollutantsValue],[fldRemark],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_D_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldCCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldCName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //农村土壤
+  {
+    "type": "eqiso_v",
+    "TypeDisplayName": "农村土壤",
+    "tablenamepre": "[tblEQISO_Basedata_V_Pre]",
+    "tablename": "[tblEQISO_Basedata_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldPCode],[fldPName],[fldLon],[fldLat],[fldSampleType],[fldYear],[fldMonth],[fldDay],[fld100],[fld116],[fld106],[fld108],[fld103],[fld120],[fld113],[fld186],[fld111],[fld112],[fld105],[fld109],[fld121],[fld118],[fld522],[fld104],[fld263],[fldPollutantsName1],[fldPollutantsValue1],[fldPollutantsName2],[fldPollutantsValue2],[fldPollutantsName3],[fldPollutantsValue3],[fldRemark],[fldFlag],[fldBReport],[fldUserID],[fldSource]",
+    "View": "[vwEQISO_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldPCode],[fldPName],[fldLon],[fldLat],[fldSampleType],[fldYear],[fldMonth],[fldDay],[fld100],[fld116],[fld106],[fld108],[fld103],[fld120],[fld113],[fld186],[fld111],[fld112],[fld105],[fld109],[fld121],[fld118],[fld522],[fld104],[fld263],[fldPollutantsName1],[fldPollutantsValue1],[fldPollutantsName2],[fldPollutantsValue2],[fldPollutantsName3],[fldPollutantsValue3],[fldRemark],[fldFlag],0 as [fldBReport],[fldUserID],[fldSource]",
+    "ItemTableName": "[tblEQISO_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldCCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldCName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //农村生态
+  {
+    "type": "eqib_v",
+    "TypeDisplayName": "农村生态",
+    "tablenamepre": "[tbl_EQIB_BaseData_V_Pre]",
+    "tablename": "[tbl_EQIB_BaseData_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRTCode],[fldRTName],[fldLons],[fldLone],[fldLats],[fldLate],[fldYear],[fldMon],[fldDay],[fldSWFDvalue],[fldZBFGvalue],[fldSWMDvalue],[fldTDTHvalue],[fldRLGRvalue],[fldXYSTvalue],[fldBReport],[fldUserID],[fldRemark],[fldSource]",
+    "View": "[vwEQIB_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRTCode],[fldRTName],[fldLons],[fldLone],[fldLats],[fldLate],[fldYear],[fldMon],[fldDay],[fldSWFDvalue],[fldZBFGvalue],[fldSWMDvalue],[fldTDTHvalue],[fldRLGRvalue],[fldXYSTvalue],0 as [fldBReport],[fldUserID],[fldRemark],[fldSource]",
+    "ItemTableName": null,
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][区县代码：",
+        "Field": "fldRTCode"
+      },
+      {
+        "Display": "区县名称：",
+        "Field": "fldRTName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMon"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //农村污水处理厂
+  {
+    "type": "eqiw_ws_v",
+    "TypeDisplayName": "农村污水处理厂",
+    "tablenamepre": "[tblEQIW_WS_Basedata_V_Pre]",
+    "tablename": "[tblEQIW_WS_Basedata_V]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldRSCode],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld997],[fld998],[fld316],[fld311],[fld302],[fld317],[fld461],[fld313],[fld330],[fldRemark],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_WS_Basedata_V_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldCCode],[fldCName],[fldVCode],[fldVName],[fldRSCode],[fldLon],[fldLat],[fldYear],[fldMonth],[fldDay],[fld997],[fld998],[fld316],[fld311],[fld302],[fld317],[fld461],[fld313],[fld330],[fldRemark],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_WS_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldCCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldCName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      }
+    ]
+  },
+  //重金属空气
+  {
+    "type": "eqia_r_hm",
+    "TypeDisplayName": "重金属空气",
+    "tablenamepre": "[tblEQIA_RPI_Basedata_Pre]",
+    "tablename": "[tblEQIA_RPI_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldLCode],[fldLName],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldFlag],[fldBReport],[fldUserID]",
+    "View": "[vwEQIA_RPI_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldLCode],[fldLName],[fldSYear],[fldSMonth],[fldSDay],[fldSHour],[fldSMinute],[fldEYear],[fldEMonth],[fldEDay],[fldEHour],[fldEMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldFlag],0 as [fldBReport],[fldUserID]",
+    "ItemTableName": "[tblEQIA_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldSYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldSMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldSDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //重金属地表水
+  {
+    "type": "eqiw_r_hm",
+    "TypeDisplayName": "重金属地表水",
+    "tablenamepre": "[tblEQIW_R_Basedata_Pre]",
+    "tablename": "[tblEQIW_R_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_R_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_R_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldRCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldRName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //重金属饮用水
+  {
+    "type": "eqiw_d_hm",
+    "TypeDisplayName": "重金属饮用水",
+    "tablenamepre": "[tblEQIW_D_Basedata_Pre]",
+    "tablename": "[tblEQIW_D_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],[fldBReport]",
+    "View": "[vwEQIW_D_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldRCode],[fldRName],[fldRSCode],[fldRSName],[fldSAMPH],[fldSAMPR],[fldRSC],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSource],[fldUserID],[fldFlag],0 as [fldBReport]",
+    "ItemTableName": "[tblEQIW_D_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][测点代码：",
+        "Field": "fldRSCode"
+      },
+      {
+        "Display": "测点名称：",
+        "Field": "fldRSName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //重金属土壤
+  {
+    "type": "eqiso_hm",
+    "TypeDisplayName": "重金属土壤",
+    "tablenamepre": "[tblEQISO_Basedata_Pre]",
+    "tablename": "[tblEQISO_Basedata]",
+    "basedatacol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSampleType],[fldSampleName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSamplingPerson],[fldSamplingWeather],[fldFlag],[fldBReport],[fldUserID],[fldEntCode],[fldEntName]",
+    "View": "[vwEQISO_Basedata_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldSTName],[fldPCode],[fldPName],[fldSampleType],[fldSampleName],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldItemCode],[fldItemName],[fldItemValue],[fldSamplingPerson],[fldSamplingWeather],[fldFlag],0 as [fldBReport],[fldUserID],[fldEntCode],[fldEntName]",
+    "ItemTableName": "[tblEQISO_Item]",
+    "AuditingLog": [
+      {
+        "Display": "[城市代码：",
+        "Field": "fldSTCode"
+      },
+      {
+        "Display": "城市名称：",
+        "Field": "fldSTName"
+      },
+      {
+        "Display": "][河流代码：",
+        "Field": "fldPCode"
+      },
+      {
+        "Display": "河流名称：",
+        "Field": "fldPName"
+      },
+      {
+        "Display": "][监测日期：",
+        "Field": "fldYear"
+      },
+      {
+        "Display": "",
+        "Field": "fldMonth"
+      },
+      {
+        "Display": "",
+        "Field": "fldDay"
+      },
+      {
+        "Display": "][项目名称：",
+        "Field": "fldItemName"
+      }
+    ]
+  },
+  //电磁辐射
+  {
+    "type": "eqid_d",
+    "TypeDisplayName": "电磁辐射",
+    "tablenamepre": "[tblEQID_D_BaseData_Pre]",
+    "tablename": "[tblEQID_D_BaseData]",
+    "basedatacol": "[fldSTCode],[fldPCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldRate],[fldEIntensity],[fldMIntensity],[fldPower],[fldUserID],[fldSource]",
+    "View": "[vwEQID_D_BaseData_Pre_NewAllForAuditing]",
+    "ViewCol": "[fldSTCode],[fldPCode],[fldYear],[fldMonth],[fldDay],[fldHour],[fldMinute],[fldRate],[fldEIntensity],[fldMIntensity],[fldPower],[fldUserID],[fldSource]",
+    "ItemTableName": null,
+    "AuditingLog": null
+  }
+]

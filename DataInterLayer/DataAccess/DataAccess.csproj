@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF2B322E-5D19-4235-85CF-01C80A4F0953}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDYZ.Ensis.DataSource.DataAccess</RootNamespace>
+    <AssemblyName>DDYZ.Ensis.DataSource.DataAccess</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DDYZ.Ensis.Library.Exception, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DDYZ.Ensis.Library\Exception\bin\Debug\DDYZ.Ensis.Library.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccepttblChanneSub.cs" />
+    <Compile Include="BaseProcedure.cs" />
+    <Compile Include="Common_PageList_New_SUM.cs" />
+    <Compile Include="Common_PageList_New.cs" />
+    <Compile Include="DataAccessConfig.cs" />
+    <Compile Include="deletebytable.cs" />
+    <Compile Include="getitembytype.cs" />
+    <Compile Include="GetItemGraphdate.cs" />
+    <Compile Include="GetStagebySectItemval.cs" />
+    <Compile Include="AccepttblChanne.cs" />
+    <Compile Include="allAmount.cs" />
+    <Compile Include="UpdateChannelinformation.cs" />
+    <Compile Include="usp_DictionariesCode.cs" />
+    <Compile Include="usp_inserttblPayfailMessageLog.cs" />
+    <Compile Include="inserttbljdpay.cs" />
+    <Compile Include="inserttblWeiXinpay.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="usp_All_DAQLTSTD_GetEditionBytable.cs" />
+    <Compile Include="usp_AuditingActionAll.cs" />
+    <Compile Include="usp_Auditing_DatadtTitle_Chinesize.cs" />
+    <Compile Include="usp_base_eqiw_getdata_forgis.cs" />
+    <Compile Include="usp_base_getdata_forgis.cs" />
+    <Compile Include="usp_ByStandardName.cs" />
+    <Compile Include="usp_DT_Dn_deletech_data_content.cs" />
+    <Compile Include="usp_DT_Dn_Insertch_data_content.cs" />
+    <Compile Include="updatetblReportArchive.cs" />
+    <Compile Include="usp_EQIA_P_Auditing.cs" />
+    <Compile Include="usp_EQIA_RD_Auditing.cs" />
+    <Compile Include="usp_Eqia_RPI_Basedata_Living_GetO3EightAVGValue.cs" />
+    <Compile Include="usp_Eqia_RPI_Basedata_Living_GetTwentyFourAVGValue.cs" />
+    <Compile Include="usp_EQIA_R_Auditing.cs" />
+    <Compile Include="usp_EQIA_S_Auditing.cs" />
+    <Compile Include="usp_EQIB_CZP_Auditing.cs" />
+    <Compile Include="usp_EQIN_A_Auditing.cs" />
+    <Compile Include="usp_EQIN_F_Auditing.cs" />
+    <Compile Include="usp_EQI_Comm_CreteQueryTableFile.cs" />
+    <Compile Include="inserttblAlipay.cs" />
+    <Compile Include="usp_Dictionaries.cs" />
+    <Compile Include="usp_IsRulePaySub.cs" />
+    <Compile Include="usp_IsRuleH5.cs" />
+    <Compile Include="usp_ThawtblAccounting.cs" />
+    <Compile Include="usp_FrozentblAccounting.cs" />
+    <Compile Include="usp_EQIN_M_Auditing.cs" />
+    <Compile Include="usp_EQIN_T_Auditing.cs" />
+    <Compile Include="usp_EQISO_Auditing.cs" />
+    <Compile Include="usp_EQIV_Common_Auditing.cs" />
+    <Compile Include="usp_EQIW_DT_Auditing.cs" />
+    <Compile Include="usp_EQIW_DX_Auditing.cs" />
+    <Compile Include="usp_EQIW_D_Auditing.cs" />
+    <Compile Include="usp_EQIW_G_Auditing.cs" />
+    <Compile Include="usp_EQIW_R_Auditing.cs" />
+    <Compile Include="usp_EQIW_R_Auditing_ShuiHua.cs" />
+    <Compile Include="usp_eqiw_r_autodataHour.cs" />
+    <Compile Include="usp_EQIW_R_Auto_Auditing.cs" />
+    <Compile Include="usp_EQIW_R_HourData_Auto_ohd.cs" />
+    <Compile Include="usp_EQIW_STS_Auditing.cs" />
+    <Compile Include="usp_eqiw_sts_dataStage.cs" />
+    <Compile Include="usp_EQI_Comm_CreteQueryTable.cs" />
+    <Compile Include="usp_execInsert.cs" />
+    <Compile Include="usp_ExecProcess.cs" />
+    <Compile Include="usp_execSqlText.cs" />
+    <Compile Include="usp_GetAllBusinessBaseDataByDateAndBusiness.cs" />
+    <Compile Include="usp_GetCityOrTypeName.cs" />
+    <Compile Include="usp_getEQIA_R_ItemforGis.cs" />
+    <Compile Include="usp_getEQIA_R_Point_ByExceptionValueForGis.cs" />
+    <Compile Include="usp_getEQIA_R_Point_ByOutValueForGis.cs" />
+    <Compile Include="usp_getEQIA_R_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIA_R_Value_ByPointForGis.cs" />
+    <Compile Include="usp_getEQID_D_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIN_T_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIP_S_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIS_W_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIW_R_Point_ByExceptionValueForGis.cs" />
+    <Compile Include="usp_getEQIW_R_Point_ByOutValueForGis.cs" />
+    <Compile Include="usp_getEQIW_R_Value_ByAllForGis.cs" />
+    <Compile Include="usp_getEQIW_R_Value_ByPointForGis.cs" />
+    <Compile Include="usp_GetAllBusinessPointsByYearAndBusiness.cs" />
+    <Compile Include="usp_GetField.cs" />
+    <Compile Include="usp_GetHistoryData.cs" />
+    <Compile Include="usp_GetItemByteye_Select.cs" />
+    <Compile Include="usp_GetItem_Select.cs" />
+    <Compile Include="usp_GetPointNameorLevel.cs" />
+    <Compile Include="usp_GetPointNameorLevel_shibao.cs" />
+    <Compile Include="usp_GetSubmitDataInfo_CQ.cs" />
+    <Compile Include="usp_GetReportedDataInfo.cs" />
+    <Compile Include="usp_GetReportedDataInfo_basedata.cs" />
+    <Compile Include="usp_GettblFW_SystemUrl.cs" />
+    <Compile Include="SuccessState.cs" />
+    <Compile Include="usp_InsertorUpdate.cs" />
+    <Compile Include="usp_Operation_LAPtblFW_Report.cs" />
+    <Compile Include="usp_Operation_LAPtblFW_Report_Doc.cs" />
+    <Compile Include="usp_tblDictionary_ByPK.cs" />
+    <Compile Include="usp_tblDictionary_Delete.cs" />
+    <Compile Include="usp_tblDictionary_Delete_ParentID.cs" />
+    <Compile Include="usp_tblDictionary_GetNameByParentIDAndValue.cs" />
+    <Compile Include="usp_tblDictionary_GetValueByParentIDAndName.cs" />
+    <Compile Include="usp_tblDictionary_Insert.cs" />
+    <Compile Include="usp_tblDictionary_Select_ByNameAndParentID.cs" />
+    <Compile Include="usp_tblDictionary_Select_ByParentID.cs" />
+    <Compile Include="usp_tblDictionary_Select_ByParentName.cs" />
+    <Compile Include="usp_tblDictionary_Update.cs" />
+    <Compile Include="usp_tblDocManage_Insert.cs" />
+    <Compile Include="usp_tblDT_Dn_DataInfo_ByModuleandOffline.cs" />
+    <Compile Include="usp_tblDT_DN_TempletInfo_ByAll_Select.cs" />
+    <Compile Include="usp_tblEMCMIS_City_Select.cs" />
+    <Compile Include="usp_tblEQIA_D_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIA_PPI_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIA_PPI_BaseData_GetItemAVGDataForGis.cs" />
+    <Compile Include="usp_tblEQIA_PPI_BaseData_Insert.cs" />
+    <Compile Include="usp_tblEQIA_PPI_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIA_PPI_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIA_PPI_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIA_PPI_Basedata_Pre_UpdateFlag.cs" />
+    <Compile Include="usp_tblEQIA_P_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIA_P_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIA_P_Point_ForPage.cs" />
+    <Compile Include="usp_tblEQIA_P_Point_GetPCodeByRole.cs" />
+    <Compile Include="usp_tblEQIA_P_Point_GetPCodeByYear.cs" />
+    <Compile Include="usp_tblEQIA_P_Report_CityAcidRain_Page.cs" />
+    <Compile Include="usp_tblEQIA_RDPI_Basedata_Pre_DelAllData.cs" />
+    <Compile Include="usp_tblEQIA_RDPI_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_ByPK.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_Delete.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_GetAllStandardName.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_GetDaySTG.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_Insert.cs" />
+    <Compile Include="usp_tblEQIA_RD_ItemSTD_Update.cs" />
+    <Compile Include="usp_tblEQIA_RD_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIA_RD_Item_ByCode.cs" />
+    <Compile Include="usp_tblEQIA_RD_Point_GetPCodeByRole.cs" />
+    <Compile Include="usp_tblEQIA_RD_Point_GetPCodeByYear.cs" />
+    <Compile Include="usp_tblEQIA_RD_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CityDay_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CityDay_Midd_TimeQuantumSelect.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CityHour_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CityHour_Midd_SelectTrend.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CityHour_Midd_TimeQuantum_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_CountyHour_Liv_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_PDay_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_PHour_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_RPI_AQI_PHour_Midd_SelectTrend.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIA_RPI_BaseData_GetCityDayAQI_Page.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_GetHumidityAndTemperature.cs" />
+    <Compile Include="usp_tblEQIA_RPI_BaseData_GetRealTimeAQI_Page.cs" />
+    <Compile Include="usp_tblEQIA_RPI_BaseData_GetTrendAQIOrDensity_GIS.cs" />
+    <Compile Include="usp_tblEQIA_RPI_BaseData_GetTrendAQIOrDensity_Page.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIA_RPI_BaseData_Living_GetHoursValue.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIA_RPI_Basedata_Pre_UpdateItemValueBytable.cs" />
+    <Compile Include="usp_tblEQIA_R_ContaminantsAndWpi_Midd_Select.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_Country_Select.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_GetPCode.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_GetPCodeByYear_New.cs" />
+    <Compile Include="usp_tblEQIA_STS_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIA_STS_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIA_STS_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIA_STS_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIA_STS_Point_GetPCodeByRole.cs" />
+    <Compile Include="usp_tblEQIA_STS_Point_GetPCodeByYear.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetbyYearAndLevel.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetDataAndSelfBySTCode.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetNameAndCode.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetRive.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetRSCodeAndName.cs" />
+    <Compile Include="usp_tblEQIB_Section_GetRSCodeByRCode.cs" />
+    <Compile Include="usp_tblEQID_D_Point_GetGDCODEByYear.cs" />
+    <Compile Include="usp_tblEQIN_A_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIN_A_Point_GetGDCODEByYear.cs" />
+    <Compile Include="usp_tblEQIN_F_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIN_M_Point_GetSTCodeByYearandCode.cs" />
+    <Compile Include="usp_tblEQIN_T_Point_GetSTCodeByYearandCode.cs" />
+    <Compile Include="usp_tblEQISO_Point_GetCountyPCode.cs" />
+    <Compile Include="usp_tblEQISO_Point_GetPCode.cs" />
+    <Compile Include="usp_tblEQISO_Point_GetPCodeBystcodeandpcode.cs" />
+    <Compile Include="usp_tblEQISO_Point_GetPCodeByYearAndEntCode.cs" />
+    <Compile Include="usp_tblEQIW_DT_Section_GetRCodeandRSCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_DT_Section_GetRCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_DT_Section_GetRSCode.cs" />
+    <Compile Include="usp_tblEQIW_DT_Session_GetRCodeByYear.cs" />
+    <Compile Include="usp_tblEQIW_DX_Section_GetRCodeandRSCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_DX_Section_GetRCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_DX_Section_GetRSCode.cs" />
+    <Compile Include="usp_tblEQIW_DX_Session_GetRCodeByYear.cs" />
+    <Compile Include="usp_tblEQIW_D_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIW_D_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIW_D_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIW_D_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIW_D_Basedata_Pre_UpdateFlag.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetRCodeandRSCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetRCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetRCodeBySTCode_New.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetRCodeBySTCode_NofldSTCode.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetRSCode.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetStype.cs" />
+    <Compile Include="usp_tblEQIW_D_Session_GetRCodeByYear.cs" />
+    <Compile Include="usp_tblEQIW_G_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIW_G_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIW_G_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIW_G_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIW_G_Basedata_Pre_UpdateFlag.cs" />
+    <Compile Include="usp_tblEQIW_G_Section_GetbyYearAndLevel.cs" />
+    <Compile Include="usp_tblEQIW_L_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIW_L_Basedata_Insert_byR.cs" />
+    <Compile Include="usp_tblEQIW_L_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIW_L_Basedata_Pre_InsertD.cs" />
+    <Compile Include="usp_tblEQIW_L_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIW_L_Basedata_Pre_UpdateFlag.cs" />
+    <Compile Include="usp_tblEQIW_L_Report_Apprise_WUHAN.cs" />
+    <Compile Include="usp_tblEQIW_L_Section_ForGis.cs" />
+    <Compile Include="usp_tblEQIW_N_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_R_Auditing_Insert.cs" />
+    <Compile Include="usp_insert_tblAgentPay.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Pre_InsertD.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Apprise_WUHAN.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Gis.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Auto_SectionStageApprise.cs" />
+    <Compile Include="usp_tblEQIW_R_SectionSelectByStcode.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_GetRCodeandRSCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_GetRCodeBySTCodeByRole_New.cs" />
+    <Compile Include="usp_tblEQIW_StdColorData.cs" />
+    <Compile Include="usp_tblEQIW_STS_Auditing_Insert.cs" />
+    <Compile Include="usp_tblEQIW_STS_Basedata_Insert.cs" />
+    <Compile Include="usp_tblEQIW_STS_Basedata_Pre_Delete.cs" />
+    <Compile Include="usp_tblEQIW_STS_Basedata_Pre_UpdateCity.cs" />
+    <Compile Include="usp_tblEQIW_STS_Basedata_Pre_UpdateFlag.cs" />
+    <Compile Include="usp_tblEQIW_STS_Section_GetRCodeBySTCodeByRole.cs" />
+    <Compile Include="usp_tblEQIW_STS_Section_GetRSCodeByRole.cs" />
+    <Compile Include="usp_tblEQIW_STS_Session_GetRCodeByYear.cs" />
+    <Compile Include="usp_eqiw_r_autodataAvg.cs" />
+    <Compile Include="usp_tblEQI_Basedata_Pre_UpdateItemValueAndRemarkBytable.cs" />
+    <Compile Include="usp_tblEQI_Common_Basedata_Pre_Updatetable.cs" />
+    <Compile Include="usp_tblEQIA_R_BaseData_GetItemAVGDataForGis.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_ByPK.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_ByStandardNameAndItemCode.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_Delete.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_GetAllStandardName.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_GetAQL.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_GetDaySTG.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_GetSTG.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_GetTargetAVG.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_Insert.cs" />
+    <Compile Include="usp_tblEQIA_R_ItemSTD_Update.cs" />
+    <Compile Include="usp_tblEQIA_R_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIA_R_Item_ByItemCode.cs" />
+    <Compile Include="usp_tblEQIA_R_Item_GetDaySTDValueByItemCode.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_ForPage.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_GetPCodeByRole.cs" />
+    <Compile Include="usp_tblEQIA_R_Point_GetPCodeByYear.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_AirQualityDay_Gis.cs" />
+    <Compile Include="usp_tblEQIA_P_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_AppriseStat_V.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_CityDayData_Page.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_CityValue_AQIEx.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_HourStat.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_PointValue_AQI.cs" />
+    <Compile Include="usp_tblEQIBCD_Report_EcologicalIndex_Gis.cs" />
+    <Compile Include="usp_tblEQIbcp_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIBC_Z_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIBT_Report_EcologicalIndex_Gis.cs" />
+    <Compile Include="usp_tblEQID_D_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIE_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIN_A_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIN_A_Report_AppriseStat_S.cs" />
+    <Compile Include="usp_tblEQIN_F_FuncCode_ByAll.cs" />
+    <Compile Include="usp_tblEQIN_F_Point_forPage.cs" />
+    <Compile Include="usp_tblEQIN_F_Point_GetPCodeByYearandRole.cs" />
+    <Compile Include="usp_tblEQIN_F_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIN_F_Report_AppriseStat_S.cs" />
+    <Compile Include="usp_tblEQIN_F_Report_NoiseStat_Page.cs" />
+    <Compile Include="usp_tblEQIN_T_Point_forGis.cs" />
+    <Compile Include="usp_tblEQIN_T_Report_AppriseStat_S.cs" />
+    <Compile Include="usp_tblEQIP_S_WaterCompanyInfo_forGis.cs" />
+    <Compile Include="usp_tblEQIP_W_WaterCompanyInfo_forGis.cs" />
+    <Compile Include="usp_tblEQISE_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQISE_Item_Insert.cs" />
+    <Compile Include="usp_tblEQISO_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQISO_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQISO_Report_Apprise_V.cs" />
+    <Compile Include="usp_tblEQIS_DZ_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIS_DZ_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIS_P_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIS_D_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIS_D_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIS_P_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIS_W_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIS_W_Point_ForGis.cs" />
+    <Compile Include="usp_tblEQIS_W_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_D_BaseData_StageDataStat_Page.cs" />
+    <Compile Include="usp_tblEQIW_D_BaseData_WaterQuality_Page.cs" />
+    <Compile Include="usp_tblEQIW_D_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_D_Report_Apprise_V.cs" />
+    <Compile Include="usp_tblEQIW_D_Report_StageDataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_ForGis.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_ForPage.cs" />
+    <Compile Include="usp_tblEQIA_R_Report_AppriseStat.cs" />
+    <Compile Include="usp_tblEQIW_D_Section_GetCitySTCodeName.cs" />
+    <Compile Include="usp_tblEQIW_G_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIW_G_ItemSTD_GetSTD.cs" />
+    <Compile Include="usp_tblEQIW_G_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_G_Section_GetRCodeBySTCode.cs" />
+    <Compile Include="usp_tblEQIW_L_ItemSTD_GetSTD.cs" />
+    <Compile Include="usp_tblEQIW_L_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_L_Report_LakeStageForGIS.cs" />
+    <Compile Include="usp_tblEQIW_L_Report_StageStat.cs" />
+    <Compile Include="usp_tblEQIW_L_Report_TLIStat_Page.cs" />
+    <Compile Include="usp_tblEQIW_L_Section_ByRiverSystemType.cs" />
+    <Compile Include="usp_tblEQIW_RL_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_R_Auto_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_GetDayOrMonthAvgValue.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_GetTrendStageOrDensity_Page.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Living_GetDayOrMonthAvgValue.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Living_GetWaterHourValue.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_Pre_Insert.cs" />
+    <Compile Include="usp_tblEQIW_R_Basedata_WaterQuality_Page.cs" />
+    <Compile Include="usp_tblEQIS_W_Report_AppriseStat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_Hm_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_R_ItemSTD_GetSTD.cs" />
+    <Compile Include="usp_tblEQIW_R_Item_ByAll.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Apprise.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_AppriseStat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_AppriseStat_Stat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_AppriseStat_Stat_Page.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Apprise_ForLake.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_Apprise_V.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_DataApprise.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_DataBaseExprot.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_DataStat_Gis.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_DataStat_Page.cs" />
+    <Compile Include="usp_tblEQIW_R_Report_SectionApprise.cs" />
+    <Compile Include="usp_tblEQIW_R_RiverSystem_ByAll.cs" />
+    <Compile Include="usp_tblEQIW_R_RiverSystem_ByType.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_AllSectionFor_Page.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_ByRiverSystemType.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_ForGis.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_GetRCodeBySTCodeByRole.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_GetRSCodeByRCode.cs" />
+    <Compile Include="usp_tblEQIW_R_Section_GetRSCodeByRole.cs" />
+    <Compile Include="usp_tblEQIW_WS_Report_Apprise_V.cs" />
+    <Compile Include="usp_tblEQI_Com_Item_ByItemCode.cs" />
+    <Compile Include="usp_updatetblAgentPayfail.cs" />
+    <Compile Include="usp_updatetblAgentPay.cs" />
+    <Compile Include="usp_updatetblAgentPayState.cs" />
+    <Compile Include="usp_updatetblOrdertable.cs" />
+    <Compile Include="usp_tblEQI_GetByType.cs" />
+    <Compile Include="usp_tblEQI_getdllBystcode.cs" />
+    <Compile Include="usp_tblEQI_InputDate_Insert.cs" />
+    <Compile Include="usp_tblEQI_InputDate_Update.cs" />
+    <Compile Include="usp_tblEQI_InsertByType.cs" />
+    <Compile Include="usp_tblEQI_Item_Group_ByPK.cs" />
+    <Compile Include="usp_tblEQI_Item_Group_ByUserIDandObject.cs" />
+    <Compile Include="usp_tblEQI_Item_Group_Delete.cs" />
+    <Compile Include="usp_tblEQI_Item_Group_Insert.cs" />
+    <Compile Include="usp_tblEQI_Item_Group_Update.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_ByPK.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_ByUserIDandObject.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_ByUserIDandObject_input.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_ByUserIDandStcodeandYearandObject_input.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_Delete.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_Insert.cs" />
+    <Compile Include="usp_tblEQI_Point_Group_Update.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_ByAll.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_ByPK.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_ByUserIDandObject.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_Delete.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_Insert.cs" />
+    <Compile Include="usp_tblEQI_Query_Group_Update.cs" />
+    <Compile Include="usp_tbleqi_ThreeVerifyIfUpdateOrInsert.cs" />
+    <Compile Include="usp_tblEQI_VerifyIdea_UpdateOrInsert.cs" />
+    <Compile Include="usp_tblFW_AuditingLog_Insert.cs" />
+    <Compile Include="usp_tblFW_Dictionary_ByAll.cs" />
+    <Compile Include="usp_tblFW_Dictionary_ByPK.cs" />
+    <Compile Include="usp_tblFW_Dictionary_CountByTable.cs" />
+    <Compile Include="usp_tblFW_Dictionary_GetAllFields.cs" />
+    <Compile Include="usp_tblFW_Dictionary_GetAllTableName.cs" />
+    <Compile Include="usp_tblFW_Dictionary_GetTableDesc.cs" />
+    <Compile Include="usp_tblFW_IP_Power_GetIPPower.cs" />
+    <Compile Include="usp_tblFW_Log_Backup.cs" />
+    <Compile Include="usp_tblFW_Log_Insert.cs" />
+    <Compile Include="usp_tblFW_RegCity_ByAll.cs" />
+    <Compile Include="usp_tblFW_RegCity_ByAllCode.cs" />
+    <Compile Include="usp_tblFW_RegCity_ByCode.cs" />
+    <Compile Include="usp_tblFW_RegCity_ByPK.cs" />
+    <Compile Include="usp_tblFW_RegCity_Insert.cs" />
+    <Compile Include="usp_tblFW_RegCity_Parent.cs" />
+    <Compile Include="usp_tblFW_RegCity_SelfAndChild.cs" />
+    <Compile Include="usp_tblFW_RegCity_SetLoginCity.cs" />
+    <Compile Include="usp_tblFW_RegCity_Update.cs" />
+    <Compile Include="usp_tblFW_Reports_ByNameList.cs" />
+    <Compile Include="usp_tblFW_Reports_ByRoleID.cs" />
+    <Compile Include="usp_tblFW_Role_Report.cs" />
+    <Compile Include="usp_tblFW_Role_Report_Doc.cs" />
+    <Compile Include="usp_tblFW_User_AllMaintenance.cs" />
+    <Compile Include="usp_tblFW_User_AllRight.cs" />
+    <Compile Include="usp_tblFW_User_ByAll.cs" />
+    <Compile Include="usp_tblFW_User_ByPK.cs" />
+    <Compile Include="usp_tblFW_User_ByUserName.cs" />
+    <Compile Include="usp_tblFW_User_CheckRight.cs" />
+    <Compile Include="usp_tblFW_User_Delete.cs" />
+    <Compile Include="usp_tblFW_User_Insert.cs" />
+    <Compile Include="usp_tblFW_User_Update.cs" />
+    <Compile Include="usp_tblFW_User_UpdateActive.cs" />
+    <Compile Include="usp_tblFW_User_UpdatePassword.cs" />
+    <Compile Include="usp_tblItemGroupInfo_GIS.cs" />
+    <Compile Include="usp_tblItemInfo_GIS.cs" />
+    <Compile Include="usp_tblItem_Recording_Insert.cs" />
+    <Compile Include="usp_tblOrdertable_Insert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Exception.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Interface.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Interface.pdb" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Lib.dll" />
+    <Content Include="bin\Debug\DDYZ.Ensis.Library.Lib.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Enum.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Enum.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Exception.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Exception.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Interface.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Interface.pdb" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Lib.dll" />
+    <Content Include="bin\Release\DDYZ.Ensis.Library.Lib.pdb" />
+    <Content Include="obj\DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="obj\Debug\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+    <Content Include="obj\Release\DataAccess.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\DDYZ.Ensis.DataSource.DataAccess.dll" />
+    <Content Include="obj\Release\DDYZ.Ensis.DataSource.DataAccess.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\x86\Debug\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\DataAccess.csproj.FileListAbsolute.txt.mine" />
+    <None Include="obj\DataAccess.csproj.FileListAbsolute.txt.r1587" />
+    <None Include="obj\DataAccess.csproj.FileListAbsolute.txt.r1593" />
+    <None Include="obj\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DataAccess.csproj.CopyComplete" />
+    <None Include="obj\Debug\DataAccess.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DataAccess.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Release\CoreCompileInputs.cache" />
+    <None Include="obj\Release\DataAccess.csproj.CopyComplete" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
